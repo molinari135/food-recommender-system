@@ -1,0 +1,8 @@
+black
+flake8
+isort
+ipykernel
+pandas
+pip
+python-dotenv
+-e .
