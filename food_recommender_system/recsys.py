@@ -3,6 +3,7 @@ import json
 from profiler import UserProfileWithIntolerances
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
+from datetime import datetime
 
 
 class DataLoader:
@@ -44,16 +45,13 @@ class DataLoader:
         Validate that all seasonal food names from the JSON file
         are present in the nutritional DataFrame.
         """
-        # Extract seasonal food names for the given country
         seasonal_food_names = []
         for month, foods in seasonality_data[country].items():
             seasonal_food_names.extend(foods)
 
-        # Convert to lowercase for consistency
         seasonal_food_names = [food.lower() for food in seasonal_food_names]
         nutritional_df['Food Name'] = nutritional_df['Food Name'].str.lower()
 
-        # Check for missing food names
         missing_food_names = [food for food in seasonal_food_names if food not in nutritional_df['Food Name'].values]
 
         if not missing_food_names:
@@ -64,10 +62,11 @@ class DataLoader:
 
 
 class RecommenderSystem:
-    def __init__(self, nutritional_df, food_pantry, seasonality_data):
+    def __init__(self, nutritional_df, food_pantry, seasonality_data, user_profile):
         self.nutritional_df = nutritional_df
         self.food_pantry = food_pantry
         self.seasonality_data = seasonality_data
+        self.user_profile = user_profile
 
     def find_similar_ingredients(self, base_ingredients, top_n=3):
         """
@@ -78,18 +77,14 @@ class RecommenderSystem:
 
         Returns: A dictionary of similar ingredients for each base ingredient.
         """
-        # Ensure there are no NaN values
         if self.nutritional_df.isnull().values.any():
             print("Missing values detected, filling NaN values with 0...")
             self.nutritional_df = self.nutritional_df.fillna(0)
 
         # Drop non-nutritional columns
         nutrition_matrix = self.nutritional_df.drop(columns=['Food Name', 'Category Name']).values
-
-        # Compute the cosine similarity matrix
         similarity_matrix = cosine_similarity(nutrition_matrix)
 
-        # Initialize dictionary for similar ingredients
         similar_ingredients = {}
 
         for ingredient in base_ingredients:
@@ -101,30 +96,33 @@ class RecommenderSystem:
                 similar_ingredients[ingredient] = []
                 continue
 
-            # Get the index and category of the base ingredient
             index = matching_rows.index[0]
             ingredient_category = matching_rows['Category Name'].iloc[0]
 
-            # Filter the nutritional data by the same category
             category_filtered_df = self.nutritional_df[self.nutritional_df['Category Name'] == ingredient_category]
-
-            # Recompute the cosine similarity matrix for the filtered category data
             category_nutrition_matrix = category_filtered_df.drop(columns=['Food Name', 'Category Name']).values
             category_similarity_matrix = cosine_similarity(category_nutrition_matrix)
 
-            # Get the similarities for the current ingredient in the filtered matrix
             ingredient_similarities = category_similarity_matrix[category_filtered_df.index == index].flatten()
-
-            # Get the indices of the most similar ingredients (excluding the ingredient itself)
             similar_indices = np.argsort(ingredient_similarities)[::-1][1:top_n + 1]
 
-            # Get the food names for the similar ingredients
             similar_foods = [category_filtered_df.iloc[i]['Food Name'] for i in similar_indices]
-
-            # Add the result to the dictionary
             similar_ingredients[ingredient] = similar_foods
 
         return similar_ingredients
+
+    def enrich_user_pantry_with_seasonal_ingredients(self):
+        """Add seasonal ingredients to the user's pantry based on the current season and location."""
+        current_month = datetime.now().strftime('%B').lower()
+        seasonal_foods = self.seasonality_data.get('Italy', {}).get(current_month, [])
+
+        # Convert seasonal foods to lowercase for consistency
+        seasonal_foods = [food.lower() for food in seasonal_foods]
+
+        # Add seasonal foods to the pantry (only if they're not already there)
+        updated_pantry = self.user_profile["available_ingredients"].get("Base", [])
+        updated_pantry.extend([food for food in seasonal_foods if food not in updated_pantry])
+        self.user_profile["available_ingredients"]["Base"] = updated_pantry
 
 
 if __name__ == "__main__":
@@ -136,29 +134,38 @@ if __name__ == "__main__":
     food_seasonality = data_loader.load_json("food-seasonality.json")
     food_pantry = data_loader.load_json("food-pantry.json")
 
-    # Filter categories
+    # Filter categories and fill missing values
     exclude_categories = ['Baby Foods', 'Meals, Entrees, and Side Dishes', 'Fast Foods']
     nutritional_facts = DataLoader.filter_categories(nutritional_facts, exclude_categories)
     nutritional_facts = DataLoader.fill_missing_values(nutritional_facts)
 
-    print(nutritional_facts.head())
     DataLoader.validate_seasonal_foods(nutritional_facts, food_seasonality, country='Italy')
 
+    # Initialize UserProfile
     profiler = UserProfileWithIntolerances()
     user_profile = profiler.create_user_profile()
 
     if user_profile:
+        # Save the user profile to a JSON file
+        profiler.save_user_profile(user_profile)
+        print("User profile saved.")
+
         # Apply dietary filters from the user profile
         filtered_foods = profiler.filter_food_based_on_user_profile(user_profile, nutritional_facts)
 
-        # Initialize RecommenderSystem with the necessary data
-        recommender = RecommenderSystem(nutritional_df=filtered_foods,
-                                        food_pantry=food_pantry,
-                                        seasonality_data=food_seasonality)
+        # Initialize RecommenderSystem
+        recommender = RecommenderSystem(
+            nutritional_df=filtered_foods,
+            food_pantry=food_pantry,
+            seasonality_data=food_seasonality,
+            user_profile=user_profile
+        )
+
+        # Enrich user pantry with seasonal ingredients
+        recommender.enrich_user_pantry_with_seasonal_ingredients()
 
         # Get similar ingredients based on the user's available ingredients
         base_ingredients = user_profile["available_ingredients"]['Base']
-
         similar_ingredients = recommender.find_similar_ingredients(base_ingredients)
 
         # Print the similar ingredients for each base ingredient
