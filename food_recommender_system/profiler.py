@@ -1,11 +1,12 @@
 import json
 import pandas as pd
 
+
 class UserProfiler:
     """
     A class to create and manage user profiles for the recommender system.
     """
-    
+
     def __init__(self, pantry_path="data/raw/food-pantry.json"):
         """
         Initialize the profiler with the path to the pantry data.
@@ -42,9 +43,9 @@ class UserProfiler:
 
     def create_user_profile(self):
         """
-        Create a user profile based on their nationality and available ingredients, 
+        Create a user profile based on their nationality and available ingredients,
         as well as intolerances and allergies.
-        :return: A dictionary containing the user's nationality, available ingredients, 
+        :return: A dictionary containing the user's nationality, available ingredients,
                 and dietary preferences (intolerances/allergies).
         """
         # Ask for intolerances and allergies
@@ -124,6 +125,5 @@ class UserProfileWithIntolerances(UserProfiler):
         # 4. Gluten intolerant users should not have gluten-containing items
         if user_profile.get("gluten_intolerant", False):
             filtered_df = filtered_df[filtered_df["Category Name"] != "Breads, cereals, fastfood,grains"]
-
 
         return filtered_df

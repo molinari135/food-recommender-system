@@ -1,6 +1,8 @@
 import pandas as pd
 import json
 from profiler import UserProfileWithIntolerances
+from sklearn.metrics.pairwise import cosine_similarity
+import numpy as np
 
 
 class DataLoader:
@@ -61,6 +63,70 @@ class DataLoader:
             print(missing_food_names)
 
 
+class RecommenderSystem:
+    def __init__(self, nutritional_df, food_pantry, seasonality_data):
+        self.nutritional_df = nutritional_df
+        self.food_pantry = food_pantry
+        self.seasonality_data = seasonality_data
+
+    def find_similar_ingredients(self, base_ingredients, top_n=3):
+        """
+        Finds similar ingredients to those in the user profile based on nutritional data.
+
+        base_ingredients: List of ingredients from the user's pantry.
+        top_n: The number of similar ingredients to return for each base ingredient.
+
+        Returns: A dictionary of similar ingredients for each base ingredient.
+        """
+        # Ensure there are no NaN values
+        if self.nutritional_df.isnull().values.any():
+            print("Missing values detected, filling NaN values with 0...")
+            self.nutritional_df = self.nutritional_df.fillna(0)
+
+        # Drop non-nutritional columns
+        nutrition_matrix = self.nutritional_df.drop(columns=['Food Name', 'Category Name']).values
+
+        # Compute the cosine similarity matrix
+        similarity_matrix = cosine_similarity(nutrition_matrix)
+
+        # Initialize dictionary for similar ingredients
+        similar_ingredients = {}
+
+        for ingredient in base_ingredients:
+            ingredient = ingredient.strip().lower()
+            matching_rows = self.nutritional_df[self.nutritional_df['Food Name'] == ingredient]
+
+            if matching_rows.empty:
+                print(f"Ingredient '{ingredient}' not found in the dataset!")
+                similar_ingredients[ingredient] = []
+                continue
+
+            # Get the index and category of the base ingredient
+            index = matching_rows.index[0]
+            ingredient_category = matching_rows['Category Name'].iloc[0]
+
+            # Filter the nutritional data by the same category
+            category_filtered_df = self.nutritional_df[self.nutritional_df['Category Name'] == ingredient_category]
+
+            # Recompute the cosine similarity matrix for the filtered category data
+            category_nutrition_matrix = category_filtered_df.drop(columns=['Food Name', 'Category Name']).values
+            category_similarity_matrix = cosine_similarity(category_nutrition_matrix)
+
+            # Get the similarities for the current ingredient in the filtered matrix
+            ingredient_similarities = category_similarity_matrix[category_filtered_df.index == index].flatten()
+
+            # Get the indices of the most similar ingredients (excluding the ingredient itself)
+            similar_indices = np.argsort(ingredient_similarities)[::-1][1:top_n + 1]
+
+            # Get the food names for the similar ingredients
+            similar_foods = [category_filtered_df.iloc[i]['Food Name'] for i in similar_indices]
+
+            # Add the result to the dictionary
+            similar_ingredients[ingredient] = similar_foods
+
+        return similar_ingredients
+
+
 if __name__ == "__main__":
     # Initialize DataLoader
     data_loader = DataLoader()
@@ -82,4 +148,20 @@ if __name__ == "__main__":
     user_profile = profiler.create_user_profile()
 
     if user_profile:
+        # Apply dietary filters from the user profile
         filtered_foods = profiler.filter_food_based_on_user_profile(user_profile, nutritional_facts)
+
+        # Initialize RecommenderSystem with the necessary data
+        recommender = RecommenderSystem(nutritional_df=filtered_foods,
+                                        food_pantry=food_pantry,
+                                        seasonality_data=food_seasonality)
+
+        # Get similar ingredients based on the user's available ingredients
+        base_ingredients = user_profile["available_ingredients"]['Base']
+
+        similar_ingredients = recommender.find_similar_ingredients(base_ingredients)
+
+        # Print the similar ingredients for each base ingredient
+        for ingredient, similar in similar_ingredients.items():
+            print(f"Base Ingredient: {ingredient}")
+            print(f"Similar Ingredients: {', '.join(similar)}\n")
