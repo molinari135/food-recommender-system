@@ -46,7 +46,7 @@ class DataLoader:
         are present in the nutritional DataFrame.
         """
         seasonal_food_names = []
-        for month, foods in seasonality_data[country].items():
+        for _, foods in seasonality_data[country].items():
             seasonal_food_names.extend(foods)
 
         seasonal_food_names = [food.lower() for food in seasonal_food_names]
@@ -111,18 +111,17 @@ class RecommenderSystem:
 
         return similar_ingredients
 
-    def enrich_user_pantry_with_seasonal_ingredients(self):
-        """Add seasonal ingredients to the user's pantry based on the current season and location."""
-        current_month = datetime.now().strftime('%B').lower()
+    from datetime import datetime
+
+    def get_seasonal_ingredients_for_current_month(self):
+        """Retrieve the seasonal ingredients for the current month based on location."""
+        current_month = datetime.now().strftime('%B')
         seasonal_foods = self.seasonality_data.get('Italy', {}).get(current_month, [])
 
-        # Convert seasonal foods to lowercase for consistency
-        seasonal_foods = [food.lower() for food in seasonal_foods]
-
-        # Add seasonal foods to the pantry (only if they're not already there)
-        updated_pantry = self.user_profile["available_ingredients"].get("Base", [])
-        updated_pantry.extend([food for food in seasonal_foods if food not in updated_pantry])
-        self.user_profile["available_ingredients"]["Base"] = updated_pantry
+        # Debugging step: Print the seasonal foods for the current month
+        print(f"Seasonal foods for {current_month.capitalize()}: {seasonal_foods}")
+        
+        return seasonal_foods
 
 
 if __name__ == "__main__":
@@ -161,9 +160,6 @@ if __name__ == "__main__":
             user_profile=user_profile
         )
 
-        # Enrich user pantry with seasonal ingredients
-        recommender.enrich_user_pantry_with_seasonal_ingredients()
-
         # Get similar ingredients based on the user's available ingredients
         base_ingredients = user_profile["available_ingredients"]['Base']
         similar_ingredients = recommender.find_similar_ingredients(base_ingredients)
@@ -172,3 +168,5 @@ if __name__ == "__main__":
         for ingredient, similar in similar_ingredients.items():
             print(f"Base Ingredient: {ingredient}")
             print(f"Similar Ingredients: {', '.join(similar)}\n")
+
+        seasonal_ingredients = recommender.get_seasonal_ingredients_for_current_month()
