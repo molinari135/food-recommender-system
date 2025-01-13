@@ -173,19 +173,19 @@ class UserProfiler:
             with open(self.users_file, 'r') as file:
                 users = json.load(file)
                 print(f"Loaded users: {users}")  # Print all users in the file
-            
+
             # If no user_id is passed, ask for it from the terminal
             if user_id is None:
                 user_id = int(input("Enter the user_id to retrieve: "))
 
             # Search for the user with the given user_id
             user = next((user for user in users if user['user_id'] == user_id), None)
-            
+
             if user:
                 print(f"User found: {user}")
             else:
                 print(f"No user found with user_id: {user_id}")
-        
+
         except FileNotFoundError:
             print(f"The file {self.users_file} was not found.")
         except json.JSONDecodeError:

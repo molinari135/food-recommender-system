@@ -68,7 +68,7 @@ class RecommenderSystem:
         self.seasonality_data = seasonality_data
         self.user_profile = user_profile
 
-    def find_similar_ingredients(self, base_ingredients, top_n=3):
+    def find_similar_ingredients(self, base_ingredients, top_n=2):
         """
         Finds similar ingredients to those in the user profile based on nutritional data.
 
@@ -120,7 +120,7 @@ class RecommenderSystem:
 
         # Debugging step: Print the seasonal foods for the current month
         print(f"Seasonal foods for {current_month.capitalize()}: {seasonal_foods}")
-        
+
         return seasonal_foods
 
 
