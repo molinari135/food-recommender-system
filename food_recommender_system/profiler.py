@@ -7,7 +7,7 @@ class UserProfiler:
     A class to create and manage user profiles for the recommender system.
     """
 
-    def __init__(self, pantry_path="data/raw/food-pantry.json", users_file="data/users.json"):
+    def __init__(self, pantry_path="data/raw/food-pantry.json", users_file="data/interim/user_profile.json"):
         """
         Initialize the profiler with the path to the pantry data and users file.
         :param pantry_path: Path to the JSON file containing pantry data.
@@ -167,13 +167,39 @@ class UserProfiler:
 
         return user_profile
 
+    def get_user_by_id(self, user_id=None):
+        """Retrieve a user by their user_id."""
+        try:
+            with open(self.users_file, 'r') as file:
+                users = json.load(file)
+                print(f"Loaded users: {users}")  # Print all users in the file
+            
+            # If no user_id is passed, ask for it from the terminal
+            if user_id is None:
+                user_id = int(input("Enter the user_id to retrieve: "))
+
+            # Search for the user with the given user_id
+            user = next((user for user in users if user['user_id'] == user_id), None)
+            
+            if user:
+                print(f"User found: {user}")
+            else:
+                print(f"No user found with user_id: {user_id}")
+        
+        except FileNotFoundError:
+            print(f"The file {self.users_file} was not found.")
+        except json.JSONDecodeError:
+            print(f"Error decoding JSON from {self.users_file}.")
+        except ValueError:
+            print("Please enter a valid integer for user_id.")
+
 
 class UserProfileWithIntolerances(UserProfiler):
     """
     A class extending UserProfiler to add allergen and intolerance checks based on user preferences.
     """
 
-    def __init__(self, pantry_path="data/raw/food-pantry.json", profile_path="user_profile.json"):
+    def __init__(self, pantry_path="data/raw/food-pantry.json", profile_path="data/interim/user_profile.json"):
         super().__init__(pantry_path, profile_path)
 
     def filter_food_based_on_user_profile(self, user_profile, food_df):
