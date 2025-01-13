@@ -1,0 +1,23 @@
+[
+    {
+        "nationality": "Italy",
+        "available_ingredients": {
+            "Base": [
+                "Egg",
+                "Milk",
+                "Yogurt",
+                "Parmigiano-Reggiano",
+                "Italian Bread",
+                "Chickpeas",
+                "Pasta",
+                "Tomato sauce",
+                "Olive Oil",
+                "Bread crumbs"
+            ]
+        },
+        "lactose_intolerant": false,
+        "vegan": false,
+        "gluten_intolerant": false,
+        "user_id": 1
+    }
+]
