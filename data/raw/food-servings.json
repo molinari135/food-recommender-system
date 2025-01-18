@@ -13,11 +13,11 @@
     },
     "Lactose-Free Dairy": {
         "serving_size": "125ml",
-        "frequency_per_week": 14
+        "frequency_per_week": 7
     },
     "Dairy": {
         "serving_size": "125ml",
-        "frequency_per_week": 14
+        "frequency_per_week": 7
     },
     "Eggs": {
         "serving_size": "50g",
@@ -29,7 +29,7 @@
     },
     "Grains": {
         "serving_size": "80g",
-        "frequency_per_week": 21
+        "frequency_per_week": 11
     },
     "Legumes": {
         "serving_size": "150g",
@@ -37,7 +37,7 @@
     },
     "Gluten-Free Grains": {
         "serving_size": "80g",
-        "frequency_per_week": 21
+        "frequency_per_week": 10
     },
     "White Meat": {
         "serving_size": "100g",
@@ -69,10 +69,10 @@
     },
     "Gluten-Free Baked Products": {
         "serving_size": "50g",
-        "frequency_per_week": 14
+        "frequency_per_week": 7
     },
     "Baked Products": {
         "serving_size": "50g",
-        "frequency_per_week": 14
+        "frequency_per_week": 7
     }
 }

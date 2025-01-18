@@ -170,28 +170,44 @@ class UserProfiler:
     def get_user_by_id(self, user_id=None):
         """Retrieve a user by their user_id."""
         try:
+            # Open the users file and load the data
             with open(self.users_file, 'r') as file:
                 users = json.load(file)
-                print(f"Loaded users: {users}")  # Print all users in the file
+                print(f"Loaded users: {users}")  # Optional debug output
+
+            # If the list is empty, return None
+            if not users:
+                print("No users found in the file.")
+                return None
 
             # If no user_id is passed, ask for it from the terminal
             if user_id is None:
                 user_id = int(input("Enter the user_id to retrieve: "))
 
-            # Search for the user with the given user_id
-            user = next((user for user in users if user['user_id'] == user_id), None)
+            # If there's only one user in the list, check directly
+            if len(users) == 1:
+                user = users[0] if users[0]['user_id'] == user_id else None
+            else:
+                # Search for the user with the given user_id
+                user = next((user for user in users if user['user_id'] == user_id), None)
 
+            # If user is found, return the user profile; otherwise, return None
             if user:
                 print(f"User found: {user}")
+                return user  # Return the user profile
             else:
                 print(f"No user found with user_id: {user_id}")
+                return None  # Return None if no user is found
 
         except FileNotFoundError:
             print(f"The file {self.users_file} was not found.")
+            return None  # Return None if the file is missing
         except json.JSONDecodeError:
             print(f"Error decoding JSON from {self.users_file}.")
+            return None  # Return None if there is an error reading the file
         except ValueError:
             print("Please enter a valid integer for user_id.")
+            return None  # Return None if the user_id provided is invalid
 
 
 class UserProfileWithIntolerances(UserProfiler):
