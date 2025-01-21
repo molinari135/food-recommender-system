@@ -88,7 +88,7 @@ class RecommenderSystem:
         similar_ingredients = {}
 
         for ingredient in base_ingredients:
-            ingredient = ingredient.strip().lower()
+            ingredient = ingredient.strip()
             matching_rows = self.nutritional_df[self.nutritional_df['Food Name'] == ingredient]
 
             if matching_rows.empty:
