@@ -13,23 +13,19 @@
     },
     "Lactose-Free Dairy": {
         "serving_size": "125ml",
-        "frequency_per_week": 7
+        "frequency_per_week": 3
     },
     "Dairy": {
         "serving_size": "125ml",
-        "frequency_per_week": 7
+        "frequency_per_week": 4
     },
     "Eggs": {
         "serving_size": "50g",
         "frequency_per_week": 2
     },
-    "Mushrooms": {
-        "serving_size": "80g",
-        "frequency_per_week": 1
-    },
     "Grains": {
         "serving_size": "80g",
-        "frequency_per_week": 11
+        "frequency_per_week": 7
     },
     "Legumes": {
         "serving_size": "150g",
@@ -37,7 +33,7 @@
     },
     "Gluten-Free Grains": {
         "serving_size": "80g",
-        "frequency_per_week": 10
+        "frequency_per_week": 7
     },
     "White Meat": {
         "serving_size": "100g",
@@ -51,9 +47,13 @@
         "serving_size": "100g",
         "frequency_per_week": 1
     },
-    "Oils and Sauces": {
+    "Oils": {
         "serving_size": "10ml",
-        "frequency_per_week": "As needed"
+        "frequency_per_week": 14
+    },
+    "Sauces": {
+        "serving_size": "10ml",
+        "frequency_per_week": 14
     },
     "Nuts": {
         "serving_size": "30g",
@@ -65,14 +65,6 @@
     },
     "Beverages": {
         "serving_size": "200ml",
-        "frequency_per_week": "Water frequently, others occasionally"
-    },
-    "Gluten-Free Baked Products": {
-        "serving_size": "50g",
-        "frequency_per_week": 7
-    },
-    "Baked Products": {
-        "serving_size": "50g",
-        "frequency_per_week": 7
+        "frequency_per_week": 14
     }
 }
