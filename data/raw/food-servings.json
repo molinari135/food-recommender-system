@@ -1,70 +1,70 @@
 {
     "Fruits": {
-        "serving_size": "150g",
+        "serving_size": 150,
         "frequency_per_week": 14
     },
     "Vegetables": {
-        "serving_size": "200g",
+        "serving_size": 200,
         "frequency_per_week": 14
     },
     "Seafood": {
-        "serving_size": "150g",
+        "serving_size": 150,
         "frequency_per_week": 2
     },
     "Lactose-Free Dairy": {
-        "serving_size": "125ml",
+        "serving_size": 125,
         "frequency_per_week": 3
     },
     "Dairy": {
-        "serving_size": "125ml",
+        "serving_size": 125,
         "frequency_per_week": 4
     },
     "Eggs": {
-        "serving_size": "50g",
+        "serving_size": 50,
         "frequency_per_week": 2
     },
     "Grains": {
-        "serving_size": "80g",
+        "serving_size": 80,
         "frequency_per_week": 7
     },
     "Legumes": {
-        "serving_size": "150g",
+        "serving_size": 150,
         "frequency_per_week": 3
     },
     "Gluten-Free Grains": {
-        "serving_size": "80g",
+        "serving_size": 80,
         "frequency_per_week": 7
     },
     "White Meat": {
-        "serving_size": "100g",
+        "serving_size": 100,
         "frequency_per_week": 3
     },
     "Cured Meat": {
-        "serving_size": "50g",
+        "serving_size": 50,
         "frequency_per_week": 1
     },
     "Red Meat": {
-        "serving_size": "100g",
+        "serving_size": 100,
         "frequency_per_week": 1
     },
     "Oils": {
-        "serving_size": "10ml",
+        "serving_size": 10,
         "frequency_per_week": 14
     },
     "Sauces": {
-        "serving_size": "10ml",
+        "serving_size": 10,
         "frequency_per_week": 14
     },
     "Nuts": {
-        "serving_size": "30g",
+        "serving_size": 30,
         "frequency_per_week": 3
     },
     "Greens": {
-        "serving_size": "80g",
+        "serving_size": 80,
         "frequency_per_week": 7
     },
     "Beverages": {
-        "serving_size": "200ml",
+        "serving_size": 200,
         "frequency_per_week": 14
     }
 }
