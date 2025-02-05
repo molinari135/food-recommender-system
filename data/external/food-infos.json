@@ -1,0 +1,546 @@
+{
+    "Apple": {
+        "benefits": ["Fiber", "Vitamin A", "Potassium"],
+        "how_to_choose": "Glossy, whole, the colour of the variety, without scab and blackening",
+        "hot_to_store": "In the frisge for up to 10 days",
+        "description": "The apple is one of the most consumed fruits in our country. There are more than 3000 varieties of apples known, but there are no more than ten types on the market. The most common are: Annurca (yellow) Fuji (faded red), Golden delicious, Granny smith (green), Renetta (opaque yellow) and Stark (red). Some of these have obtained certification. The only PDO is the Val di Non Apple (renetta, red delicious and golden delicious), the others are PGI: Cuneo Red Apple, Valtellina Apple, Melannurca Campana, South Tyrol Apple.",
+        "nutritional_intake": "The apple is excellent for health, it is a source of vitamins: A and those of group B, although the contents change depending on the variety. Moreover, it is rich in fiber and quercetin, an antioxidant. It is recommended to consume it with the peel in small bites, one because it is rich in polyphenols and its anti-radical power is comparable to that of oregano and two because it helps clean teeth and regulate intestinal transit. The Vitamin C content is slightly below average compared to the other fruits.",
+        "tips": "They can be stored at room temperature, when you are sure to consume them in a short period of time. Otherwise, if you think you will have to store them for a long time, you can keep them in a plastic bag by spraying them with a little water at least once a week."
+    },
+    "Apricot": {
+        "benefits": ["Vitamin A", "Vitamin C", "Potassium", "Carotenes"],
+        "how_to_choose": "Smooth and velvety skin to the touch, sweet scent on the nose, orange in color, soft but not soft texture and without bruises",
+        "how_to_store": "In the fridge for a maximum of 3/4 days",
+        "description": "The apricot, or prunus armeniaca, belongs to the Rosaceae family like most European fruits. In Italy, its cultivation is concentrated in southern Italy (Campania, Basilicata, Puglia) and in Emilia-Romagna.",
+        "nutritional_intake": "Its nutritional characteristic lies in the contribution of carotenes and vitamin A, the substances responsible for color. 150 g of apricots (4-5 fruits) provide 83% of the daily requirement of this vitamin and 26% of vitamin C. It contains a significant amount of potassium (far higher than the average fruit). The content of vitamins and minerals improves in dehydrated apricots but, in this case, the number of calories also increases a lot.",
+        "tips": "The apricot is a very delicate fruit and it is best eaten ripe, while when it is green and unripe it can be indigestible. The pinker the skin, the sweeter the pulp. It is an easily perishable fruit, which can be stored well in the refrigerator: for 3/4 days on the least cold shelf, placed in a cardboard or plastic bag with holes."
+    },
+    "Avocado": {
+        "benefits": ["Fiber", "Omega 6", "Vitamin E", "Potassium"],
+        "how_to_choose": "Wrinkled skin, without blackening; Press with a finger, it gives way but doesn't break the peel",
+        "how_to_store": "Out of the fridge 3 days maximum",
+        "description": "Avocado is a fruit of tropical origin. Among the best known species we find the Mexican (Persea drymifolia) to which the Hass variety belongs, with small fruits with a light and thin green skin that tends to darken as it ripens. The Guatemalan (Persea americana), on the other hand, to which the Fuerte variety belongs, has an elongated piriform shape, with a thin and smooth skin and a bright green color.",
+        "nutritional_intake": "Compared to the average, avocado is a very caloric fruit due to its high fat content (23%): a portion (120 g) in fact provides 280 Kcal. The fats present are 80% monounsaturated fatty acids (these are not saturated fats but still raise the level of triglycerides in the blood) and for this reason they should be ingested in moderation. In correlation with the fair lipid content, avocado has a protein content up to 4 times higher than the average fruit content for a total of 4.4%. It is complemented by a low content of simple sugars and a good source of fiber (3.3%). In particular, one portion (120 g) covers 95% of the potassium requirement and 50% of the vitamin E requirement in an adult's diet. It also has antioxidant, supportive and restorative action.",
+        "tips": "If you choose an avocado to eat it soon, select it already ripe: just press lightly with your fingers on the head of the fruit near the stalk to check that the pulp is soft. Another technique is to bring it to your ear and shake it. If you feel the stone moving from its cavity, it means that the fruit is ripe. If we are not going to consume it immediately, we can buy it harder and let it mature at room temperature in 3 to 5 days at most. In storage, it does not require cold: in a cold and dry environment such as that present in the refrigerator, the pulp will tend to blacken more quickly than at room temperature."
+    },
+    "Banana": {
+        "benefits": ["Fiber", "Potassium", "Magnesium", "Iron"],
+        "how_to_choose": "Yellow in color, without spots and dents, at the pressure of a finger it must give way but not pulp",
+        "how_to_store": "Out of the fridge for up to 5 days",
+        "description": "The banana is one of the most popular fruits. There are about 50 different varieties of bananas, although undoubtedly the best known is the Cavendish.",
+        "nutritional_intake": "The high sugar and carbohydrate content of bananas means that they have a higher caloric value than the average fruit. A medium-sized banana (100 g) in fact provides 90 Kcal. It also has a good fiber content, about 2%. It is also a good source of potassium and magnesium. Bananas provide 0.8 mg of the total 14 mg of iron, which should be taken daily. In addition, it is recognized by the scientific community that the banana acts as a buffer in case of gastric acidity and that it has a digestive function.",
+        "tips": "When storing bananas, do not put them in the fridge as the peel blackens and increases the presence of rotten parts inside. The banana changes a lot in nutrients depending on the degree of ripeness, so it is good to choose it based on the characteristics described."
+    },
+    "Blackberry": {
+        "benefits": ["Fiber", "Vitamin C", "Folate", "Potassium", "Iron", "Phosphorus", "Polyphenols"],
+        "how_to_choose": "Black purplish color, no mold and water on the surface",
+        "how_to_store": "In the fridge for a day, or in the freezer",
+        "description": "Blackberry is a typical fruit of cold and humid climates. The best known varieties are the Blackberry and the Mulberry Blackberry, the latter famous for being used in the preparation of refreshing granitas. They can be served with yogurt or ice cream, but they are also used to prepare jams and jellies.",
+        "nutritional_intake": "They are even lower in calories than raspberries: they provide 40 Kcal per serving (150 g). The fiber content is high. Blackberries contain a good amount of vitamin C, as well as a fair content of folate and together with potassium, iron and phosphorus present in good quantities. An excellent polyphenol content is worth mentioning, as well as in all berries.",
+        "tips": "Like raspberries, they are sold in small packages to protect them during transport, as they are very delicate fruits. These packages have an expiration date, which follows the harvest by a few days. They are fruits that are difficult to preserve and easily attacked by mold. They must be purchased at the right degree of ripeness and consumed quickly: if overripe, the fruits become soft with an unpleasant taste. One possibility to preserve them longer is to freeze them."
+    },
+    "Blueberry": {
+        "benefits": ["Fiber", "Vitamin C", "Polyphenols"],
+        "how_to_choose": "Black purplish color, no leaves and impurities, no mold and water on the surface",
+        "how_to_store": "In the fridge for up to 2 days",
+        "description": "The blueberry plant is a spontaneous shrub that is very common in the woods between 900 and 1500 meters above sea level. The fruit is a small round berry of purplish blue color and with a sour taste. In addition to the classic one, there is the Cranberry variety, more suitable for the preparation of jams and preserves rather than for fresh consumption.",
+        "nutritional_intake": "There is no waste from the blueberry, theyare low-calorie fruits and have a fair content of fiber and vitamin C. In a 150 g portion there is potassium and a small part also a quantity of calcium (5% of the daily requirement). Compared to raspberries, they have a lower content of B vitamins and minerals. However, an excellent content of polyphenols should be noted, as well as in all berries.",
+        "tips": "If you want to freeze it to prevent them from going bad, rinse the blueberries gently and add a little sugar: in this way you will prevent them from losing color, flavor, but above all vitamin C when thawed."
+    },
+    "Cherry": {
+        "benefits": ["Potassium", "Polyphenols"],
+        "how_to_choose": "Shiny appearance, deep red, attached stem, firm, no rotten parts",
+        "how_to_store": "In the refrigerator drawer for a maximum of 2 days",
+        "description": "The cherry is a fruit native to the Middle East, which has adapted very well to the temperate climate of some Italian regions. The sweetest and juiciest varieties are the most popular, but there are also bitter and sour ones - characteristic of sour cherries. Depending on the consistency of the pulp, we distinguish them into calluses, with hard pulp, and with soft pulp. Among the recognized typical products we have: Ciliegia di Vignola IGP, Ciliegia dell\\'Etna DOP and Ciliegia di Marostica IGP.",
+        "nutritional_intake": "This summer fruit is rich in flavonoids and polyphenols, important antioxidants. It also has a good fiber content. There are few calories it provides: a 150 g portion provides a scant 60 Kcal. The contents of vitamin C, iron and potassium are decent.",
+        "tips": "They must be stored, without washing, in the refrigerator while the Starking American black variety can be frozen. Their exquisite flavor should be enjoyed by consuming the fruits naturally. Cherries are also used in confectionery (for their intense red color), in confectionery, for jams or brandies and cherry liqueurs (such as kirsch)."
+    },
+    "Cranberry": {
+        "benefits": ["Vitamin C", "Fiber"],
+        "how_to_choose": "Firm, plump, and deep red berries, without shriveled skin or soft spots.",
+        "how_to_store": "Store fresh cranberries in the fridge for up to 3 weeks or freeze them for long-term storage.",
+        "description": "Cranberries are small, tart berries commonly grown in North America. They are widely used in juices, sauces, and dried snacks. Due to their sour taste, they are often sweetened when consumed fresh.",
+        "nutritional_intake": "Cranberries are rich in vitamin C and antioxidants, especially flavonoids and polyphenols. They are well known for their role in promoting urinary tract health by preventing bacterial adhesion to the bladder wall.",
+        "tips": "If using dried cranberries, opt for those without added sugars for a healthier option. Fresh cranberries can be frozen and used in smoothies or baking."
+    },
+    "Currant": {
+        "benefits": ["Vitamin C", "Vitamin K", "Iron"],
+        "how_to_choose": "Look for shiny, plump, and deeply colored berries, attached to green and fresh stems.",
+        "how_to_store": "Keep in the fridge for up to a week in a breathable container. Avoid washing before storing.",
+        "description": "Currants are small, juicy berries that can be red, black, or white. They are commonly grown in Europe and used in jams, desserts, and syrups.",
+        "nutritional_intake": "Red and black currants are packed with vitamin C, iron, and antioxidants that support immune health and improve circulation.",
+        "tips": "To enjoy their full flavor, let currants sit at room temperature for a few minutes before eating. They pair well with cheese and yogurt."
+    },
+    "Dates": {
+        "benefits": ["Fiber", "Potassium", "Iron", "Magnesium"],
+        "how_to_choose": "Plump, slightly glossy, and unbroken skin. Softer varieties like Medjool should feel tender.",
+        "how_to_store": "Store in an airtight container at room temperature for a few weeks or refrigerate for several months.",
+        "description": "Dates are naturally sweet fruits from the date palm tree, primarily cultivated in the Middle East and North Africa. They are often eaten dried but can also be consumed fresh.",
+        "nutritional_intake": "Dates are high in natural sugars, fiber, and essential minerals like potassium and magnesium, making them a great snack for sustained energy.",
+        "tips": "Use dates as a natural sweetener in smoothies and baked goods. For easier blending, soak them in warm water for a few minutes."
+    },
+    "Figs": {
+        "benefits": ["Fiber", "Potassium"],
+        "how_to_choose": "Whole, without splits and dents, with a pleasant smell, without water leakage",
+        "how_to_store": "On the least cold shelf in the fridge for a maximum of 3 days, make sure they don't crush each other",
+        "description": "The fig is actually a \"false fruit\": the real fruits are the very small seeds inside the pulp. The fig tree is the fruit of the second harvest of the tree of the same name, a typical plant of Mediterranean countries. The skin can be green, black or purple, its flesh white, pale pink or violet depending on the variety. In addition to the varieties in Italy we have excellent qualities of figs and prickly pears, of the former we have the Figs of Cosenza and the White Figs of Cilento DOP.",
+        "nutritional_intake": "Due to the massive sugar content, figs have a higher calorie intake than the average fruit. 150 g of figs provides 70 Kcal. The fiber content is good and, like all fruit, it is a source of potassium.",
+        "tips": "The fig tree is very delicate and must be handled with special attention. It should be peeled before consumption because the whitish latex that often covers the peel makes it difficult to clean."
+    },
+    "Grapefruit": {
+        "benefits": ["Vitamin C", "Vitamin A", "Potassium", "Carotenoids", "Polyphenols"],
+        "how_to_choose": "Yellow or pink colour, turgid and full consistency, without soft parts",
+        "how_to_store": "A week at room temperature in a cool place, or in the fridge for up to two and a half weeks",
+        "description": "Grapefruit is a citrus fruit with a predominantly bitter taste. The varieties are classified according to the shade of the yellow or pink pulp: the yellow grapefruit gives more juice and contains few seeds, while the pink one, with a softer flavor, is used more in haute cuisine.",
+        "nutritional_intake": "Like all citrus fruits, grapefruit is rich in vitamin C. Those that have pinkish pulp are also rich in carotenoids, while yellow ones are not. Thanks to these compounds and polyphenols, it can certainly be said that grapefruits are an important source of antioxidants.",
+        "tips": "The taste of grapefruit is special: less sweet than orange and less acidic than lemon, but more bitter. The lack of sweetness can be compensated for by serving it with a little sugar or honey. In the refrigerator you have to store them in the least cold part and it is not recommended to freeze them. When buying, it is good to choose the grapefruits that weigh the most in relation to the size: it is an indication that they are juicy."
+    },
+    "Grape": {
+        "benefits": ["Vitamin C", "Potassium", "Polyphenols"],
+        "how_to_choose": "Berries firmly attached to the stalk and bunch, turgid, swollen and without spots",
+        "how_to_store": "In the fridge for a maximum of one week",
+        "description": "Grapes are the fruit of the vine, there are many varieties that are classified according to the color of the grape (white grapes, black grapes) or use (table or wine). In Italy, in addition to the countless vines recognized for the production of wines, the table grapes of Mazzarrone (black, green, red), the table grapes of Canicattì and the grapes of Puglia have obtained IGP recognition.",
+        "nutritional_intake": "The characteristic of the grape lies in the high sugar content (more in the white than in the black one). A 150 g portion of grapes provides 90 Kcal (it is about 50% more caloric than the same portion of other fruit such as oranges, apples, pears, peaches, precisely because it is more sugary) and also provides potassium to the diet, as well as a fair amount of vitamin C. Also in antioxidants, black grapes are very rich in polyphenols, especially in the skin.",
+        "tips": "Grapes must be handled with great care because they are very delicate. It can be stored in the refrigerator for a week, removing the withered berries and placing it in micro-perforated plastic bags, but it is advisable to remove it from the fridge at least an hour before consumption in order to appreciate all the flavor and aroma. The dust on the surface indicates that the grapes have not been handled, however before consumption it must be removed with plenty of running water."
+    },
+    "Kiwifruit": {
+        "benefits": ["Fiber", "Vitamin C", "Vitamin K", "Vitamin E", "Potassium", "Phosphorus"],
+        "how_to_choose": "Intact, clean, turgid, without soft parts and alcoholic smell",
+        "how_to_store": "In the fridge for a maximum of 5 days",
+        "description": "The kiwi was originally an exotic fruit, but, for almost 40 years, it has been cultivated with excellent results in our country. Its shape is ovoid, it has a brown skin covered with a fine down, the pulp has an intense green color with black seeds of circular shape. The Kiwi gold variety is different, which is not covered with hair, the pulp is golden and the seeds are both red and black. The taste is less acidic than classic kiwi.",
+        "nutritional_intake": "Like all fruit, kiwi is rich in water, potassium and fiber, although the most interesting element from a nutritional point of view is the great contribution of vitamin C: 100 g of kiwi cover more than 100% of our daily requirement of this vitamin. It also contains a fair content of vitamins E and K, substances involved in the antioxidant effect, also suitable for restoring the body's natural defenses.",
+        "tips": "To buy it, you should know that in our country the kiwi cultivation areas are concentrated mainly in the center-north, Emilia Romagna being the region with the highest production of this fruit. However, it is in the province of Latina that the Kiwi Latina PGI has obtained European recognition."
+    },
+    "Mango": {
+        "benefits": ["Vitamin A", "Vitamin C", "Potassium", "Carotenes"],
+        "how_to_choose": "Without spots, yellow-orange skin, at the pressure of a finger the skin must give way but not break",
+        "how_to_store": "Out of the fridge for up to 4/5 days",
+        "description": "The mango is an exotic fruit widely cultivated in Sicily and the most common varieties are Kensington Pride and Glenn, both with yellow pulp and skin. Their flavor is sweet and intense, Kensington Pride has a fibrous flesh while Glenn is softer. The Tommy Atkins variety struggles to establish itself in Italy and is therefore the most imported.",
+        "nutritional_intake": "A medium portion of mango (150 g) provides 85 Kcal. This fruit is rich in vitamin A: one serving provides 800 mcg, more or less as much as the same portion of apricots gives and more than twice as much as the same amount of melon provides, far exceeding the daily requirement. As well as carotenes, it also provides, per serving, an amount of vitamin C equal to 42 mg or 56% of the recommended daily requirement for an adult. Its potassium content is also remarkable.",
+        "tips": "To consume it at its best, you can put it in the fridge a few minutes before cutting to give it more freshness. Then make an incision lengthwise, well near the central stone, on both sides: at this point extract the pulp with a teaspoon by removing it from the peel. Due to a substance called Mangiferrin, mango is used to make botanical extracts. It helps to regulate intestinal transit, acts on carbohydrate metabolism and has antioxidant and restorative activity in liver cells."
+    },
+    "Cantaloupe": {
+        "benefits": ["Fiber", "Vitamin A", "Vitamin C", "Potassium", "Carotenes"],
+        "how_to_choose": "Colour of the variety, slightly sagging and bruised-free skin, pleasant, fruity smell",
+        "how_to_store": "In the fridge for a maximum of 3 days",
+        "description": "Melon belongs to the same family as zucchini, pumpkin and cucumber. It is native to Africa and Asia, where it grew wild and was consumed since ancient times. The best known varieties are: the Netted with a lattice surface with yellow-orange pulp, the Cantaloupe with a smooth surface and the Winter with light pulp. The Mantuan Melon, in the reticulated and cantaloupe varieties, has obtained the IGP certification.",
+        "nutritional_intake": "The melon, the summer fruit par excellence, is very rich in water and consequently very thirst-quenching and, despite its sweet taste, it is low in sugar. It has a high potassium content, and those with orange flesh are also an excellent source of both beta-carotene or provitamin A and vitamin A itself. It also has a large amount of vitamin C: a slice of melon (150 g) covers 80% of the daily requirement of this vitamin.",
+        "tips": "When the petiole is shriveled and hardly detaches from the fruit, it means that the fruit has undergone accelerated ripening. Furthermore, in this state the color of the skin is straw yellow. At the table it is mainly served at the end of lunch, but also as an appetizer: a classic preparation is melon with raw ham, a tasty contrast in which sweet and savory are mixed, a food with a lot of water and potassium and another dry and rich in sodium."
+    },
+    "Melon": {
+        "benefits": ["Fiber", "Vitamin A", "Vitamin C", "Potassium", "Carotenes"],
+        "how_to_choose": "Colour of the variety, slightly sagging and bruised-free skin, pleasant, fruity smell",
+        "how_to_store": "In the fridge for a maximum of 3 days",
+        "description": "Melon belongs to the same family as zucchini, pumpkin and cucumber. It is native to Africa and Asia, where it grew wild and was consumed since ancient times. The best known varieties are: the Netted with a lattice surface with yellow-orange pulp, the Cantaloupe with a smooth surface and the Winter with light pulp. The Mantuan Melon, in the reticulated and cantaloupe varieties, has obtained the IGP certification.",
+        "nutritional_intake": "The melon, the summer fruit par excellence, is very rich in water and consequently very thirst-quenching and, despite its sweet taste, it is low in sugar. It has a high potassium content, and those with orange flesh are also an excellent source of both beta-carotene or provitamin A and vitamin A itself. It also has a large amount of vitamin C: a slice of melon (150 g) covers 80% of the daily requirement of this vitamin.",
+        "tips": "When the petiole is shriveled and hardly detaches from the fruit, it means that the fruit has undergone accelerated ripening. Furthermore, in this state the color of the skin is straw yellow. At the table it is mainly served at the end of lunch, but also as an appetizer: a classic preparation is melon with raw ham, a tasty contrast in which sweet and savory are mixed, a food with a lot of water and potassium and another dry and rich in sodium."
+    },
+    "Honeydew": {
+        "benefits": ["Vitamin C", "Potassium"],
+        "how_to_choose": "Yellow-orange color, sweet and intense aroma",
+        "how_to_store": "At room temperature if whole, in the fridge in a container for a maximum of 8 days when it is cut",
+        "description": "The pineapple is a fruit native to Brazil, whose best known variety is the Queen victoria, while the smallest and most valuable is the Cayenne lisse (both almost always imported from tropical countries). Compared to popular belief, it does not have any slimming or fat-burning properties, but it has digestive properties: this is due to the presence of an enzyme, bromelain, which helps the digestion of proteins.",
+        "nutritional_intake": "Pineapple provides 60 Kcal per serving (150 g) given by sugars that represent 10% of the total weight. It has a good vitamin C content: it provides 43% of the recommended daily amount of this vitamin per serving. The potassium content is also decent: with one portion you introduce 12% of the recommended daily amount. The amount of fiber provided, on the other hand, again per portion, is approximately half that of fruits such as apples and oranges.",
+        "tips": "To choose a good pineapple, you must first use your sense of smell: the smell must be intense and sweet. Then you need to check the skin, the dividing line that separates the various plates, from which you can understand the degree of ripeness of the fruit: it must be yellow-orange if we want a pineapple ready to eat. Being a non-climacteric fruit, if harvested early it does not ripen naturally after harvesting, remaining acidic and poor in nutrients. However, due to the early harvest, it is often found unripe and green in color. In this case, keep it in a cool, dry place until the right degree of ripeness."
+    },
+    "Nectarine": {
+        "benefits": ["Fiber", "Potassium", "Vitamin A", "Carotenes"],
+        "how_to_choose": "Healthy, firm, fragrant, without stains and lesions",
+        "how_to_store": "In the fridge drawer for up to 3 days",
+        "description": "There are many varieties of peach: those with yellow pulp, those with white pulp and nectarines (or nectarines) are mainly eaten fresh. Percoche, on the other hand, are more often used for jams and canned goods in syrup. Those that have obtained the PGI recognition are the Nectarine of Romagna and the Peach of Leonforte (Sicilian).",
+        "nutritional_intake": "Despite its sweet taste, the peach is not a particularly sugar-rich fruit (a peach provides just 30 Kcal) but it is an important source of beta carotene or pro-vitamin A (responsible for color), fiber and potassium.",
+        "tips": "It's best to buy peaches when they're ripe, but if you buy them still a little unripe, store them at room temperature until they're ready to eat. Or they can be placed on the least cold shelf of the fridge, separating them from the rest of the fruit. It is not recommended to freeze them."
+    },
+    "Orange": {
+        "benefits": ["Vitamin A", "Vitamin C", "Folate", "Potassium", "Carotenes"],
+        "how_to_choose": "Orange-red color depending on the variety, turgid and full consistency, without soft parts",
+        "how_to_store": "1 week out of the fridge in a cool place, or 2 and a half weeks in the fridge",
+        "description": "Sweet orange is a highly prized citrus fruit. Typical of the Mediterranean scrub, in southern Italy we find numerous types and denominations. Among the varieties there are: moro, tarocco, sanguinello (with red pulp), navelina, washington navel (with blond pulp). The denominations instead: Arancia Rossa di Sicilia IGP (includes the Moro, Tarocco and Sanguinello varieties grown in the provinces of Enna, Catania, Syracuse and Ragusa), Arancia del Gargano IGP, Arancia di Ribera DOP (produced in the provinces of Agrigento and Palermo).",
+        "nutritional_intake": "Citrus fruits are known for their excellent vitamin intake, especially vitamin C (ascorbic acid). In fact, one and a half oranges are enough to cover the daily requirement of this vitamin. While vitamin A covers 20% of the requirement. The potassium content is decent.",
+        "tips": "If you buy them unripe, oranges do not ripen. So make sure that the fruits are whole, healthy, clean and free of extraneous odors and tastes, without damage or alterations caused by frost. The color must be typical of the variety. Before eating them, wash the peel to remove surface pesticide residues. When storing, avoid putting them in contact with other fruit as doing so would accelerate the onset of mold."
+    },
+    "Mandarin orange": {
+        "benefits": ["Vitamin C", "Folate", "Potassium"],
+        "how_to_choose": "Orange color, whole fruits, healthy and clean",
+        "how_to_store": "In the fridge for two weeks",
+        "description": "Mandarin is a citrus fruit of oriental origins. The best known varieties are: Palermo Havana (with a thin skin, with many seeds and reddish pulp), Seedless Havana (seedless) and Late Havana or common mandarin (appreciated for its late ripening).",
+        "nutritional_intake": "Like all citrus fruits, tangerines are rich in vitamin C, but a little less than oranges: a portion of tangerines still provides the entire daily requirement of this vitamin. They also contain vitamin A, folate and potassium. Few calories, on the other hand, due to the high percentage of water, since a 150 g portion (2 fruits) provides about 100 Kcal.",
+        "tips": "This fruit cannot be frozen. The best method of storing tangerines at home for a short period is to store tangerines in the coolest part of the kitchen or on the least cold shelf of the refrigerator. If you want to store them for a longer period they can stay at a temperature between 3 and 5 ° C."
+    },
+    "Passion fruit": {
+        "benefits": ["Fiber", "Vitamin A", "Carotenes", "Iron", "Phosphorus"],
+        "how_to_choose": "If the skin is smooth it will be more acidic, if the skin is wrinkled but not wrinkled it will be sweeter",
+        "how_to_store": "In the fridge drawer or side door for up to a week",
+        "description": "The shape of Passion Fruit or Maracuja is perfectly oval and, depending on the variety to which it belongs, has different colors: the classic Passiflora edulis or Maracuja has reddish/violet skin and the size of a ping pong ball, the Passiflora edulis flavicarpa has yellow skin and slightly larger than a tennis ball. In both cases, the skin is wrinkled and tends to wrinkle as it matures. Inside, the pulp is somewhat reminiscent of pomegranate as it is made up of small grains covered with a mucilaginous yellow layer, of three different colors (yellow, orange and light green). Its velvety pulp is very fragrant, refreshing, at the same time sweet and acidulous.",
+        "nutritional_intake": "A high fiber content (11%) is given by the seeds and, like mangoes, it isvery rich in vitamin A and carotenes. Rich in iron and phosphorus, one serving covers 30% and 21% of an adult's daily requirement respectively. In addition, the acids present in its juice help absorb the iron contained in it. The remaining micronutrients and trace elements typical of fruit are all present in a balanced way.",
+        "tips": "A passion fruit that is drying out can actually be rehydrated: it must be soaked in water overnight and then consumed as soon as possible. Natural it has a slightly acidic and astringent taste, the advice is to taste it better in ice creams, smoothies, sorbets, juices, fruit salads, cocktails, mixed with yogurt, cheese or Chantilly cream."
+    },
+    "Peach": {
+        "benefits": ["Fiber", "Potassium", "Vitamin A", "Carotenes"],
+        "how_to_choose": "Healthy, firm, fragrant, without stains and lesions",
+        "how_to_store": "In the fridge drawer for up to 3 days",
+        "description": "There are many varieties of peach: those with yellow pulp, those with white pulp and nectarines (or nectarines) are mainly eaten fresh. Percoche, on the other hand, are more often used for jams and canned goods in syrup. Those that have obtained the PGI recognition are the Nectarine of Romagna and the Peach of Leonforte (Sicilian).",
+        "nutritional_intake": "Despite its sweet taste, the peach is not a particularly sugar-rich fruit (a peach provides just 30 Kcal) but it is an important source of beta carotene or pro-vitamin A (responsible for color), fiber and potassium.",
+        "tips": "It's best to buy peaches when they're ripe, but if you buy them still a little unripe, store them at room temperature until they're ready to eat. Or they can be placed on the least cold shelf of the fridge, separating them from the rest of the fruit. It is not recommended to freeze them."
+    },
+    "Pear": {
+        "benefits": ["Fiber", "Potassium"],
+        "how_to_choose": "With the peduncle intact, without blackening",
+        "how_to_store": "In the fridge drawer for up to a week",
+        "description": "Since there are many varieties, the pear is on sale almost all year round. These can be divided on the basis of the ripening period into summer, autumn and winter. Many varieties belong to the summer group: the Coscia, with its juicy pulp, the Guyot, with its smooth and freckled skin, and the William, the most widespread and used for juices. Among the autumn ones we have Kaiser, Abate, Conference and Decana. In winter we mainly find the Passacrassana. Mantuan Pear and Pear of Emilia Romagna have obtained PGI recognition.",
+        "nutritional_intake": "The pear is a fruit very rich in water and with an exceptional contribution of fiber. Eaten raw, the pear is slightly astringent. It contains other nutrients present in smaller quantities: potassium and vitamin C.",
+        "tips": "The pear is a delicate fruit and must be treated with care. Eat the peel, after washing it thoroughly to remove pesticide residues, to increase your daily fiber intake."
+    },
+    "Persimmon": {
+        "benefits": ["Vitamin A", "Vitamin C", "Potassium", "Magnesium", "Carotenes"],
+        "how_to_choose": "Bright orange color, no black lines, turgid texture, pleasant smell",
+        "how_to_store": "In the fridge for up to 3 days",
+        "description": "The persimmon is a fruit of oriental origins, where it was considered in ancient times the food of the gods.",
+        "nutritional_intake": "The caloric intake is higher than the average for fruit due to the sugar content (16%): a persimmon (150 g) provides about 100 Kcal, compared to 70 for an apple and 50 Kcal for an orange. On the other hand, the contribution to our diet of vitamin C, vitamin A and carotenes (responsible for color), powerful antioxidants, is also respectable. With a persimmon, in fact, you take more than 50% of the recommended daily intake of the two vitamins.",
+        "tips": "Persimmon is a fruit to be consumed very ripe, otherwise it can have an astringent taste. You can leave it at room temperature until it ripens but, if you want to speed up the ripening process, you can also store these fruits in a paper bag along with some apples. It is possible to freeze it whole or just the pulp (in this case it is advisable to add a few drops of lemon)."
+    },
+    "Pineapple": {
+        "benefits": ["Vitamin C", "Potassium"],
+        "how_to_choose": "Yellow-orange color, sweet and intense aroma",
+        "how_to_store": "At room temperature if whole, in the fridge in a container for a maximum of 8 days when it is cut",
+        "description": "The pineapple is a fruit native to Brazil, whose best known variety is the Queen victoria, while the smallest and most valuable is the Cayenne lisse (both almost always imported from tropical countries). Compared to popular belief, it does not have any slimming or fat-burning properties, but it has digestive properties: this is due to the presence of an enzyme, bromelain, which helps the digestion of proteins.",
+        "nutritional_intake": "Pineapple provides 60 Kcal per serving (150 g) given by sugars that represent 10% of the total weight. It has a good vitamin C content: it provides 43% of the recommended daily amount of this vitamin per serving. The potassium content is also decent: with one portion you introduce 12% of the recommended daily amount. The amount of fiber provided, on the other hand, again per portion, is approximately half that of fruits such as apples and oranges.",
+        "tips": "To choose a good pineapple, you must first use your sense of smell: the smell must be intense and sweet. Then you need to check the skin, the dividing line that separates the various plates, from which you can understand the degree of ripeness of the fruit: it must be yellow-orange if we want a pineapple ready to eat. Being a non-climacteric fruit, if harvested early it does not ripen naturally after harvesting, remaining acidic and poor in nutrients. However, due to the early harvest, it is often found unripe and green in color. In this case, keep it in a cool, dry place until the right degree of ripeness."
+    },
+    "Plum": {
+        "benefits": ["Fiber", "Potassium", "Polyphenols"],
+        "how_to_choose": "Color will vary, without green parts, healthy and clean, without attacks by parasites",
+        "how_to_store": "In the fridge for a maximum of 3 days",
+        "description": "There are many varieties of plums, the most common subdivision refers to the origin of the variety. The European-Asian are elongated in shape, purplish in color and firm flesh (California blue, President, Queen Victoria, Stanley) while the Sino-Japanese are round and light-skinned (Goccia d'oro, Regina Claudia) or red (Santa Rosa) or black-skinned. The Plum of Dro (TN) has received the PDO recognition.",
+        "nutritional_intake": "The main component of plum is water, but it also contains carbohydrates - including sorbitol, with a mild laxative action that is strengthened by the presence of fiber. Another characteristic of plum is anthocyanins (polyphenolic pigments with antioxidant action). The calories provided per serving (150 g) are 60. In smaller quantities than high fruit there are vitamin C and potassium.",
+        "tips": "If you buy them a little unripe, they can be ripened at room temperature. Once ripe, plums must be consumed within a few days: they are very perishable, so it is best to store them in the refrigerator until ready to eat."
+    },
+    "Pomegranate": {
+        "benefits": ["Vitamin C", "Potassium", "Polyphenols"],
+        "how_to_choose": "Well-colored, fresh, intact skin, without splits and wrinkles",
+        "how_to_store": "In the fridge drawer for a maximum of two weeks",
+        "description": "Pomegranate is a very thick-skinned fruit, with the inside full of deep red seeds. Originally from Iran, it is also traditionally used for savory preparations. Very common in Sicily and in the entire Mediterranean scrub, in Italy we mainly find the Horsetooth variety - although there are numerous in the countries of origin.",
+        "nutritional_intake": "A 150 g portion provides 90 Kcal. It has a good fiber and potassium content, as well as a very good vitamin C content. Its antioxidant content is also significant.",
+        "tips": "Choose and buy the ripe fruits, because once they are detached from the tree they no longer ripen."
+    },
+    "Prickly pear": {
+        "benefits": ["Vitamin C", "Fiber", "Magnesium"],
+        "how_to_choose": "Choose firm, bright-colored fruits without blemishes or excessive softness.",
+        "how_to_store": "Keep at room temperature until ripe, then refrigerate for up to 5 days.",
+        "description": "Prickly pear, also known as cactus fruit, is a tropical fruit with a sweet, mildly tangy flavor. It is grown in dry, warm climates and comes in various colors, from yellow to deep red.",
+        "nutritional_intake": "Rich in vitamin C, prickly pears support immune function and digestion thanks to their fiber content.",
+        "tips": "Wear gloves when handling fresh prickly pears to avoid contact with tiny spines. Peel carefully and enjoy fresh or in juices."
+    },
+    "Prunes": {
+        "benefits": ["Fiber", "Potassium", "Iron"],
+        "how_to_choose": "If buying fresh, select plump, deep purple fruits. Dried prunes should be moist and slightly sticky, not overly dry.",
+        "how_to_store": "Fresh plums can be stored in the fridge for a few days, while dried prunes last for months in an airtight container.",
+        "description": "Prunes are dried plums, commonly used for digestive health due to their natural laxative properties. They have a sweet and chewy texture.",
+        "nutritional_intake": "High in fiber and potassium, prunes help regulate digestion and support heart health.",
+        "tips": "Soak dried prunes in water or tea before eating to make them softer. They can be added to oatmeal, yogurt, or salads."
+    },
+    "Quince": {
+        "benefits": ["Vitamin C", "Fiber"],
+        "how_to_choose": "Choose firm, yellow fruits with a floral aroma. Avoid those with bruises or green spots.",
+        "how_to_store": "Store at room temperature until ripe, then refrigerate for up to 2 weeks.",
+        "description": "Quince is a unique fruit with a fragrant aroma and hard, astringent flesh when raw. It is mainly used in cooking to make jams, jellies, and compotes.",
+        "nutritional_intake": "Quinces provide vitamin C and fiber, making them beneficial for digestion and immune function.",
+        "tips": "Quince is best consumed cooked, as raw flesh is too hard and sour. Baking or boiling enhances its natural sweetness."
+    },
+    "Raisin": {
+        "benefits": ["Iron", "Potassium"],
+        "how_to_choose": "Look for plump, slightly sticky raisins without excess crystallized sugar on the surface.",
+        "how_to_store": "Keep in an airtight container in a cool, dry place. Refrigeration can extend shelf life.",
+        "description": "Raisins are dried grapes, naturally sweet and widely used in baking, snacks, and cereals.",
+        "nutritional_intake": "Rich in iron, potassium, and natural sugars, raisins provide a quick energy boost and support heart health.",
+        "tips": "If raisins become too dry, soak them in warm water for a few minutes before use. They pair well with nuts and cheese."
+    },
+    "Raspberry": {
+        "benefits": ["Fiber", "Vitamin C", "Folate", "Potassium", "Iron", "Phosphorus", "Polyphenols"],
+        "how_to_choose": "Opaque light red color, no mold and water on the surface",
+        "how_to_store": "In the fridge for 24 hours or frozen",
+        "description": "The raspberry is a typical fruit of cold and humid climates, it ripens a little later than the strawberry. It can be eaten plain, or served with yogurt or ice cream. It is also used to prepare jams, jellies, coulis (pureed and sieved raspberries).",
+        "nutritional_intake": "Raspberries are low in calories: they provide 50 Kcal per serving (150 g). The fiber content, on the other hand, is high: 7%. They contain plenty of vitamin C (a 150g serving provides more than 60% of its daily requirement), as well as a decent folate content. They also contain potassium, iron and phosphorus. An excellent polyphenol content is worth mentioning, as well as in all berries.",
+        "tips": "Raspberries are sold in small packages to protect them during transport, as they are very delicate fruits. These packages have an expiration date, which follows the harvest by a few days. They are difficult to preserve and easily attacked by mold, they must be purchased at the right degree of ripeness and consumed quickly: if overripe, the fruits become soft with an unpleasant taste. One possibility to preserve them longer is to freeze them."
+    },
+    "Strawberry": {
+        "benefits": ["Vitamin C", "Magnesium", "Potassium", "Phosphorus", "Polyphenols"],
+        "how_to_choose": "Avoid soft, non-shiny and moldy fruits. The surface must be shiny, red and uniform",
+        "how_to_store": "In the fridge for a maximum of 3 days",
+        "description": "The most cultivated strawberries in Italy are Camarosa and Elsanta, both bright red in color with firm pulp and red in color.",
+        "nutritional_intake": "Strawberries, being made up of 90% water, still have a good supply of minerals such as magnesium, potassium and phosphorus. Abundant in vitamins, especially C and other antioxidants. The yellow seeds on the surface stimulate intestinal transit.",
+        "tips": "Strawberries have many virtues but also weaknesses, including fragility: it is necessary to handle them gently to keep them intact. They are also often surface treated against mold and insects, so it is important to wash them before consumption. Strawberries can cause allergic episodes, so it is preferable to consume them after the age of two."
+    },
+    "Watermelon": {
+        "benefits": ["Vitamin A", "Vitamin C", "Carotenes"],
+        "how_to_choose": "With a green skin with a yellow area, it must give a dull sound by tapping on the skin",
+        "how_to_store": "Whole out of the fridge, in pieces in the fridge in a container for a maximum of 10 days",
+        "description": "Watermelon, native to tropical Africa, belongs to the same family as melon and pumpkin. There are many varieties, more or less large, with more or less seeds. Among the European denominations we find the Reggiana PGI watermelon.",
+        "nutritional_intake": "95% of watermelon is made up of water and the remaining 5% is made up of sugars, which is why it is used as a thirst-quenching remedy. It is therefore low in calories: a medium slice (150 g) provides only 23 Kcal. Very rich in carotenoids, it stands out for its high lycopene content. In addition, a slice contains 15% of the daily requirement of vitamin A, C and 5% of the daily requirement of an adult of potassium and magnesium.",
+        "tips": "When choosing a ripe watermelon, the colorless part of the skin should be yellow and not white. Place the fruit on your ear and compress it slightly: if it is at the right degree of ripeness, the pulp must crunch. Alternatively, give small strokes to the peel with your fingers, the sound should be dull. Watermelon is sensitive to cold, so it should be stored on the least cold shelf of the refrigerator. If you consume it shortly thereafter (within 8/10 days of purchase) you can keep it (whole, without cutting it) at room temperature."
+    },
+    "Clementine": {
+        "benefits": ["Vitamin C", "Vitamin A", "Folate", "Potassium", "Carotenes"],
+        "how_to_choose": "Orange color, turgid and full texture, without soft parts",
+        "how_to_store": "A week at room temperature or two and a half weeks in the fridge",
+        "description": "From the cross between mandarin and bitter orange comes the clementine, seedless. The main names of this fruit are: the Clementine of the Gulf of Taranto PGI (contains a maximum of 3 seeds), the Clementine of Calabria PGI (seedless).",
+        "nutritional_intake": "Like all citrus fruits, clementines are rich in vitamin C (a little less, however, than oranges): two provide almost the entire daily requirement of this vitamin. They also contain carotenes, vitamin A, folate and potassium. Few calories, on the other hand, due to the high percentage of water: a 150 g portion (2 fruits) provides about 100 Kcal.",
+        "tips": "This fruit cannot be frozen, the best method of preservation at home for a short period is to store tangerines in the coolest part of the kitchen or on the least cold shelf of the refrigerator. If you want to store them for a longer period they can stay at a temperature between 3 and 5 ° C."
+    },
+    "Artichoke": {
+        "benefits": ["Fiber", "Vitamin C", "Iron", "Magnesium", "Phosphorus"],
+        "how_to_choose": "Shiny, closed and intense green leaves, with a white heart",
+        "how_to_store": "In the fridge for up to 3 days",
+        "description": "The part we eat of the plant is the flower bud, in fact it is one of the few vegetables in the form of a flower that we usually consume together with broccoli and cauliflower. Artichokes are divided into two groups, namely thorny and non-thorny. Among the thorny we have the Spiny Artichoke of Sardinia PDO, among the non-thorny we have the Romanesco Artichoke of Lazio PGI, the Artichoke of Paestum PGI and the Brindisi artichoke.",
+        "nutritional_intake": "The edible part of the artichoke is about 1/3 of the total. It is low in calories, a good vegetable source of iron, magnesium and phosphorus. The potassium and vitamin C content is decent. It also stimulates intestinal transit also thanks to the action of fiber (a portion of 250 g, equal to 3-4 artichokes without waste, provides 50% of the recommended daily fiber intake).",
+        "tips": "The type of color depends on the variety and not on the degree of ripeness. To choose a good artichoke at the time of purchase, it must be fleshy and heavy, as well as with shiny, closed and very green leaves. A dry stem, discolored or spotted leaves indicate a lack of freshness. When cut, the heart must not be black, if it is, it means that it has suffered frost damage. They can be stored for up to 3 days, raw and whole, in the refrigerator. Once cooked, they should not be stored because they deteriorate easily."
+    },
+    "Asparagus": {
+        "benefits": ["Vitamin A", "Vitamin C"],
+        "how_to_choose": "Green tips, tightly tightened, straight and firm shaft",
+        "how_to_store": "2/3 days wrapped in a damp cloth in the refrigerator",
+        "description": "Asparagus are the young and tender shoots of the plant of the same name. Depending on the variety, they can be green, violet or white (the latter grow underground). The White Asparagus of Bassano is the only PDO, while the PGI designation includes the Asparagus of Cantello, the Asparagus of Badoere, the Green Asparagus of Altedo and the White Asparagus of Cimadolmo.",
+        "nutritional_intake": "Asparagus has a low calorie content (87 Kcal per serving of 250 g already cleaned) because it contains a lot of water and few energy nutrients. It is a very suitable vegetable in low-calorie diets. Good source of vitamin A (a 250 g serving provides 50% of the daily requirement) and vitamin C (almost all of the recommended amount per serving).",
+        "tips": "Choose fresh asparagus with tightly tightened and compact tips, with a straight and firm stem: bending it must break cleanly. They can be kept in the refrigerator for 2/3 days wrapped in a damp cloth, but they can also be frozen. Remove the woodiest part of the stem and cook them in a tall pot, arranged vertically, so the sprouts remain above the water level and steam. With this cooking you will not reduce the vitamin C content excessively."
+    },
+    "Green been": {
+        "benefits": ["Vitamin A", "Vitamin C", "Folate", "Potassium", "Phosphorus", "Carotenes"],
+        "how_to_choose": "Embossed seeds, vivid and bright color, no stains, easy to open",
+        "how_to_store": "In the fridge drawer for up to 5 days",
+        "description": "The green bean is a legume fruit, the pod that contains the seeds of the plant. Green beans are harvested early, when the seeds are still small. There are two types of green beans: a flat one and a round one.",
+        "nutritional_intake": "Its nutritional characteristics consist of its low caloric intake, consisting of few carbohydrates and proteins, its richness in fiber and the important amount of vitamins: vitamin A, carotenes, folic acid (with a 250 g portion you cover the entire daily requirement), and vitamin C (the latter is lost during cooking).",
+        "tips": "Green beans can be stored for almost a week on the least cold shelf of the refrigerator, in a plastic bag with holes in it. They can also be frozen but you need a quick passage in boiling water first, then drain and cool them."
+    },
+    "Beetroot": {
+        "benefits": ["Folate", "Vitamin C", "Potassium", "Magnesium", "Phosphorus"],
+        "how_to_choose": "Bright red color, stiff and clean leaves and stems, non-withered and flaccid body",
+        "how_to_store": "In the fridge for up to 3 days",
+        "description": "Beetroot is not to be confused with (white) sugar beet. This is red in color and also has the root as an edible part.",
+        "nutritional_intake": "Rich in water, low in calories (45 Kcal per 250 g serving) and nothing in fat, its macronutrients consist of few simple sugars and a low protein content. It is a good source of potassium and folate. They are present in fair quantities of vitamin C, magnesium and phosphorus. It therefore has a high antioxidant content but its fiber intake, compared to other vegetables, is lower.",
+        "tips": "If it looks flabby and wilted, it means that it has lost water and that it was harvested a long time ago. To best preserve its nutritional intake, eat it as a side dish or raw in salads. Alternatively, given its antioxidant characteristics, it is recommended as an infusion for tea and herbal teas."
+    },
+    "Broad been": {
+        "benefits": ["Protein", "Vitamin C", "Folate", "Vitamin B3", "Iron", "Phosphorus", "Zinc", "Carotenes", "Polyphenols"],
+        "how_to_choose": "Embossed seeds, vivid and bright color, No stains, easy to open",
+        "how_to_store": "In the fridge drawer for a maximum of 5 days",
+        "description": "The large and fleshy broad bean pods are covered with white fuzz inside. They contain flat, irregular and green seeds. It is well known in the Apulian area, but the beans certified with the denomination are mostly Greek. The consumption of fava beans can cause serious disorders for those suffering from favism, similar to the symptoms of anemia.",
+        "nutritional_intake": "Being a legume, it is rich in protein: a portion of 250 g covers 20% of the daily requirement. The content of B vitamins and vitamin C (the latter is lost during cooking) is very interesting. Very rich in minerals, including selenium, it also contains several groups of polyphenols which, together with all other nutrients, help the drainage of liquids and improve the functionality of the urinary tract.",
+        "tips": "If you don't consume them immediately, you can dry them, or freeze them: after blanching them for about 3 minutes, they are left to cool and put in plastic bags. To enjoy them at their best, try mashed broad beans."
+    },
+    "Broccoli": {
+        "benefits": ["Fiber", "Protein", "Vitamin A", "Vitamin C", "Folate", "Potassium", "Magnesium", "Iron", "Phosphorus", "Polyphenols", "Carotenes"],
+        "how_to_choose": "Flowers of the right color, clean, hard, compact, very tight-grained, green and tender leaves",
+        "how_to_store": "In the refrigerator for up to 5 days, in a bag with holes in it",
+        "description": "Belonging to the same genus, we eat the flowers of cauliflower and broccoli while we eat the leaves of cabbage, Brussels sprout and cabbage. The inflorescences of cauliflower are white, purple, green or compact orange depending on the type. The snails of the Roman cabbage, on the other hand, are yellow-green. Those of broccoli are small and green.",
+        "nutritional_intake": "Leafy cabbage is lower in calories than flower cabbage. Both exceptional in their fiber content, a 200g serving of Brussels sprouts covers 50% of the daily intake recommended by nutritionists. Good source of vegetable protein. Vitamin C and vitamin A are very present, in one portion we abundantly cover our daily needs. A serving of Brussels sprouts covers 75% of the folate requirement.",
+        "tips": "First of all, we recommend that you do not wash them until you are ready to eat them. For cleaning, it is not recommended to soak them in water, but it is better to quickly pass the parts to be cleaned under running water. Once cooked, they can be stored in the refrigerator for a few days, well drained and covered with aluminum foil. The cooking of these vegetables can be very annoying due to the bad smell emanating from the sulfur compounds present: to overcome this inconvenience, you can use a pressure cooker or try adding lemon juice or a tablespoon of vinegar to the pot. A curiosity: stems and leaves, waste parts of broccoli, have the same vitamin A and magnesium content as the flowers."
+    },
+    "Brussels sprout": {
+        "benefits": ["Fiber", "Protein", "Vitamin A", "Vitamin C", "Folate", "Potassium", "Magnesium", "Iron", "Phosphorus", "Polyphenols", "Carotenes"],
+        "how_to_choose": "Flowers of the right color, clean, hard, compact, very tight-grained, green and tender leaves",
+        "how_to_store": "In the refrigerator for up to 5 days, in a bag with holes in it",
+        "description": "Belonging to the same genus, we eat the flowers of cauliflower and broccoli while we eat the leaves of cabbage, Brussels sprout and cabbage. The inflorescences of cauliflower are white, purple, green or compact orange depending on the type. The snails of the Roman cabbage, on the other hand, are yellow-green. Those of broccoli are small and green.",
+        "nutritional_intake": "Leafy cabbage is lower in calories than flower cabbage. Both exceptional in their fiber content, a 200g serving of Brussels sprouts covers 50% of the daily intake recommended by nutritionists. Good source of vegetable protein. Vitamin C and vitamin A are very present, in one portion we abundantly cover our daily needs. A serving of Brussels sprouts covers 75% of the folate requirement.",
+        "tips": "First of all, we recommend that you do not wash them until you are ready to eat them. For cleaning, it is not recommended to soak them in water, but it is better to quickly pass the parts to be cleaned under running water. Once cooked, they can be stored in the refrigerator for a few days, well drained and covered with aluminum foil. The cooking of these vegetables can be very annoying due to the bad smell emanating from the sulfur compounds present: to overcome this inconvenience, you can use a pressure cooker or try adding lemon juice or a tablespoon of vinegar to the pot. A curiosity: stems and leaves, waste parts of broccoli, have the same vitamin A and magnesium content as the flowers."
+    },
+    "Cabbage": {
+        "benefits": ["Fiber", "Protein", "Vitamin A", "Vitamin C", "Folate", "Potassium", "Magnesium", "Iron", "Phosphorus", "Polyphenols", "Carotenes"],
+        "how_to_choose": "Flowers of the right color, clean, hard, compact, very tight-grained, green and tender leaves",
+        "how_to_store": "In the refrigerator for up to 5 days, in a bag with holes in it",
+        "description": "Belonging to the same genus, we eat the flowers of cauliflower and broccoli while we eat the leaves of cabbage, Brussels sprout and cabbage. The inflorescences of cauliflower are white, purple, green or compact orange depending on the type. The snails of the Roman cabbage, on the other hand, are yellow-green. Those of broccoli are small and green.",
+        "nutritional_intake": "Leafy cabbage is lower in calories than flower cabbage. Both exceptional in their fiber content, a 200g serving of Brussels sprouts covers 50% of the daily intake recommended by nutritionists. Good source of vegetable protein. Vitamin C and vitamin A are very present, in one portion we abundantly cover our daily needs. A serving of Brussels sprouts covers 75% of the folate requirement.",
+        "tips": "First of all, we recommend that you do not wash them until you are ready to eat them. For cleaning, it is not recommended to soak them in water, but it is better to quickly pass the parts to be cleaned under running water. Once cooked, they can be stored in the refrigerator for a few days, well drained and covered with aluminum foil. The cooking of these vegetables can be very annoying due to the bad smell emanating from the sulfur compounds present: to overcome this inconvenience, you can use a pressure cooker or try adding lemon juice or a tablespoon of vinegar to the pot. A curiosity: stems and leaves, waste parts of broccoli, have the same vitamin A and magnesium content as the flowers."
+    },
+    "Carrot": {
+        "benefits": ["Fiber", "Vitamin A", "Carotenes"],
+        "how_to_choose": "Bright orange color, smooth without buds",
+        "how_to_store": "In the fridge for up to 10 days in a perforated bag",
+        "description": "The carrot is a root that grows underground, it is a very versatile vegetable. Among the carrots of the appellation are the Carota Novella di Ispica PGI and the Carrot of the Fucino Plateau PGI.",
+        "nutritional_intake": "Low in calories, the carrot surprises with its contribution of vitamin A and carotenes (with a 250 g portion of carrots, on average, you take in an amount of vitamin A equal to 4 times the recommended amount). The carrot is also rich in fiber. When fresh, it is very hard and crunchy.",
+        "tips": "Too large and too lignified core indicate that the carrot was harvested too late. An excess of beta-carotene is not good for your health: if you eat one or two servings of carrots, avoid taking carotenoid-based supplements or other food sources that contain carotenoids. Prolonged cooking (boiled or stewed) will help make these elements more available for absorption."
+    },
+    "Cauliflower": {
+        "benefits": ["Vitamin C", "Fiber"],
+        "how_to_choose": "Look for firm, compact heads with no dark spots or yellowing. The leaves should be fresh and green.",
+        "how_to_store": "Store in the refrigerator, wrapped in a perforated plastic bag, for up to a week.",
+        "description": "Cauliflower is a cruciferous vegetable known for its white, compact florets. It is versatile and can be eaten raw, roasted, boiled, or mashed as a low-carb alternative to potatoes.",
+        "nutritional_intake": "Rich in vitamin C and fiber, cauliflower supports the immune system and digestive health. It also contains antioxidants that help reduce inflammation.",
+        "tips": "To prevent a strong odor when cooking, add a little lemon juice or vinegar to the water. Try roasting it to enhance its natural sweetness."
+    },
+    "Chicory": {
+        "benefits": ["Vitamin K", "Fiber", "Folate"],
+        "how_to_choose": "Choose fresh, crisp leaves with a deep green color. Avoid wilted or yellowing leaves.",
+        "how_to_store": "Keep in the fridge wrapped in a damp cloth or plastic bag. Use within 3-4 days for the best flavor.",
+        "description": "Chicory is a leafy green with a slightly bitter taste, commonly used in salads, soups, and sautés. It is often associated with Mediterranean cuisine.",
+        "nutritional_intake": "High in fiber and antioxidants, chicory aids digestion and supports liver function. It is also a source of vitamin K, which is important for bone health.",
+        "tips": "Blanch chicory before cooking to reduce its bitterness. It pairs well with garlic and olive oil for a flavorful side dish."
+    },
+    "Corn": {
+        "benefits": ["Carbohydrates", "Fiber", "Vitamin B6", "Magnesium"],
+        "how_to_choose": "Look for bright green husks that fit tightly around the cob. The kernels should be plump and evenly spaced.",
+        "how_to_store": "Store corn in the husk in the refrigerator for up to 3 days. For longer storage, freeze the kernels.",
+        "description": "Corn is a starchy vegetable and grain widely consumed worldwide. It is used fresh, dried, or ground into flour for various culinary applications.",
+        "nutritional_intake": "Corn provides energy through carbohydrates and contains fiber for digestive health. It is also a good source of vitamin B6 and magnesium.",
+        "tips": "For the best flavor, cook fresh corn as soon as possible after purchasing. Grilling or boiling enhances its natural sweetness."
+    },
+    "Cucumber": {
+        "benefits": ["Vitamin C", "Potassium"],
+        "how_to_choose": "Intense green colour, without spots, firm, with tender seeds",
+        "how_to_store": "Up to a week in the refrigerator. If already cut, wrap it in plastic wrap",
+        "description": "Cucumber belongs to the same family as melon and zucchini. Originally, the taste of cucumber was bitter, unlike the varieties we encounter today.",
+        "nutritional_intake": "Very rich in water, this vegetable is among the lowest in calories (33 Kcal per 250 g of cucumbers), has little sodium and a fair potassium content. It also has a good vitamin C content. Famous for being used in cosmetics, with a draining and toning action on the skin, it also has an emollient and soothing action on the gastro-intestinal tract.",
+        "tips": "Larger cucumbers can have a floury consistency and be more bitter: once cut, to make it more digestible and less bitter, just cut it into slices and let it macerate in coarse salt a few hours before consuming it. Once it has released the bitter water, wash it, drain it and season it. Enjoy it raw in a salad or accompanied by a yogurt sauce. They are also consumed in vinegar, the so-called gherkins. Cucumbers sold for fresh consumption have a hard skin, while those used for pickles must have a fine and relatively tender skin."
+    },
+    "Eggplant": {
+        "benefits": ["Fiber", "Vitamin C"],
+        "how_to_choose": "Turgid, shiny, the color of variation, without lesions and rotted parts",
+        "how_to_store": "In the fridge for a maximum of 4 days",
+        "description": "The edible part of the eggplant is the fruit. There are numerous varieties of different shapes and colors, the most consumed are: the round of Florence with light purple skin and delicate taste, the Palermitana with a round shape and a tender and tasty dark purple color, the Naples violet with an elongated and slender shape with a pulp with a strong and spicy flavor. In addition, with a shape similar to a tomato and red in color, the Aubergine Rossa di Rotonda PDO is the only type of aubergine certified at European level.",
+        "nutritional_intake": "Very rich in water, in fact it dries out a lot during cooking: for this reason it is a low-calorie vegetable. Its vitamin C content is decent, although some of it is lost with cooking. It provides a lot of fiber, with a 200 g portion you cover a quarter of the recommended fiber intake per day.",
+        "tips": "When storing it, it is better not to remove the stalk. In the kitchen, the tonda di Firenze lends itself to pies and accompaniments to meat and cheese. The palermois suitable for preserves and fried foods. The violet of Naples lends itself very well to a \"mushroom\" cut. The red of Rotonda PDO can be tasted in different ways, depending on your imagination and favorite recipes."
+    },
+    "Endive": {
+        "benefits": ["Vitamin K", "Fiber", "Folate"],
+        "how_to_choose": "Look for crisp, fresh leaves with a bright green or pale yellow color, depending on the variety. Avoid wilted or browning leaves.",
+        "how_to_store": "Store in the refrigerator wrapped in a damp cloth or in a plastic bag for up to 5 days.",
+        "description": "Endive is a leafy vegetable from the chicory family, known for its slightly bitter taste. It is often used in salads, sautéed, or grilled.",
+        "nutritional_intake": "Rich in vitamin K and fiber, endive promotes bone health and digestion. It also contains folate, which is essential for cell growth.",
+        "tips": "To reduce bitterness, soak endive leaves in cold water for a few minutes before using them in salads or cooking."
+    },
+    "Onion": {
+        "benefits": ["Vitamin C", "Fiber"],
+        "how_to_choose": "Choose firm onions with dry, papery skin and no soft spots. Avoid sprouted or moldy onions.",
+        "how_to_store": "Store in a cool, dry, well-ventilated place away from potatoes to prevent sprouting. Cut onions should be refrigerated and used within a few days.",
+        "description": "Onions are a widely used vegetable with a strong flavor, available in different varieties such as red, white, and yellow. They can be eaten raw, cooked, caramelized, or pickled.",
+        "nutritional_intake": "Onions contain antioxidants and sulfur compounds that may support heart health. They are also a source of vitamin C and fiber, aiding immunity and digestion.",
+        "tips": "To reduce tears when cutting onions, chill them in the fridge for 15 minutes before slicing. Cooking onions slowly enhances their natural sweetness."
+    },
+    "Parsnip": {
+        "benefits": ["Fiber", "Vitamin C", "Potassium", "Folate"],
+        "how_to_choose": "Look for firm, smooth, and pale-colored parsnips. Avoid ones that are soft, shriveled, or have dark spots.",
+        "how_to_store": "Store in the refrigerator in a plastic bag for up to two weeks. Keep away from excess moisture to prevent spoilage.",
+        "description": "Parsnips are root vegetables similar in shape to carrots but with a cream-colored exterior and a sweet, nutty flavor. They are commonly used in soups, roasts, and mashes.",
+        "nutritional_intake": "Parsnips are rich in fiber, which supports digestion. They also provide vitamin C for immunity, potassium for heart health, and folate for cell function.",
+        "tips": "Roasting parsnips brings out their natural sweetness. For a smoother texture, boil and mash them like potatoes."
+    },
+    "Pea": {
+        "benefits": ["Protein", "Fiber", "Vitamin C", "Vitamin A", "Vitamin B1", "Vitamin B2", "Folate", "Iron", "Phosphorus", "Zinc", "Potassium", "Calcium", "Carotenes", "Polyphenols"],
+        "how_to_choose": "Green in color, shiny, to the touch they must creak slightly",
+        "how_to_store": "In the fridge for up to two weeks or frozen",
+        "description": "The pea is the seed of a pod. Normally only the seed is consumed, except in the case of soft peas (snow peas or peas that are eaten whole).",
+        "nutritional_intake": "From a nutritional point of view, they are both legumes and vegetables: as legumes they are rich in protein, but if eaten fresh and green they are rich in vitamin C like vegetables (a hectogram of peas provides almost 50% of the daily requirement of vitamin C). Their fiber content is also not insignificant. Excellent content of vitamins and minerals, the content of iron, phosphorus and zinc is also high. Good potassium and calcium levels. Among the typical pigments of green leaves we find lutein, a carotenoid that acts as a precursor of vitamin A. Among the polyphenols we find isoflavones.",
+        "tips": "On the market you can mainly find frozen or canned peas. When you buy them fresh, with the pod, you should store them in the refrigerator at 4-5 ° C for up to 10-12 days. At room temperature they can be stored for no more than 3 days."
+    },
+    "Bell pepper": {
+        "benefits": ["Fiber", "Vitamin A", "Vitamin C", "Carotenes"],
+        "how_to_choose": "Hard, firm, fleshy, shiny, with a green stalk",
+        "how_to_store": "In the fridge drawer for up to 4 days",
+        "description": "The pepper is native to South America and owes its name to the first specimens that crossed the ocean: they were spicy and the flavor was reminiscent of pepper. We find them in yellow, green or red depending on the variety. Among the types that have obtained recognition we have the Pontecorvo PDO pepper and the Senise PGI pepper.",
+        "nutritional_intake": "Rich in water, depending on the flavor there are sweet peppers and hot peppers - for the latter the spicy taste depends on the presence of a substance called capsaicin. Of great importance is the high content of vitamin C (just one ounce of peppers introduces more than double the recommended daily requirement), vitamin A and carotenes (especially in red ones).",
+        "tips": "Peppers are generally eaten fresh or roasted. They are also an important ingredient in a large number of recipes, such as stuffed peppers, peperonata, etc. To roast them on the grill, the meatiest, juiciest and most tender ones (yellow peppers) are used, easy to peel. Red peppers, on the other hand, have a consistent, crunchy and sugary pulp. Dried peppers are also widely used."
+    },
+    "Pumpkin flowers": {
+        "benefits": ["Vitamin C", "Vitamin A", "Iron"],
+        "how_to_choose": "Select bright yellow or orange flowers with fresh, firm petals. Avoid wilted or bruised flowers.",
+        "how_to_store": "Store in the refrigerator wrapped in a damp paper towel inside an airtight container. Use within 1-2 days, as they are highly perishable.",
+        "description": "Pumpkin flowers, also known as squash blossoms, are edible flowers from pumpkin and zucchini plants. They have a delicate texture and mild, slightly sweet flavor, commonly used in Italian and Mexican cuisine.",
+        "nutritional_intake": "Rich in vitamin C and A, pumpkin flowers support immunity and eye health. They also contain iron and antioxidants, which help protect cells from damage.",
+        "tips": "Pumpkin flowers are best enjoyed fresh. They can be stuffed with ricotta, lightly battered and fried, or added to pasta and soups for a delicate flavor."
+    },
+    "Pumpkin": {
+        "benefits": ["Fiber", "Vitamin A", "Vitamin C", "Potassium", "Iron", "Carotenes"],
+        "how_to_choose": "Without imperfections on the skin and outwardly shiny, stalk well firm, firm pulp",
+        "how_to_store": "In the fridge for up to 5 days",
+        "description": "The pumpkin plant belongs to the same family as zucchini, eggplant, melon and watermelon - the cucurbits. We have two varieties of pumpkin, the Maxima and the Moschata. From the Maxima we remember the Mantovana, flattened and ribbed in shape with a sweet and aromatic taste. Of the Moschata the long flood of Naples and the flood of Chioggia, both with a more fibrous pulp than the Maxima Mantovana.",
+        "nutritional_intake": "From a nutritional point of view, pumpkin is low in calories, only 45 per 250 g serving. It provides a moderate amount of fiber and, with the exception of potassium and iron, not many mineral salts. At the same time, however, it is very rich in carotenes (from which it derives its color) and vitamin A: in practice, already with 100 g of pumpkin it is possible to cover the entire daily requirement of this vitamin. Per serving there is a fair amount of vitamin C.",
+        "tips": "The pumpkin keeps very well, in a cool and dry place, even for a few months. Once opened, however, it must be placed in the refrigerator and consumed within 4-5 days. The pumpkin, although recognized in the Italian tradition, has no particular denominations. In the only case of Ferrara pumpkin cappellacci we find this recognized as IGP."
+    },
+    "Radish": {
+        "benefits": ["Vitamin C", "Fiber", "Potassium"],
+        "how_to_choose": "Choose firm, smooth, and brightly colored radishes with fresh, green leaves. Avoid soft or wrinkled ones.",
+        "how_to_store": "Store radishes in the refrigerator in a perforated plastic bag. Remove the leaves before storing to keep them fresh for up to a week.",
+        "description": "Radishes are root vegetables known for their crisp texture and peppery flavor. They come in different varieties, including red, white, and black radishes, and are commonly used in salads and as garnishes.",
+        "nutritional_intake": "Radishes are low in calories and high in fiber, vitamin C, and antioxidants. They support digestion, boost the immune system, and help maintain healthy skin.",
+        "tips": "For a milder taste, soak radishes in cold water before eating. Use them fresh in salads, pickled, or roasted for a sweeter, softer flavor."
+    },
+    "Zucchini": {
+        "benefits": ["Fiber", "Vitamin C", "Folate", "Potassium", "Phosphorus"],
+        "how_to_choose": "Taut and not wrinkled skin, preferably with few seeds because of higher quality",
+        "how_to_store": "In the fridge for a maximum of 4 days",
+        "description": "The varieties of zucchini have different shapes and colors: there is the Bianca di Trieste, the Genovese - with a cylindrical and elongated shape with the flower on top, the Tonda di Nizza and the green of Milan.",
+        "nutritional_intake": "The fruit of the zucchini is consumed, which is mostly rich in water and therefore provides few calories per portion (22 Kcal per 200 g). Mostly made up of fiber, it contains few vitamins (C, B2, folate) that are largely lost during cooking. Among the mineral salts we find a fair percentage of potassium and phosphorus.",
+        "tips": "National open field products are available from May to September, so it is preferable to consume zucchini during this period. Avoid greenhouse products that are usually found from November to April."
+    },
+    "Sweet potato": {
+        "benefits": ["Vitamin A", "Vitamin C", "Fiber", "Potassium"],
+        "how_to_choose": "Select firm, smooth sweet potatoes with even skin color. Avoid those with soft spots, cracks, or sprouting.",
+        "how_to_store": "Store in a cool, dry, and dark place (not in the refrigerator) to prevent hardening. They can last up to 2-3 weeks.",
+        "description": "Sweet potatoes are starchy root vegetables known for their naturally sweet flavor and vibrant orange flesh. They come in different varieties, ranging from white to deep purple. They are versatile and used in both savory and sweet dishes.",
+        "nutritional_intake": "Rich in vitamin A (beta-carotene), vitamin C, fiber, and potassium, sweet potatoes support immune function, digestion, and heart health. They are also a good source of complex carbohydrates and antioxidants.",
+        "tips": "For a richer flavor, bake sweet potatoes instead of boiling them. They can be mashed, roasted, or turned into fries, soups, and desserts. Leaving the skin on adds extra fiber and nutrients."
+    },
+    "Tomato": {
+        "benefits": ["Vitamin C", "Vitamin A", "Potassium", "Carotenes"],
+        "how_to_choose": "Skin with a uniform color, without spots, cracks and wrinkles",
+        "how_to_store": "In the fridge for up to 4 days",
+        "description": "The tomato is a red fruit, more or less intense, fleshy and succulent. The skin becomes more fragile and thin as it matures, the seeds are very numerous, flattened in shape and surrounded by a very fluid gel. Among the many varieties, the San Marzano Tomato and the Piennolo Tomato of Vesuvius have obtained the PDO recognition, while the Pachino Tomato has obtained the PGI.",
+        "nutritional_intake": "Tomatoes are rich in water, about 95%: this is why they are low-calorie. In addition, a 200 g portion is rich in potassium and vitamin C, with a decent content of vitamin A and carotenes. Other B vitamins, vitamin E and selenium are present in quantities close to 10% of the daily requirement.",
+        "tips": "The ideal varieties to be enjoyed raw, properly rinsed and cleaned of soil and residues, are the so-called \"table\" varieties, namely: Sardinian, cherry tomatoes, ribs, ox heart and copper. The ideal ones to be cooked, to make sauces or just preserves are instead the perino and the san marzano. Furthermore, they should not be placed below 0° when stored, as they can come undone when thawed and give rise to rot. Smaller ones can be stored in the side door."
+    },
+    "Turnip": {
+        "benefits": ["Fiber", "Vitamin C", "Vitamin B3", "Potassium", "Iron", "Polyphenols", "Carotenes"],
+        "how_to_choose": "Firm and thin stems, closed inflorescences without yellow parts, green leaves, consistent",
+        "how_to_store": "In the refrigerator for up to 5 days, in a bag with holes in it",
+        "description": "Its name suggests the part we eat of this vegetable. In fact, we eat the leaves, flowers and the final part of the stem of the turnip. It belongs to the same genus as cabbage but its slightly more bitter taste distinguishes it. Two types are very tasty: the Bari one, with a hard stem and numerous leaves and the Neapolitan one, with a softer stem.",
+        "nutritional_intake": "It provides few calories, despite the good taste it gives: a 200 g portion provides 46 Kcal. Very rich in fiber, the vitamin C content is considerable as well as the niacin (vitamin B3) content. The iron and potassium content is moderate. The presence of bioactive substances, typical of leafy vegetables and vegetables with a sulfur aftertaste, should be noted: for this reason, turnip greens are recognized for having a draining effect on body fluids, as well as antioxidant activity.",
+        "tips": "To clean the turnip greens in the best possible way, you must first remove the hard stems and the thickest and largest leaves, then selecting the florets and leaves, discarding the older ones leaving only the tender ones. Rinse them under cool running water and clean them with your hands."
+    },
+    "Turnip greens": {
+        "benefits": ["Fiber", "Vitamin C", "Vitamin B3", "Potassium", "Iron", "Polyphenols", "Carotenes"],
+        "how_to_choose": "Firm and thin stems, closed inflorescences without yellow parts, green leaves, consistent",
+        "how_to_store": "In the refrigerator for up to 5 days, in a bag with holes in it",
+        "description": "Its name suggests the part we eat of this vegetable. In fact, we eat the leaves, flowers and the final part of the stem of the turnip. It belongs to the same genus as cabbage but its slightly more bitter taste distinguishes it. Two types are very tasty: the Bari one, with a hard stem and numerous leaves and the Neapolitan one, with a softer stem.",
+        "nutritional_intake": "It provides few calories, despite the good taste it gives: a 200 g portion provides 46 Kcal. Very rich in fiber, the vitamin C content is considerable as well as the niacin (vitamin B3) content. The iron and potassium content is moderate. The presence of bioactive substances, typical of leafy vegetables and vegetables with a sulfur aftertaste, should be noted: for this reason, turnip greens are recognized for having a draining effect on body fluids, as well as antioxidant activity.",
+        "tips": "To clean the turnip greens in the best possible way, you must first remove the hard stems and the thickest and largest leaves, then selecting the florets and leaves, discarding the older ones leaving only the tender ones. Rinse them under cool running water and clean them with your hands."
+    },
+    "Potato": {
+        "benefits": ["Fiber", "Vitamin C", "Vitamin B1", "Vitamin B3", "Vitamin B6", "Potassium", "Phosphorus", "Iron"],
+        "how_to_choose": "Healthy, whole, free of sprouts and soil encrustations",
+        "how_to_store": "Up to two weeks in a cool, dark and dry place",
+        "description": "The tuber of the potato is consumed. The potato varieties are divided by the color of the paste as well as by the shape that can be round and oval, elongated or cylindrical. By type of pasta we have the white-fleshed ones, the yellow-fleshed ones and the Vitelotta (purple-fleshed). For the shape we find almost all of them round and oval except the American (elongated shape). The Sila PGI potato and the PDO Bologna potato have obtained the awards.",
+        "nutritional_intake": "Potatoes are more caloric than other roots and vegetables, but that doesn't mean they're to be discarded. A 200 g serving provides 150 Kcal given mainly by complex carbohydrates and also provides 13% of the recommended daily intake of fiber. Rich in vitamins, even if it loses a large content when cooked, potassium predominates among the minerals present, followed by phosphorus, iron and to a lesser extent zinc.",
+        "tips": "Do not store potatoes in conditions below 0° C: if they remain there for several days they become indigestible even after cooking. On the other hand, to keep the nutrient content as unchanged as possible, it is preferable not to cook potatoes in water but in the oven, in foil or steam and peel them only after cooking. Potatoes are not rich in selenium by nature, but are enriched in cultivation. This element is found more present in cereals or nuts."
+    },
+    "Shallot": {
+        "benefits": ["Vitamin C", "Fiber", "Manganese"],
+        "how_to_choose": "Choose firm shallots with dry, papery skin and no soft spots or sprouting.",
+        "how_to_store": "Store in a cool, dry, and dark place. Keep them in a mesh bag or basket for proper air circulation.",
+        "description": "Shallots are a type of small, elongated onion with a milder, sweeter flavor. They are commonly used in gourmet cooking, sauces, and dressings.",
+        "nutritional_intake": "Rich in antioxidants, fiber, and vitamins, shallots contribute to heart health, immune support, and digestion. They also contain allicin, which has antibacterial properties.",
+        "tips": "To reduce the intensity of their taste, soak shallots in cold water before using them raw in salads or dressings."
+    },
+    "Pickled cucumber": {
+        "benefits": ["Vitamin K"],
+        "how_to_choose": "Pick firm, well-sealed pickles without cloudiness in the brine.",
+        "how_to_store": "Store unopened jars in a cool, dark place. Once opened, keep them refrigerated and submerged in brine.",
+        "description": "Pickled cucumbers, also known as pickles, are cucumbers fermented or preserved in vinegar or brine. They offer a tangy, crunchy texture and are commonly used in sandwiches and salads.",
+        "nutritional_intake": "Pickles are a good source of probiotics when naturally fermented. They provide vitamin K for bone health and electrolytes, making them a hydrating snack.",
+        "tips": "If pickles are too sour, soak them in water for a few minutes before eating. Use the brine in salad dressings or as a marinade."
+    },
+    "Radicchio": {
+        "benefits": ["Vitamin K", "Fiber"],
+        "how_to_choose": "Look for firm, crisp radicchio with deep red or purple leaves and no browning.",
+        "how_to_store": "Wrap in a damp paper towel and store in the fridge's crisper drawer. Use within a few days for the best texture.",
+        "description": "Radicchio is a leafy vegetable with a slightly bitter taste, often used in salads or grilled dishes. It belongs to the chicory family and is popular in Italian cuisine.",
+        "nutritional_intake": "Rich in antioxidants, vitamin K, and fiber, radicchio supports digestion and heart health. Its bitter compounds may aid liver function.",
+        "tips": "Grilling or roasting radicchio reduces its bitterness, making it a great addition to warm salads or pasta dishes."
+    },
+    "Fennel": {
+        "benefits": ["Fiber", "Vitamin C", "Folate", "Potassium", "Phosphorus"],
+        "how_to_choose": "Healthy, whole, clean, without shoots, with tight, fleshy, crunchy leaves, the heavier it is, the fresher it is",
+        "how_to_store": "In the refrigerator for 5/6 days",
+        "description": "Fennel is a bulb made up of layers of concentric leaves. The size and shape change according to the variety, the dessert of Florence is oval while the bulk of Naples and Sicily is round. Its taste is aromatic, mainly due to the presence of anethole.",
+        "nutritional_intake": "Fennel is very low in calories (22 Kcal per 250g serving) and rich in fiber. It covers 25% of the vitamin C requirement (if consumed raw) and provides the diet with a fair amount of potassium.",
+        "tips": "It is ideal for slimming diets, the round-shaped ones are ideal to be eaten raw, the elongated ones containing a lot of fiber, it is better to consume them steamed (to prevent them from losing vitamin C and folate)."
+    }
+}
