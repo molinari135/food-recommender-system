@@ -1,6 +1,6 @@
 import random
 import datetime
-from recsys import DataLoader, RecommenderSystem
+from food_recommender_system.recommender import DataLoader, RecommenderSystem
 from profiler import UserProfiler, UserProfileWithIntolerances
 import json
 
