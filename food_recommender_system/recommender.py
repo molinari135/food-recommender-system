@@ -283,23 +283,13 @@ class RecommenderSystem:
         if combined_preferences.empty:
             return data
 
-        # add the following categories without asking for preferences Sweets Breakfast, Baked Products Breakfast, Beverages, Lactose-Free Dairy Breakfast, Dairy Breakfast
-        breakfast_categories = ["Sweets Breakfast", "Baked Products Breakfast", "Beverages", "Lactose-Free Dairy Breakfast", "Dairy Breakfast", "Nuts Breakfast", "Nuts"]
-        jolly_categories = ["Fast Foods", "Sweets"]
-
-        breakfast_preferences = pd.concat([data[data["Category Name"] == category] for category in breakfast_categories])
-        jolly_preferences = pd.concat([data[data["Category Name"] == category] for category in jolly_categories])
-
-        # Add breakfast preferences to combined_preferences
-        combined_preferences = pd.concat([combined_preferences, breakfast_preferences, jolly_preferences])
-
         food_list = combined_preferences["Food Name"].unique()
         dataset_keys = combined_preferences["Food Name"].unique()
         self.user_profiler.set_food_preferences(food_list, dataset_keys)
         self.user_profiler.save_profile("user_profile.json")
 
         return combined_preferences.reset_index(drop=True)
-    
+
     def ask_seasonal_preferences(self):
 
         # Find seasonal fruits and vegetables
@@ -332,8 +322,8 @@ class RecommenderSystem:
             selected_vegetables = vegetables
 
         # Filter the user preferences dataframe to include only selected seasonal fruits and vegetables
-        selected_fruits_df = df[df['Food Name'].isin(selected_fruits)]
-        selected_vegetables_df = df[df['Food Name'].isin(selected_vegetables)]
+        selected_fruits_df = self.df[self.df['Food Name'].isin(selected_fruits)]
+        selected_vegetables_df = self.df[self.df['Food Name'].isin(selected_vegetables)]
 
         # Add breakfast preferences to combined_preferences
         combined_preferences = pd.concat([selected_fruits_df, selected_vegetables_df])
@@ -344,18 +334,18 @@ class RecommenderSystem:
         self.user_profiler.save_profile("user_profile.json")
 
 
-# user_profiler = UserProfiler()
-# user = user_profiler.load_profile("user_profile.json")
+user_profiler = UserProfiler()
+user = user_profiler.load_profile("user_profile.json")
 
-# dataloader = DataLoader()
-# df = dataloader.load_csv("nutritional-facts.csv")
-# seasonality = dataloader.load_json("food-seasonality.json")
+dataloader = DataLoader()
+df = dataloader.load_csv("nutritional-facts.csv")
+seasonality = dataloader.load_json("food-seasonality.json")
 
-# recommender = RecommenderSystem(
-#     df=df,
-#     seasonality=seasonality,
-#     user_profiler=user
-# )
+recommender = RecommenderSystem(
+    df=df,
+    seasonality=seasonality,
+    user_profiler=user
+)
 
-# recommender.ask_user_preferences()
-# recommender.ask_seasonal_preferences()
+recommender.ask_user_preferences()
+recommender.ask_seasonal_preferences()
