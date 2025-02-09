@@ -15,9 +15,17 @@
         "serving_size": 125,
         "frequency_per_week": 3
     },
+    "Lactose-Free Dairy Breakfast": {
+        "serving_size": 125,
+        "frequency_per_week": 7
+    },
     "Dairy": {
         "serving_size": 125,
         "frequency_per_week": 4
+    },
+    "Dairy Breakfast": {
+        "serving_size": 125,
+        "frequency_per_week": 7
     },
     "Eggs": {
         "serving_size": 50,
@@ -59,12 +67,28 @@
         "serving_size": 30,
         "frequency_per_week": 7
     },
+    "Nuts Breakfast": {
+        "serving_size": 30,
+        "frequency_per_week": 7
+    },
     "Greens": {
         "serving_size": 80,
         "frequency_per_week": 7
     },
     "Beverages": {
         "serving_size": 200,
+        "frequency_per_week": 14
+    },
+    "Sweets Breakfast": {
+        "serving_size": 20,
+        "frequency_per_week": 14
+    },
+    "Baked Products": {
+        "serving_size": 50,
+        "frequency_per_week": 14
+    },
+    "Baked Products Breakfast": {
+        "serving_size": 50,
         "frequency_per_week": 14
     }
 }

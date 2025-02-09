@@ -107,6 +107,7 @@ class UserProfiler:
                     diet=data["diet"],
                     intolerances=data["intolerances"],
                     food_preferences=data["food_preferences"],
+                    seasonal_preferences=data["seasonal_preferences"],
                     meals=data["meals"],
                     used_jolly=data["used_jolly"])
         except FileNotFoundError:

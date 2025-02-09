@@ -192,21 +192,22 @@ class RecommenderSystem:
 
         return fruits, vegetables
 
-    def find_similar_food(self, food_name: str, n: int = 1, same_category: bool = True, low_density_food: bool = True):
+    @staticmethod
+    def find_similar_food(df: pd.DataFrame, food_name: str, n: int = 1, same_category: bool = True, low_density_food: bool = True):
         similar_foods = []
 
         if same_category:
-            food_info = DataLoader.find_nutritional_info(self.df, only_numbers=False)
+            food_info = DataLoader.find_nutritional_info(df, food_name, only_numbers=False)
             if food_info is None:
                 return f"No information found for {food_name}"
 
             category = food_info["Category Name"].values[0]
-            food_A = DataLoader.find_nutritional_info(self.df, food_name).to_numpy().flatten()
+            food_A = DataLoader.find_nutritional_info(df, food_name).to_numpy().flatten()
 
-            for food in self.df[self.df["Category Name"] == category]["Food Name"]:
+            for food in df[df["Category Name"] == category]["Food Name"]:
                 if food == food_name:
                     continue
-                food_B = DataLoader.find_nutritional_info(self.df, food).to_numpy().flatten()
+                food_B = DataLoader.find_nutritional_info(df, food).to_numpy().flatten()
 
                 norm_A = norm(food_A)
                 norm_B = norm(food_B)
@@ -221,8 +222,8 @@ class RecommenderSystem:
             similar_foods = sorted(similar_foods, key=lambda x: x[1], reverse=True)
 
             if low_density_food:
-                similar_foods = sorted(similar_foods, key=lambda x: (DataLoader.compute_energy_density(self.df, x[0])[1], x[1]))
-                similar_foods = [(food, similarity, DataLoader.compute_energy_density(self.df, food)[0]) for food, similarity in similar_foods]
+                similar_foods = sorted(similar_foods, key=lambda x: (DataLoader.compute_energy_density(df, x[0])[1], x[1]))
+                similar_foods = [(food, similarity, DataLoader.compute_energy_density(df, food)[0]) for food, similarity in similar_foods]
 
             return similar_foods
 
@@ -334,18 +335,18 @@ class RecommenderSystem:
         self.user_profiler.save_profile("user_profile.json")
 
 
-user_profiler = UserProfiler()
-user = user_profiler.load_profile("user_profile.json")
+# user_profiler = UserProfiler()
+# user = user_profiler.load_profile("user_profile.json")
 
-dataloader = DataLoader()
-df = dataloader.load_csv("nutritional-facts.csv")
-seasonality = dataloader.load_json("food-seasonality.json")
+# dataloader = DataLoader()
+# df = dataloader.load_csv("nutritional-facts.csv")
+# seasonality = dataloader.load_json("food-seasonality.json")
 
-recommender = RecommenderSystem(
-    df=df,
-    seasonality=seasonality,
-    user_profiler=user
-)
+# recommender = RecommenderSystem(
+#     df=df,
+#     seasonality=seasonality,
+#     user_profiler=user
+# )
 
-recommender.ask_user_preferences()
-recommender.ask_seasonal_preferences()
+# recommender.ask_user_preferences()
+# recommender.ask_seasonal_preferences()
