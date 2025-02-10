@@ -115,76 +115,135 @@ def compute_meal_calories(meal: list, df: pd.DataFrame, servings: pd.DataFrame, 
     return calories
 
 
-if __name__ == "__main__":
-    user_profiler = UserProfiler.load_profile("user_profile.json")
-
+def generate_weekly_meal_plan(user_profiler: UserProfiler, dataloader: DataLoader, profile_file: str):
+    """
+    Generates a weekly meal plan based on user preferences and food servings data.
+    """
+    # Load user profile
     user_preferences = user_profiler.get_food_preferences()
     seasonal_preferences = user_profiler.get_seasonal_preferences()
     user_intolerances = user_profiler.get_intolerances()
     preferences = user_preferences + seasonal_preferences
 
-    dataloader = DataLoader()
+    # Load data
     df = dataloader.load_csv("nutritional-facts.csv")
     servings = dataloader.load_json("food-servings.json")
 
+    # Filter user preferences in the dataset
     user_preferences_df = df[df["Food Name"].isin(preferences)]
-    filtered_df = DataLoader.filter_categories(df, EXCLUDED_CATEGORIES)
+    filtered_df = DataLoader.filter_categories(df, EXCLUDED_CATEGORIES + user_intolerances)
     seasonal_foods = df[df["Food Name"].isin(seasonal_preferences)]
     filtered_df = pd.concat([filtered_df, seasonal_foods])
 
     servings_count = servings.copy()
-
     generated_meals = {"Breakfast": [], "Snack": [], "Lunch": [], "Dinner": []}
 
-    for _ in range(7):  # Loop 7 times to generate 7 breakfasts
+    # Generate 7 breakfasts and snacks
+    for _ in range(7):
         breakfast, similar_breakfast = generate_breakfast(user_preferences_df, filtered_df)
         snack, similar_snack = generate_snack(user_preferences_df, filtered_df)
         generated_meals["Breakfast"].append((breakfast, similar_breakfast))
         generated_meals["Snack"].append((snack, similar_snack))
 
-        # Categories for which meals need to be generated
+    # Categories for meal generation
     categories = ["Seafood", "Lactose-Free Dairy", "Dairy", "Eggs", "Legumes", "White Meat", "Cured Meat", "Red Meat"]
-
     meals = []
 
-    # Generate meals based on frequency_per_week for each category
+    # Generate meals based on frequency_per_week
     for category in categories:
         if category in servings_count:
             info = servings_count[category]
-            # Check if category is available in user preferences
             if not user_preferences_df[user_preferences_df["Category Name"] == category].empty:
                 for _ in range(info["frequency_per_week"]):
-                    # Generate a meal for each category
-                    if category == "Seafood":
-                        meal, similar_meal = generate_meal(user_preferences_df, filtered_df)  # Replace with the actual function
-                    elif category == "Lactose-Free Dairy":
-                        meal, similar_meal = generate_meal(user_preferences_df, filtered_df)
-                    elif category == "Dairy":
-                        meal, similar_meal = generate_meal(user_preferences_df, filtered_df)
-                    elif category == "Eggs":
-                        meal, similar_meal = generate_meal(user_preferences_df, filtered_df)
-                    elif category == "Legumes":
-                        meal, similar_meal = generate_meal(user_preferences_df, filtered_df)
-                    elif category == "White Meat":
-                        meal, similar_meal = generate_meal(user_preferences_df, filtered_df)
-                    elif category == "Cured Meat":
-                        meal, similar_meal = generate_meal(user_preferences_df, filtered_df)
-                    elif category == "Red Meat":
-                        meal, similar_meal = generate_meal(user_preferences_df, filtered_df)
-
-                    # Add the generated meals to the generated meals dictionary
+                    meal, similar_meal = generate_meal(user_preferences_df, filtered_df)
                     meals.append((meal, similar_meal))
 
-    # Randomly select 7 lunches and 7 dinners from the candidates
+    # Select 7 random lunches and 7 random dinners
     selected_lunches = random.sample(meals, 7)
     selected_dinners = random.sample(meals, 7)
-
-    # Store the selected meals in the generated_meals dictionary
     generated_meals["Lunch"] = selected_lunches
     generated_meals["Dinner"] = selected_dinners
 
+    # Save meal plan to profile
     user_profiler.set_meals(generated_meals)
-    user_profiler.save_profile("user_profile.json")
+    user_profiler.save_profile(profile_file)
+
+    return generated_meals
+
+
+if __name__ == "__main__":
+    profile_file = "user_profile.json"
+    user_profiler = UserProfiler.load_profile(profile_file)
+    dataloader = DataLoader()
+    generate_weekly_meal_plan(user_profiler, dataloader, profile_file)
+
+    # user_preferences = user_profiler.get_food_preferences()
+    # seasonal_preferences = user_profiler.get_seasonal_preferences()
+    # user_intolerances = user_profiler.get_intolerances()
+    # preferences = user_preferences + seasonal_preferences
+
+    # dataloader = DataLoader()
+    # df = dataloader.load_csv("nutritional-facts.csv")
+    # servings = dataloader.load_json("food-servings.json")
+
+    # user_preferences_df = df[df["Food Name"].isin(preferences)]
+    # filtered_df = DataLoader.filter_categories(df, EXCLUDED_CATEGORIES)
+    # seasonal_foods = df[df["Food Name"].isin(seasonal_preferences)]
+    # filtered_df = pd.concat([filtered_df, seasonal_foods])
+
+    # servings_count = servings.copy()
+
+    # generated_meals = {"Breakfast": [], "Snack": [], "Lunch": [], "Dinner": []}
+
+    # for _ in range(7):  # Loop 7 times to generate 7 breakfasts
+    #     breakfast, similar_breakfast = generate_breakfast(user_preferences_df, filtered_df)
+    #     snack, similar_snack = generate_snack(user_preferences_df, filtered_df)
+    #     generated_meals["Breakfast"].append((breakfast, similar_breakfast))
+    #     generated_meals["Snack"].append((snack, similar_snack))
+
+    #     # Categories for which meals need to be generated
+    # categories = ["Seafood", "Lactose-Free Dairy", "Dairy", "Eggs", "Legumes", "White Meat", "Cured Meat", "Red Meat"]
+
+    # meals = []
+
+    # # Generate meals based on frequency_per_week for each category
+    # for category in categories:
+    #     if category in servings_count:
+    #         info = servings_count[category]
+    #         # Check if category is available in user preferences
+    #         if not user_preferences_df[user_preferences_df["Category Name"] == category].empty:
+    #             for _ in range(info["frequency_per_week"]):
+    #                 # Generate a meal for each category
+    #                 if category == "Seafood":
+    #                     meal, similar_meal = generate_meal(user_preferences_df, filtered_df)  # Replace with the actual function
+    #                 elif category == "Lactose-Free Dairy":
+    #                     meal, similar_meal = generate_meal(user_preferences_df, filtered_df)
+    #                 elif category == "Dairy":
+    #                     meal, similar_meal = generate_meal(user_preferences_df, filtered_df)
+    #                 elif category == "Eggs":
+    #                     meal, similar_meal = generate_meal(user_preferences_df, filtered_df)
+    #                 elif category == "Legumes":
+    #                     meal, similar_meal = generate_meal(user_preferences_df, filtered_df)
+    #                 elif category == "White Meat":
+    #                     meal, similar_meal = generate_meal(user_preferences_df, filtered_df)
+    #                 elif category == "Cured Meat":
+    #                     meal, similar_meal = generate_meal(user_preferences_df, filtered_df)
+    #                 elif category == "Red Meat":
+    #                     meal, similar_meal = generate_meal(user_preferences_df, filtered_df)
+
+    #                 # Add the generated meals to the generated meals dictionary
+    #                 meals.append((meal, similar_meal))
+
+    # # Randomly select 7 lunches and 7 dinners from the candidates
+    # selected_lunches = random.sample(meals, 7)
+    # selected_dinners = random.sample(meals, 7)
+
+    # # Store the selected meals in the generated_meals dictionary
+    # generated_meals["Lunch"] = selected_lunches
+    # generated_meals["Dinner"] = selected_dinners
+
+    # user_profiler.set_meals(generated_meals)
+    # user_profiler.save_profile("user_profile.json")
 
     # meal, similar_meal = generate_meal(user_preferences_df, filtered_df)
     # breakfast, similar_breakfast = generate_breakfast(user_preferences_df, filtered_df)

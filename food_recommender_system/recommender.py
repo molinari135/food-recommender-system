@@ -227,6 +227,7 @@ class RecommenderSystem:
 
             return similar_foods
 
+
     def ask_user_preferences(self):
         preferences = {}
 
