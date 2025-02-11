@@ -131,7 +131,10 @@ def generate_weekly_meal_plan(user_profiler: UserProfiler, dataloader: DataLoade
 
     # Filter user preferences in the dataset
     user_preferences_df = df[df["Food Name"].isin(preferences)]
-    filtered_df = DataLoader.filter_categories(df, EXCLUDED_CATEGORIES + user_intolerances)
+    if user_intolerances is not None:
+        filtered_df = DataLoader.filter_categories(df, EXCLUDED_CATEGORIES + user_intolerances)
+    else:
+        filtered_df = DataLoader.filter_categories(df, EXCLUDED_CATEGORIES)
     seasonal_foods = df[df["Food Name"].isin(seasonal_preferences)]
     filtered_df = pd.concat([filtered_df, seasonal_foods])
 

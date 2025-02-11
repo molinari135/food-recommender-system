@@ -53,7 +53,7 @@ def suggest_lunch(user_profiler, df, fast_food_equiv):
 def reset_jolly_if_new_week(user_profiler):
     """Reset the jolly flag if today is the first day of the week (Monday)."""
     today = datetime.datetime.now()
-    
+
     # Check if today is Monday and if it's past midnight
     if today.weekday() == 0 and today.hour == 0 and today.minute == 0:
         user_profiler.set_used_jolly(False)

@@ -187,9 +187,6 @@ class RecommenderSystem:
                 elif category == "Vegetables":
                     vegetables.append(food)
 
-        print("Fruits:", fruits)
-        print("Vegetables:", vegetables)
-
         return fruits, vegetables
 
     @staticmethod
@@ -226,7 +223,6 @@ class RecommenderSystem:
                 similar_foods = [(food, similarity, DataLoader.compute_energy_density(df, food)[0]) for food, similarity in similar_foods]
 
             return similar_foods
-
 
     def ask_user_preferences(self):
         preferences = {}
