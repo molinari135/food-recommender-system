@@ -17,12 +17,10 @@ def load_data():
     return df, fast_food_equiv
 
 
-def suggest_lunch(user_profiler, df, fast_food_equiv):
-    """Suggest a new lunch based on user mood and preferences."""
+def change_meal(user_profiler, df, fast_food_equiv, meal_name):
+    """Suggest a new meal based on user mood and preferences."""
     today_day_of_week = datetime.datetime.now().weekday()
     weekly_meals = user_profiler.get_meals()
-
-    print("Today's lunch is:", weekly_meals["Lunch"][today_day_of_week][0])
 
     is_happy = input("Is today a happy day? (yes/no): ").strip().lower() == 'yes'
 
@@ -37,17 +35,19 @@ def suggest_lunch(user_profiler, df, fast_food_equiv):
             if food_equivalents:
                 new_lunch.append(food_equivalents)
 
-            weekly_meals["Lunch"][today_day_of_week] = new_lunch
+            weekly_meals[meal_name][today_day_of_week] = new_lunch
 
             user_profiler.set_used_jolly(True)
-            print("Updated lunch: ", weekly_meals["Lunch"][today_day_of_week])
+            print(f"No worries! Your {meal_name} has been changed!")
+            print(f"Today you can have a {", ".join(weekly_meals[meal_name][today_day_of_week][0])}")
+            print(f"Alternatively, you can make a {", ".join(weekly_meals[meal_name][today_day_of_week][1])}")
         else:
             print("No fast food options available.")
     else:
-        print("Happy day, no changes to lunch.")
+        print(f"Happy day, no changes to your {meal_name}!")
 
     user_profiler.set_meals(weekly_meals)
-    # user_profiler.save_profile("user_profile.json")
+    user_profiler.save_profile("user_profile.json")
 
 
 def reset_jolly_if_new_week(user_profiler):
@@ -73,7 +73,7 @@ def main():
     df, fast_food_equiv = load_data()
 
     # Suggest a new lunch if needed
-    suggest_lunch(user_profiler, df, fast_food_equiv)
+    change_meal(user_profiler, df, fast_food_equiv, "Lunch")
 
     # Check if the jolly has been used
     check_jolly_usage(user_profiler)

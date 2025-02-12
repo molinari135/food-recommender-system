@@ -30,7 +30,7 @@ NO_INTOLERANCE_PREFERENCES = {
     "Red Meat": ["Beef", "Pork"],
     "Sauces": ["Tomato sauce", "Marinara sauce"],
     "Seafood": ["Salmon", "Tuna", "Fish sticks", "Cod", "Mussels"],
-    "Sweets": ["Crème caramel", "Chocolate", "Ice cream"],
+    "Sweets": ["Chocolate", "Ice cream"],
     "Sweets Breakfast": ["Marmalade", "Fruit preserves"],
     "White Meat": ["Chicken meat"]
 }
@@ -155,6 +155,10 @@ class DataLoader:
         if 1.5 <= energy_density <= 2.5:
             return ("Medium", energy_density)
         return ("High", energy_density)
+    
+    @staticmethod
+    def find_food_category(df: pd.DataFrame, food_name: str):
+        return df[df["Food Name"] == food_name]["Category Name"].values
 
 
 class RecommenderSystem:
@@ -179,8 +183,6 @@ class RecommenderSystem:
 
             if len(food_category) > 0:
                 category = food_category[0]
-
-                print(f"Food: {food}, Category: {category}")
 
                 if category == "Fruits":
                     fruits.append(food)
@@ -226,11 +228,13 @@ class RecommenderSystem:
 
     def ask_user_preferences(self):
         preferences = {}
+        default_preferences = NO_INTOLERANCE_PREFERENCES
 
         filtered_df = DataLoader.filter_categories(self.df, EXCLUDED_CATEGORIES)
+        categories = filtered_df["Category Name"].unique()
         user_intolerances = self.user_profiler.get_intolerances()
 
-        if user_intolerances is None:
+        if user_intolerances is []:
             print("Loading default preferences for no intolerances...")
             default_preferences = NO_INTOLERANCE_PREFERENCES
         if user_intolerances == ["Dairy", "Dairy Breakfast"]:
@@ -244,8 +248,10 @@ class RecommenderSystem:
             default_preferences = NO_DIARY_GRAIN_PREFERENCES
 
         data = DataLoader.filter_categories(filtered_df, user_intolerances)
-        categories = filtered_df["Category Name"].unique()
-        categories = np.setdiff1d(categories, user_intolerances)
+        if user_intolerances == []:
+            categories = filtered_df["Category Name"].unique()
+        else:
+            categories = np.setdiff1d(categories, user_intolerances)
 
         for category in categories:
             foods = data[data["Category Name"] == category]["Food Name"].tolist()

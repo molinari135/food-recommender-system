@@ -37,19 +37,18 @@ class UserProfiler:
         ```
         """
         self.diet = "omnivore"  # TODO add vegetarian and vegan
-        self.intolerances = intolerances if intolerances else None
-        self.food_preferences = food_preferences if food_preferences else None
-        self.seasonal_preferences = seasonal_preferences if seasonal_preferences else None
-        self.meals = meals if meals else None
+        self.intolerances = intolerances if intolerances else []
+        self.food_preferences = food_preferences if food_preferences else []
+        self.seasonal_preferences = seasonal_preferences if seasonal_preferences else []
+        self.meals = meals if meals else {}
         self.used_jolly = used_jolly if used_jolly else False
 
     def set_intolerances(self, intolerance):
         """Add an intolerance to the profile"""
-        if intolerance in ["Dairy", "Grains"]:
-            if intolerance not in self.intolerances:
-                self.intolerances.append(intolerance)
-        else:
-            raise ValueError("It should be 'Dairy', 'Grains',  or both")
+        if intolerance == "Lactose":
+            self.intolerances.append(["Dairy", "Dairy Breakfast"])
+        if intolerance == "Gluten":
+            self.intolerances.append(["Grains", "Baked Products", "Baked Products Breakfast"])
 
     def get_intolerances(self):
         return self.intolerances
@@ -113,6 +112,22 @@ class UserProfiler:
         except FileNotFoundError:
             print("File not found")
             return cls()
+
+    @staticmethod
+    def create_new_profile(file_path="user_profile.json"):
+        empty_profile = {
+            "diet": "omnivore",
+            "intolerances": [],
+            "food_preferences": [],
+            "seasonal_preferences": [],
+            "meals": {},
+            "used_jolly": False
+        }
+
+        with open(file_path, "w") as f:
+            json.dump(empty_profile, f, indent=4)
+
+        print(f"Empty profile created at {file_path}")
 
     def __str__(self):
         return f"Diet: {self.diet}, Intolerances: {self.intolerances}, Preferences: {self.food_preferences}, Seasonal preferences: {self.seasonal_preferences}, Meals: {self.meals} Used jolly: {self.used_jolly}"

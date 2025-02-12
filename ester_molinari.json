@@ -1,0 +1,520 @@
+{
+    "diet": "omnivore",
+    "intolerances": [],
+    "food_preferences": [
+        "Cod",
+        "Fish sticks",
+        "Mussels",
+        "Tuna",
+        "Salmon",
+        "Provolone",
+        "Swiss cheese",
+        "Parmigiano-Reggiano",
+        "Cheese",
+        "Ricotta",
+        "Mozzarella",
+        "Milk",
+        "Yogurt",
+        "Egg",
+        "Olive oil",
+        "Kefir",
+        "Greek yogurt",
+        "Chickpeas",
+        "Lentil",
+        "Bean",
+        "Wheat Bread",
+        "Pasta",
+        "Rice",
+        "Chicken meat",
+        "Mortadella",
+        "Salami",
+        "Italian sausage",
+        "Ham",
+        "Pork",
+        "Beef",
+        "Marinara sauce",
+        "Tomato sauce",
+        "Almond",
+        "Hazelnut",
+        "Pistachio",
+        "Walnut",
+        "Almond paste",
+        "Ice cream",
+        "Chocolate",
+        "Fruit preserves",
+        "Marmalade",
+        "Apple juice",
+        "Orange juice",
+        "Coffee",
+        "Espresso",
+        "Tea",
+        "Italian bread",
+        "Chicken sandwich",
+        "Hamburger",
+        "Pizza"
+    ],
+    "seasonal_preferences": [
+        "Apple",
+        "Grapefruit",
+        "Kiwifruit",
+        "Orange",
+        "Mandarin orange",
+        "Pear",
+        "Clementine",
+        "Artichoke",
+        "Broccoli",
+        "Cabbage",
+        "Carrot",
+        "Cauliflower",
+        "Chicory",
+        "Pumpkin",
+        "Turnip",
+        "Potato",
+        "Radicchio"
+    ],
+    "meals": {
+        "Breakfast": [
+            [
+                [
+                    "Kefir",
+                    "Multigrain bread",
+                    "Almond butter",
+                    "Orange"
+                ],
+                [
+                    "Soy yogurt",
+                    "White Bread",
+                    "Almond paste",
+                    "Grapefruit"
+                ]
+            ],
+            [
+                [
+                    "Pineapple juice",
+                    "White Bread",
+                    "Fruit preserves",
+                    "Clementine"
+                ],
+                [
+                    "Herbal tea",
+                    "Multigrain bread",
+                    "Apricot jam",
+                    "Grapefruit"
+                ]
+            ],
+            [
+                [
+                    "Apple juice",
+                    "White Bread",
+                    "Peanut butter",
+                    "Grapefruit"
+                ],
+                [
+                    "Herbal tea",
+                    "Multigrain bread",
+                    "Almond paste",
+                    "Orange"
+                ]
+            ],
+            [
+                [
+                    "Kefir",
+                    "Biscuit",
+                    "Marmalade",
+                    "Clementine"
+                ],
+                [
+                    "Soy yogurt",
+                    "White Bread",
+                    "Apricot jam",
+                    "Grapefruit"
+                ]
+            ],
+            [
+                [
+                    "Orange juice",
+                    "Multigrain bread",
+                    "Almond paste",
+                    "Kiwifruit"
+                ],
+                [
+                    "Herbal tea",
+                    "White Bread",
+                    "Peanut butter",
+                    "Grapefruit"
+                ]
+            ],
+            [
+                [
+                    "Pineapple juice",
+                    "Multigrain bread",
+                    "Marmalade",
+                    "Clementine"
+                ],
+                [
+                    "Herbal tea",
+                    "White Bread",
+                    "Apricot jam",
+                    "Grapefruit"
+                ]
+            ],
+            [
+                [
+                    "Herbal tea",
+                    "White Bread",
+                    "Fruit preserves",
+                    "Grapefruit"
+                ],
+                [
+                    "Oolong tea",
+                    "Multigrain bread",
+                    "Apricot jam",
+                    "Orange"
+                ]
+            ]
+        ],
+        "Snack": [
+            [
+                [
+                    "White Bread",
+                    "Almond butter",
+                    "Clementine"
+                ],
+                [
+                    "Multigrain bread",
+                    "Almond paste",
+                    "Grapefruit"
+                ]
+            ],
+            [
+                [
+                    "Multigrain bread",
+                    "Almond paste",
+                    "Mandarin orange"
+                ],
+                [
+                    "White Bread",
+                    "Peanut butter",
+                    "Grapefruit"
+                ]
+            ],
+            [
+                [
+                    "White Bread",
+                    "Fruit preserves",
+                    "Pear"
+                ],
+                [
+                    "Multigrain bread",
+                    "Apricot jam",
+                    "Grapefruit"
+                ]
+            ],
+            [
+                [
+                    "White Bread",
+                    "Apricot jam",
+                    "Grapefruit"
+                ],
+                [
+                    "Multigrain bread",
+                    "Marmalade",
+                    "Orange"
+                ]
+            ],
+            [
+                [
+                    "Biscuit",
+                    "Almond paste",
+                    "Mandarin orange"
+                ],
+                [
+                    "White Bread",
+                    "Peanut butter",
+                    "Grapefruit"
+                ]
+            ],
+            [
+                [
+                    "Biscuit",
+                    "Almond paste",
+                    "Mandarin orange"
+                ],
+                [
+                    "White Bread",
+                    "Peanut butter",
+                    "Grapefruit"
+                ]
+            ],
+            [
+                [
+                    "Multigrain bread",
+                    "Peanut butter",
+                    "Pear"
+                ],
+                [
+                    "White Bread",
+                    "Almond paste",
+                    "Grapefruit"
+                ]
+            ]
+        ],
+        "Lunch": [
+            [
+                [
+                    "Pasta",
+                    "Cheese",
+                    "Olive oil",
+                    "Tomato sauce",
+                    "Cauliflower",
+                    "Apple"
+                ],
+                [
+                    "Couscous",
+                    "Cottage cheese",
+                    "Olive oil",
+                    "Salsa",
+                    "Cauliflower",
+                    "Grapefruit"
+                ]
+            ],
+            [
+                [
+                    "Rice",
+                    "Ricotta",
+                    "Olive oil",
+                    "Tomato sauce",
+                    "Chicory",
+                    "Mandarin orange"
+                ],
+                [
+                    "Buckwheat",
+                    "Cottage cheese",
+                    "Olive oil",
+                    "Salsa",
+                    "Chicory",
+                    "Grapefruit"
+                ]
+            ],
+            [
+                [
+                    "Pasta",
+                    "Provolone",
+                    "Olive oil",
+                    "Marinara sauce",
+                    "Carrot",
+                    "Apple"
+                ],
+                [
+                    "Couscous",
+                    "Feta",
+                    "Olive oil",
+                    "Tomato sauce",
+                    "Carrot",
+                    "Grapefruit"
+                ]
+            ],
+            [
+                [
+                    "Rice",
+                    "Egg",
+                    "Olive oil",
+                    "Tomato sauce",
+                    "Turnip",
+                    "Pear"
+                ],
+                [
+                    "Buckwheat",
+                    "Egg white",
+                    "Olive oil",
+                    "Salsa",
+                    "Turnip",
+                    "Grapefruit"
+                ]
+            ],
+            [
+                [
+                    "Rice",
+                    "Provolone",
+                    "Olive oil",
+                    "Marinara sauce",
+                    "Turnip",
+                    "Grapefruit"
+                ],
+                [
+                    "Buckwheat",
+                    "Feta",
+                    "Olive oil",
+                    "Tomato sauce",
+                    "Turnip",
+                    "Orange"
+                ]
+            ],
+            [
+                [
+                    "Pasta",
+                    "Lentil",
+                    "Olive oil",
+                    "Marinara sauce",
+                    "Cabbage",
+                    "Grapefruit"
+                ],
+                [
+                    "Couscous",
+                    "Bean",
+                    "Olive oil",
+                    "Tomato sauce",
+                    "Cabbage",
+                    "Orange"
+                ]
+            ],
+            [
+                [
+                    "Wheat Bread",
+                    "Beef",
+                    "Olive oil",
+                    "Tomato sauce",
+                    "Potato",
+                    "Kiwifruit"
+                ],
+                [
+                    "Couscous",
+                    "Roast beef",
+                    "Olive oil",
+                    "Salsa",
+                    "Potato",
+                    "Grapefruit"
+                ]
+            ]
+        ],
+        "Dinner": [
+            [
+                [
+                    "Rice",
+                    "Ricotta",
+                    "Olive oil",
+                    "Tomato sauce",
+                    "Chicory",
+                    "Mandarin orange"
+                ],
+                [
+                    "Buckwheat",
+                    "Cottage cheese",
+                    "Olive oil",
+                    "Salsa",
+                    "Chicory",
+                    "Grapefruit"
+                ]
+            ],
+            [
+                [
+                    "Pasta",
+                    "Mozzarella",
+                    "Olive oil",
+                    "Tomato sauce",
+                    "Turnip",
+                    "Grapefruit"
+                ],
+                [
+                    "Couscous",
+                    "Cottage cheese",
+                    "Olive oil",
+                    "Salsa",
+                    "Turnip",
+                    "Orange"
+                ]
+            ],
+            [
+                [
+                    "Pasta",
+                    "Cod",
+                    "Olive oil",
+                    "Tomato sauce",
+                    "Carrot",
+                    "Clementine"
+                ],
+                [
+                    "Couscous",
+                    "Surimi",
+                    "Olive oil",
+                    "Salsa",
+                    "Carrot",
+                    "Grapefruit"
+                ]
+            ],
+            [
+                [
+                    "Pasta",
+                    "Cod",
+                    "Olive oil",
+                    "Tomato sauce",
+                    "Chicory",
+                    "Pear"
+                ],
+                [
+                    "Couscous",
+                    "Surimi",
+                    "Olive oil",
+                    "Salsa",
+                    "Chicory",
+                    "Grapefruit"
+                ]
+            ],
+            [
+                [
+                    "Pasta",
+                    "Egg",
+                    "Olive oil",
+                    "Marinara sauce",
+                    "Turnip",
+                    "Kiwifruit"
+                ],
+                [
+                    "Couscous",
+                    "Egg white",
+                    "Olive oil",
+                    "Tomato sauce",
+                    "Turnip",
+                    "Grapefruit"
+                ]
+            ],
+            [
+                [
+                    "Wheat Bread",
+                    "Ricotta",
+                    "Olive oil",
+                    "Tomato sauce",
+                    "Chicory",
+                    "Grapefruit"
+                ],
+                [
+                    "Couscous",
+                    "Cottage cheese",
+                    "Olive oil",
+                    "Salsa",
+                    "Chicory",
+                    "Orange"
+                ]
+            ],
+            [
+                [
+                    "Rice",
+                    "Salmon",
+                    "Olive oil",
+                    "Marinara sauce",
+                    "Carrot",
+                    "Kiwifruit"
+                ],
+                [
+                    "Buckwheat",
+                    "Surimi",
+                    "Olive oil",
+                    "Tomato sauce",
+                    "Carrot",
+                    "Grapefruit"
+                ]
+            ]
+        ]
+    },
+    "used_jolly": false
+}

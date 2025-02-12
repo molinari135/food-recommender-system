@@ -79,13 +79,13 @@ class Justificator:
                 persuasion += f"💪 If you're looking to build muscle, {food1} is the better option.\n"
 
             # Balanced advice
-            persuasion += "😋 Or simply... follow your taste!\n"
+            persuasion += "😋 Just follow your taste!\n"
 
             comparison_results.append(comparison + "\n" + persuasion)
 
         return comparison_results
 
-    def recommend_fruit_or_vegetable(self, food_name):
+    def recommend_seasonal(self, food_name):
         """
         Provides persuasive information about a fruit or vegetable, emphasizing its benefits and seasonality.
 
@@ -103,31 +103,17 @@ class Justificator:
 
         recommendation = f"🌿 Why choose {food_name}?\n"
         # recommendation += f"📌 Description: {details['description']}\n"
-        recommendation += f"💪 Health Benefits: {', '.join(details['benefits'])}\n"
+        recommendation += f"💪 Health Benefits: {", ".join(details['benefits'])}\n"
         # recommendation += f"🛒 How to Choose: {details['how_to_choose']}\n"
         # recommendation += f"❄️ How to Store: {details['hot_to_store']}\n"
-        recommendation += f"🥗 Nutritional Insights: {details['nutritional_intake']}\n"
+        recommendation += f"🥗 Nutritional Insights:\n{details['nutritional_intake']}\n"
 
         # Persuasive reasoning for seasonality
         recommendation += "\n🌍 Why choose seasonal produce?\n"
-        recommendation += "✔️ Better taste & freshness – Seasonal foods are naturally ripened and have the best flavor.\n"
-        recommendation += "✔️ Higher nutritional value – Fresh seasonal produce retains more vitamins and minerals.\n"
-        recommendation += "✔️ Lower environmental impact – Locally grown seasonal food reduces transportation emissions.\n"
+        recommendation += "✔️  Better taste & freshness – Seasonal foods are naturally ripened and have the best flavor.\n"
+        recommendation += "✔️  Higher nutritional value – Fresh seasonal produce retains more vitamins and minerals.\n"
+        recommendation += "✔️  Lower environmental impact – Locally grown seasonal food reduces transportation emissions.\n"
 
         # recommendation += "\n🍽️ Pro Tip: " + details["tips"] + "\n"
 
         return recommendation
-
-
-# # Example usage
-# if __name__ == "__main__":
-#     justificator = Justificator()
-
-#     # Example: Comparing two meals
-#     meal1 = ["Rice", "Tuna", "Olive oil", "Tomato sauce", "Artichoke", "Pear"]
-#     meal2 = ["Pasta", "Bean", "Olive oil", "Marinara sauce", "Pumpkin", "Kiwifruit"]
-#     justif = justificator.compare_meals(meal1, meal2)
-#     justifruit = justificator.recommend_fruit_or_vegetable(meal1[5])
-
-#     print(justif[1])
-#     print(justifruit)
