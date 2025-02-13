@@ -1,121 +1,70 @@
 from profiler import UserProfiler
-from recommender import DataLoader, RecommenderSystem
+from recommender import RecommenderSystem
+from dataloader import DataLoader
 from mealgen import generate_weekly_meal_plan
 from justificator import Justificator
 from datetime import datetime
 from moodmod import change_meal
-import os
-
-# Paths to data files
-PROFILE_FILE = "user_profile.json"
-NUTRITIONAL_FACTS_PATH = "nutritional-facts.csv"
-FOOD_SEASONALITY_PATH = "food-seasonality.json"
+from pathlib import Path
 
 
 # Main process
 def main():
     try:
-        # Step 1: Load or create user profile
-        name = input("Please, enter name_surname to create or load your profile: ").strip().lower()
-        profile_file = f"{name}.json"
-
         user_profiler = UserProfiler()
-
-        if not os.path.exists(profile_file):
-            print(f"Profile '{profile_file}' not found. Creating a new profile...")
-            user_profiler.create_new_profile(profile_file)  # Create the profile
-
-        user = user_profiler.load_profile(profile_file)
-
         dataloader = DataLoader()
-        df = dataloader.load_csv("nutritional-facts.csv")
-        seasonality = dataloader.load_json("food-seasonality.json")
-        servings = dataloader.load_json("food-servings.json")
-        fast_food_equiv = dataloader.load_json("fast-food-equiv.json")
 
-        recommender = RecommenderSystem(
-            df=df,
-            seasonality=seasonality,
-            user_profiler=user
-        )
+        nutritional_facts_file = Path("nutritional-facts.csv")
+        food_seasonality_file = Path("food-seasonality.json")
+        servings_file = Path("food-servings.json")
+        fast_food_eqiv_file = Path("fast-food-equiv.json")
 
-        justificator = Justificator()
+        df = dataloader.load_csv(nutritional_facts_file)
+        seasonality = dataloader.load_json(food_seasonality_file)
+        servings = dataloader.load_json(servings_file)
+        fast_food_equiv = dataloader.load_json(fast_food_eqiv_file)
+
+        name_surname = input("Enter name_surname to create or load your profile: ").strip().lower()
+        filename = Path(f"{name_surname}.json")
+
+        # Check if the profile to load exists, otherwise make a new one and load it
+        user_profiler.check_profile(filename)
+        user = user_profiler.load_profile(filename)
+
+        recommender = RecommenderSystem(df, seasonality, user)
+        justificator = Justificator(df, seasonality)
 
         if user.get_meals() == {} and user.get_intolerances() == []:
 
-            intolerances = input("Are you lactose intolerant? (Yes/no)").strip().lower()
+            intolerances = input("Are you lactose intolerant? (Yes/no): ").strip().lower()
             if intolerances == "yes":
                 user.set_intolerances("Lactose")
 
-            intolerances = input("Are you gluten intolerant? (Yes/no)").strip().lower()
+            intolerances = input("Are you gluten intolerant? (Yes/no): ").strip().lower()
             if intolerances == "yes":
                 user.set_intolerances("Gluten")
 
             # Save the profile
-            user.save_profile(profile_file)
-            recommender.ask_user_preferences()
-            recommender.ask_seasonal_preferences()
+            user.save_profile(filename)
+            recommender.ask_user_preferences(filename)
+            recommender.ask_seasonal_preferences(filename)
 
-            generate_weekly_meal_plan(user, dataloader, profile_file)
+            generate_weekly_meal_plan(df, servings, user, filename)
 
-        today_day_of_week = datetime.now().weekday()
+        meal_name, current_meal, current_alternative = Justificator.get_current_meal(user, df)
 
-        if today_day_of_week == 0:
-            user.set_used_jolly(False)
-
-        current_hour = datetime.now().hour
-
-        meal = ""
-
-        if 24 <= current_hour < 9:
-            meal = "Breakfast"
-        if 9 <= current_hour < 11:
-            meal = "Snack"
-        if 11 <= current_hour < 14:
-            meal = "Lunch"
-        if 14 <= current_hour < 17:
-            meal = "Snack"
-        if 17 <= current_hour < 24:
-            meal = "Dinner"
-
-        current_meal = user.get_meals()[meal][today_day_of_week][0]
-        current_alternative = user.get_meals()[meal][today_day_of_week][1]
-
-        justificate = True
-
-        print(f"Today's {meal} is:")
-        for food in current_meal:
-            category = DataLoader.find_food_category(df, food)[0]
-            if category != "Fast Foods":
-                serving = servings.get(category, {}).get('serving_size')
-                print(f"- {serving}g of {food}")
-            else:
-                print(food)
-                justificate = False
-
+        print(f"\nToday's {meal_name.lower()} is:")
+        Justificator.print_meal(current_meal, df, servings)
         print("\nAlternatively, you can have:")
-        for food in current_alternative:
-            category = DataLoader.find_food_category(df, food)
-            if category.size > 0:
-                serving = servings.get(category[0], {}).get('serving_size')
-                print(f"- {serving}g of {food}")
-            else:
-                print(food)
-                justificate = False
-        if justificate:
-            print("\n", justificator.compare_meals(current_meal, current_alternative)[0])
-            print("\n", justificator.compare_meals(current_meal, current_alternative)[1])
-            print("\n", justificator.recommend_seasonal(current_meal[len(current_meal) - 1]))
-            print("\n", justificator.recommend_seasonal(current_alternative[len(current_alternative) - 1]))
+        Justificator.print_meal(current_alternative, df, servings)
 
-        if meal in ["Lunch", "Dinner"]:
-            if user.get_used_jolly():
-                print("You have used your jolly for this week, you have to wait for the next one!")
-            else:
-                change_meal(user, df, fast_food_equiv, meal)
-                user.set_used_jolly(True)
-                user.save_profile(profile_file)
+        comparison = justificator.compare_meals(current_meal, current_alternative)
+        for comp in comparison:
+            print(comp)
 
+        preferences_df = df[df["Food Name"].isin(user_profiler.get_food_preferences())]
+        change_meal(user, preferences_df, fast_food_equiv, meal_name, filename)
+        
     except Exception as e:
         print(f"An error occurred: {str(e)}")
 

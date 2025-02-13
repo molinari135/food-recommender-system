@@ -1,94 +1,117 @@
 {
     "Fruits": {
         "serving_size": 150,
+        "tips": "e.g. a medium fruit or two small fruits",
         "frequency_per_week": 14
     },
     "Vegetables": {
         "serving_size": 200,
+        "tips": "raw or cooked, weight them",
         "frequency_per_week": 14
     },
     "Seafood": {
         "serving_size": 150,
+        "tips": "ask your fishmonger to weight them",
         "frequency_per_week": 2
     },
     "Lactose-Free Dairy": {
-        "serving_size": 125,
+        "serving_size": 100,
+        "tips": "weight them with a cooking scale",
         "frequency_per_week": 3
     },
     "Lactose-Free Dairy Breakfast": {
         "serving_size": 125,
+        "tips": "a small glass or a portion",
         "frequency_per_week": 7
     },
     "Dairy": {
-        "serving_size": 125,
+        "serving_size": 100,
+        "tips": "weight them with a cooking scale",
         "frequency_per_week": 4
     },
     "Dairy Breakfast": {
         "serving_size": 125,
+        "tips": "a small glass or a portion",
         "frequency_per_week": 7
     },
     "Eggs": {
         "serving_size": 50,
+        "tips": "an egg",
         "frequency_per_week": 2
     },
     "Grains": {
         "serving_size": 80,
+        "tips": "weight them with a cooking scale",
         "frequency_per_week": 7
     },
     "Legumes": {
         "serving_size": 150,
+        "tips": "50g if dried",
         "frequency_per_week": 3
     },
     "Gluten-Free Grains": {
         "serving_size": 80,
+        "tips": "4 tablespoons if dried",
         "frequency_per_week": 7
     },
     "White Meat": {
         "serving_size": 100,
+        "tips": "a chicken breast or thigh",
         "frequency_per_week": 3
     },
     "Cured Meat": {
         "serving_size": 50,
+        "tips": "e.g. 3-4 slices of ham, 5-6 of salami or 2 if mortadella",
         "frequency_per_week": 1
     },
     "Red Meat": {
         "serving_size": 100,
+        "tips": "a slice of meat or a sausage",
         "frequency_per_week": 1
     },
     "Oils": {
         "serving_size": 10,
+        "tips": "a tablespoon",
         "frequency_per_week": 14
     },
     "Sauces": {
         "serving_size": 10,
+        "tips": "a tablespoon",
         "frequency_per_week": 14
     },
     "Nuts": {
         "serving_size": 30,
+        "tips": "e.g. 7-8 walnuts, 15-20 almonds or hazelnuts",
         "frequency_per_week": 7
     },
     "Nuts Breakfast": {
         "serving_size": 30,
+        "tips": "e.g. 7-8 walnuts, 15-20 almonds or hazelnuts",
         "frequency_per_week": 7
     },
     "Greens": {
         "serving_size": 80,
+        "tips": "a bowl",
         "frequency_per_week": 7
     },
     "Beverages": {
         "serving_size": 200,
+        "tips": "a medium glass",
         "frequency_per_week": 14
     },
     "Sweets Breakfast": {
         "serving_size": 20,
+        "tips": "e.g. 2 full teaspoons",
         "frequency_per_week": 14
     },
     "Baked Products": {
         "serving_size": 50,
+        "tips": "e.g. a small bun or a slice",
         "frequency_per_week": 14
     },
     "Baked Products Breakfast": {
         "serving_size": 50,
+        "tips": "e.g. 2-3 biscuits, a small bun",
         "frequency_per_week": 14
     }
 }

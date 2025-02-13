@@ -1,21 +1,24 @@
 import os
+from pathlib import Path
 
 # Paths
-BASE_PATH = os.path.join(os.getcwd(), 'data')
-RAW_DATA_PATH = os.path.join(BASE_PATH, 'raw')
-PROCESSED_DATA_PATH = os.path.join(BASE_PATH, 'processed')
-SEASONALITY_FILE = os.path.join(RAW_DATA_PATH, 'food-seasonality.json')
-NUTRITIONAL_FACTS_FILE = os.path.join(RAW_DATA_PATH, 'nutritional-facts.csv')
-USER_PROFILE_FILE = os.path.join(PROCESSED_DATA_PATH, 'user_profile.json')
+BASE_PATH = Path(os.path.join(os.getcwd(), 'data'))
+RAW_DATA_PATH = Path(os.path.join(BASE_PATH, 'raw'))
+PROCESSED_DATA_PATH = Path(os.path.join(BASE_PATH, 'processed'))
 
-EXCLUDED_CATEGORIES = [
-    "Baby Foods", "Meals, Entrees, and Side Dishes", "Soups", "Spices", "Fruits", "Vegetables", "Greens"
-]
+MACRONUTRIENTS = ["Calories", "Carbs", "Fats", "Fiber", "Protein"]
+EXCLUDED_CATEGORIES = ["Baby Foods", "Meals, Entrees, and Side Dishes", "Soups", "Spices", "Fruits", "Vegetables", "Greens"]
+
+LACTOSE_INTOLERANCE = ["Dairy", "Dairy Breakfast"]
+GLUTEN_INTOLERANCE = ["Grains", "Baked Products", "Baked Products Breakfast"]
+LACTOSE_AND_GLUTEN_INTOLERANCE = LACTOSE_INTOLERANCE + GLUTEN_INTOLERANCE
+
+MEAL_GENERATION_CATEGORIES = ["Seafood", "Lactose-Free Dairy", "Dairy", "Eggs", "Legumes", "White Meat", "Cured Meat", "Red Meat"]
 
 PREFERENCES = {
     "no_intolerances": {
         "Baked Products": ["Italian bread", "Focaccia, Crackers"],
-        "Baked Products Breakfast": ["White Bread, Biscuit"],
+        "Baked Products Breakfast": ["White Bread", "Biscuit"],
         "Beverages": ["Espresso", "Tea", "Orange juice", "Apple juice", "Coffee"],
         "Cured Meat": ["Italian sausage", "Salami", "Mortadella", "Ham"],
         "Dairy": ["Mozzarella", "Ricotta", "Cheese"],
@@ -39,7 +42,7 @@ PREFERENCES = {
     },
     "lactose_intolerance": {
         "Baked Products": ["Italian bread", "Focaccia, Crackers"],
-        "Baked Products Breakfast": ["White Bread, Biscuit"],
+        "Baked Products Breakfast": ["White Bread", "Biscuit"],
         "Beverages": ["Espresso", "Tea", "Orange juice", "Apple juice", "Coffee"],
         "Cured Meat": ["Italian sausage", "Salami", "Mortadella", "Ham"],
         "Eggs": ["Egg"],

@@ -1,74 +1,78 @@
 import numpy as np
-from recommender import DataLoader
+from dataloader import DataLoader
+from datetime import datetime
+from profiler import UserProfiler
+import pandas as pd
 
 
 class Justificator:
     """Provides explanations about fruits, vegetables, and meal choices based on nutritional data."""
 
-    def __init__(self, nutrition_data_path="nutritional-facts.csv", seasonal_info_path="food-infos.json"):
+    def __init__(self, df, seasonality):
         """Loads the nutritional database."""
-        self.dataloader = DataLoader()
-        self.df = self.dataloader.load_csv(nutrition_data_path)
-        self.seasonal_info = self.dataloader.load_json(seasonal_info_path)
+        self.df = df
+        self.seasonal_info = seasonality
         self.macronutrients = ["Calories", "Carbs", "Fats", "Fiber", "Protein"]
 
-    def compare_meals(self, meal1, meal2):
-        """
-        Compares each food in meal1 with the corresponding food in meal2 for macronutrient values.
+    def print_meal(meal: list, df: pd.DataFrame, servings: dict):    
+        for food in meal:
+            category = DataLoader.get_food_category(df, food)[0]
+            serving_size = servings.get(category).get("serving_size")
+            tips = servings.get(category).get("tips")
+            print(f"- {serving_size}g of {food} ({tips})")
 
-        Args:
-            meal1 (list): List of food items in the first meal.
-            meal2 (list): List of food items in the second meal.
+    def compare_meals(self, meal1: list, meal2: list, verbose: bool = False):
 
-        Returns:
-            str: A detailed comparison for each macronutrient.
-        """
         if len(meal1) != len(meal2):
             return "Error: The two meals should have the same number of items for a fair comparison."
 
+        comparison = ""
         comparison_results = []
 
         for food1, food2 in zip(meal1, meal2):
-            food1_info = self.dataloader.find_nutritional_info(self.df, food1, only_numbers=False)
-            food2_info = self.dataloader.find_nutritional_info(self.df, food2, only_numbers=False)
+            food1_info = DataLoader.get_nutritional_info(self.df, food1, only_numbers=False)
+            food2_info = DataLoader.get_nutritional_info(self.df, food2, only_numbers=False)
 
             if food1_info.size == 0 or food2_info.size == 0:
                 return f"Error: Nutritional information for '{food1}' or '{food2}' is missing."
 
-            comparison = f"**Comparing {food1} vs {food2}:**\n"
+            if verbose:
+                comparison = f"**Comparing {food1} vs {food2}:**\n"
 
             food1_info = np.array(food1_info[self.macronutrients])[0]
             food2_info = np.array(food2_info[self.macronutrients])[0]
 
-            # print(food1_info[0])
-
-            comparison = f"Comparing {food1} vs {food2}:\n"
+            if verbose:
+                comparison = f"\nComparing {food1} vs {food2}:\n"
             persuasion = "💡 Which one should you choose?\n"
 
             better_choice = {"food": None, "score": 0}  # Track which food is better based on nutrition
 
             for i, nutrient in enumerate(self.macronutrients):
-                f1_value, f2_value = float(food1_info[i]), float(food2_info[i])
+                f1_value, f2_value = int(food1_info[i]), int(food2_info[i])
 
                 if f1_value < f2_value:
-                    comparison += f"- {nutrient}: {food1} has less ({int(f1_value)}), {food2} has more ({int(f2_value)}).\n"
+                    if verbose:
+                        comparison += f"- {nutrient}: {food1} has less ({f1_value}), {food2} has more ({f2_value}).\n"
                     if nutrient in ["Calories", "Carbs", "Fats"]:
                         better_choice["food"] = food1  # Lower calories/carbs/fats = usually healthier
                         better_choice["score"] += 1
                 elif f1_value > f2_value:
-                    comparison += f"- {nutrient}: {food1} has more ({int(f1_value)}), {food2} has less ({int(f2_value)}).\n"
+                    if verbose:
+                        comparison += f"- {nutrient}: {food1} has more ({f1_value}), {food2} has less ({f2_value}).\n"
                     if nutrient in ["Protein", "Fiber"]:
                         better_choice["food"] = food1  # More protein/fiber = usually healthier
                         better_choice["score"] += 1
-                else:
-                    comparison += f"- {nutrient}: Both have the same amount ({f1_value}).\n"
+                elif f1_value == f2_value:
+                    if verbose:
+                        comparison += f"- {nutrient}: Both have the same amount ({f1_value}).\n"
 
             # Persuasion logic
             if better_choice["food"]:
                 if better_choice["food"] == food1:
-                    persuasion += f"👉 {food1} seems like the healthier choice as it has better macronutrient balance.\n"
+                    persuasion += f"👉 {food1} has better macronutrient balance.\n"
                 else:
-                    persuasion += f"👉 **{food2} is a better option** if you're looking for a healthier alternative.\n"
+                    persuasion += f"👉 {food2} is a better option if you're looking for a healthier alternative.\n"
 
             # Additional tailored reasoning
             if food1_info[0] < food2_info[0]:  # Lower calories is generally healthier
@@ -79,7 +83,7 @@ class Justificator:
                 persuasion += f"💪 If you're looking to build muscle, {food1} is the better option.\n"
 
             # Balanced advice
-            persuasion += "😋 Just follow your taste!\n"
+            persuasion += "😋 Remember that there is no good of bad food... Just follow your taste!\n"
 
             comparison_results.append(comparison + "\n" + persuasion)
 
@@ -117,3 +121,28 @@ class Justificator:
         # recommendation += "\n🍽️ Pro Tip: " + details["tips"] + "\n"
 
         return recommendation
+
+    def get_current_meal(user: UserProfiler, df: pd.DataFrame):
+        """Determines the current meal based on the time of day and provides recommendations."""
+        today_day_of_week = datetime.now().weekday()
+        current_hour = datetime.now().hour
+
+        meal_name = "Breakfast" if current_hour < 9 else \
+            "Snack" if current_hour < 11 else \
+            "Lunch" if current_hour < 14 else \
+            "Snack" if current_hour < 17 else "Dinner"
+
+        current_meal = user.get_meals()[meal_name][today_day_of_week][0]
+        current_alternative = user.get_meals()[meal_name][today_day_of_week][1]
+
+        return meal_name, current_meal, current_alternative
+
+        # print(f"Today's {meal} is:")
+        # for food in current_meal:
+        #     category = DataLoader.get_food_category(df, food)[0]
+        #     print(f"- {food} ({category})")
+
+        # print("\nAlternatively, you can have:")
+        # for food in current_alternative:
+        #     category = DataLoader.get_food_category(df, food)
+        #     print(f"- {food} ({category[0] if category.size > 0 else 'Unknown'})")
