@@ -1,0 +1,537 @@
+{
+    "intolerances": [
+        [
+            "Dairy",
+            "Dairy Breakfast"
+        ]
+    ],
+    "food_preferences": [
+        "French bread",
+        "Italian bread",
+        "Pita bread",
+        "Multigrain bread",
+        "White Bread",
+        "Soy milk",
+        "Apple juice",
+        "Orange juice",
+        "Pineapple juice",
+        "Coffee",
+        "Tea",
+        "Rice milk",
+        "Herbal tea",
+        "Turkey ham",
+        "Mortadella",
+        "Salami",
+        "Italian sausage",
+        "Ham",
+        "Egg white",
+        "Egg",
+        "Veggie burger",
+        "French fries",
+        "McDonald's french fries",
+        "Pizza",
+        "Rice",
+        "Wheat Bread",
+        "Pasta",
+        "Edam",
+        "Provolone",
+        "Kefir",
+        "Soy yogurt",
+        "Chickpeas",
+        "Lentil",
+        "Soybean",
+        "Tempeh",
+        "Hummus",
+        "Tofu",
+        "Bean",
+        "Almond",
+        "Chestnut",
+        "Hazelnut",
+        "Mixed nuts",
+        "Pistachio",
+        "Walnut",
+        "Peanut",
+        "Almond paste",
+        "Almond butter",
+        "Peanut butter",
+        "Olive oil",
+        "Roast beef",
+        "Meatball",
+        "Pork",
+        "Ground beef",
+        "Steak",
+        "Beef",
+        "Salsa",
+        "Marinara sauce",
+        "Tomato sauce",
+        "Fish sticks",
+        "Smoked salmon",
+        "Shrimp",
+        "Mussels",
+        "Tuna",
+        "Salmon",
+        "Sherbet",
+        "Kit Kat",
+        "Chocolate",
+        "Frozen yogurt",
+        "Fruit preserves",
+        "Marmalade",
+        "Apricot jam",
+        "Chicken meat",
+        "Turkey meat"
+    ],
+    "seasonal_preferences": [
+        "Kiwifruit",
+        "Orange",
+        "Clementine",
+        "Artichoke",
+        "Carrot",
+        "Pumpkin",
+        "Turnip"
+    ],
+    "meals": {
+        "Breakfast": [
+            [
+                [
+                    "Soy yogurt",
+                    "Multigrain bread",
+                    "Peanut butter",
+                    "Clementine"
+                ],
+                [
+                    "Kefir",
+                    "White Bread",
+                    "Almond paste",
+                    "Orange"
+                ]
+            ],
+            [
+                [
+                    "Rice milk",
+                    "Multigrain bread",
+                    "Peanut butter",
+                    "Clementine"
+                ],
+                [
+                    "Herbal tea",
+                    "White Bread",
+                    "Almond paste",
+                    "Orange"
+                ]
+            ],
+            [
+                [
+                    "Coffee",
+                    "Multigrain bread",
+                    "Almond butter",
+                    "Clementine"
+                ],
+                [
+                    "Herbal tea",
+                    "White Bread",
+                    "Almond paste",
+                    "Orange"
+                ]
+            ],
+            [
+                [
+                    "Orange juice",
+                    "White Bread",
+                    "Peanut butter",
+                    "Orange"
+                ],
+                [
+                    "Herbal tea",
+                    "Multigrain bread",
+                    "Almond paste",
+                    "Clementine"
+                ]
+            ],
+            [
+                [
+                    "Pineapple juice",
+                    "Multigrain bread",
+                    "Peanut butter",
+                    "Clementine"
+                ],
+                [
+                    "Herbal tea",
+                    "White Bread",
+                    "Almond paste",
+                    "Orange"
+                ]
+            ],
+            [
+                [
+                    "Rice milk",
+                    "White Bread",
+                    "Apricot jam",
+                    "Kiwifruit"
+                ],
+                [
+                    "Herbal tea",
+                    "Multigrain bread",
+                    "Marmalade",
+                    "Orange"
+                ]
+            ],
+            [
+                [
+                    "Orange juice",
+                    "Multigrain bread",
+                    "Almond paste",
+                    "Kiwifruit"
+                ],
+                [
+                    "Herbal tea",
+                    "White Bread",
+                    "Peanut butter",
+                    "Orange"
+                ]
+            ]
+        ],
+        "Snack": [
+            [
+                [
+                    "Multigrain bread",
+                    "Marmalade",
+                    "Clementine"
+                ],
+                [
+                    "White Bread",
+                    "Apricot jam",
+                    "Orange"
+                ]
+            ],
+            [
+                [
+                    "White Bread",
+                    "Fruit preserves",
+                    "Orange"
+                ],
+                [
+                    "Multigrain bread",
+                    "Apricot jam",
+                    "Clementine"
+                ]
+            ],
+            [
+                [
+                    "White Bread",
+                    "Almond paste",
+                    "Orange"
+                ],
+                [
+                    "Multigrain bread",
+                    "Peanut butter",
+                    "Clementine"
+                ]
+            ],
+            [
+                [
+                    "White Bread",
+                    "Almond butter",
+                    "Orange"
+                ],
+                [
+                    "Multigrain bread",
+                    "Almond paste",
+                    "Clementine"
+                ]
+            ],
+            [
+                [
+                    "White Bread",
+                    "Peanut butter",
+                    "Clementine"
+                ],
+                [
+                    "Multigrain bread",
+                    "Almond paste",
+                    "Orange"
+                ]
+            ],
+            [
+                [
+                    "Multigrain bread",
+                    "Apricot jam",
+                    "Orange"
+                ],
+                [
+                    "White Bread",
+                    "Marmalade",
+                    "Clementine"
+                ]
+            ],
+            [
+                [
+                    "Multigrain bread",
+                    "Apricot jam",
+                    "Orange"
+                ],
+                [
+                    "White Bread",
+                    "Marmalade",
+                    "Clementine"
+                ]
+            ]
+        ],
+        "Lunch": [
+            [
+                [
+                    "Rice",
+                    "Provolone",
+                    "Olive oil",
+                    "Tomato sauce",
+                    "Carrot",
+                    "Kiwifruit"
+                ],
+                [
+                    "Buckwheat",
+                    "Feta",
+                    "Butter",
+                    "Salsa",
+                    "Pumpkin",
+                    "Orange"
+                ]
+            ],
+            [
+                [
+                    "Pasta",
+                    "Italian sausage",
+                    "Olive oil",
+                    "Marinara sauce",
+                    "Carrot",
+                    "Kiwifruit"
+                ],
+                [
+                    "Couscous",
+                    "Turkey ham",
+                    "Butter",
+                    "Tomato sauce",
+                    "Pumpkin",
+                    "Orange"
+                ]
+            ],
+            [
+                [
+                    "Rice",
+                    "Steak",
+                    "Olive oil",
+                    "Marinara sauce",
+                    "Turnip",
+                    "Kiwifruit"
+                ],
+                [
+                    "Buckwheat",
+                    "Roast beef",
+                    "Butter",
+                    "Tomato sauce",
+                    "Pumpkin",
+                    "Orange"
+                ]
+            ],
+            [
+                [
+                    "Wheat Bread",
+                    "Edam",
+                    "Olive oil",
+                    "Marinara sauce",
+                    "Artichoke",
+                    "Kiwifruit"
+                ],
+                [
+                    "Couscous",
+                    "Feta",
+                    "Butter",
+                    "Tomato sauce",
+                    "Pumpkin",
+                    "Orange"
+                ]
+            ],
+            [
+                [
+                    "Pasta",
+                    "Mortadella",
+                    "Olive oil",
+                    "Tomato sauce",
+                    "Pumpkin",
+                    "Orange"
+                ],
+                [
+                    "Couscous",
+                    "Turkey ham",
+                    "Butter",
+                    "Salsa",
+                    "Turnip",
+                    "Clementine"
+                ]
+            ],
+            [
+                [
+                    "Rice",
+                    "Mortadella",
+                    "Olive oil",
+                    "Tomato sauce",
+                    "Turnip",
+                    "Kiwifruit"
+                ],
+                [
+                    "Buckwheat",
+                    "Turkey ham",
+                    "Butter",
+                    "Salsa",
+                    "Pumpkin",
+                    "Orange"
+                ]
+            ],
+            [
+                [
+                    "Pasta",
+                    "Shrimp",
+                    "Olive oil",
+                    "Salsa",
+                    "Carrot",
+                    "Clementine"
+                ],
+                [
+                    "Couscous",
+                    "Surimi",
+                    "Butter",
+                    "Tomato sauce",
+                    "Pumpkin",
+                    "Orange"
+                ]
+            ]
+        ],
+        "Dinner": [
+            [
+                [
+                    "Wheat Bread",
+                    "Tuna",
+                    "Olive oil",
+                    "Tomato sauce",
+                    "Carrot",
+                    "Orange"
+                ],
+                [
+                    "Couscous",
+                    "Surimi",
+                    "Butter",
+                    "Salsa",
+                    "Pumpkin",
+                    "Clementine"
+                ]
+            ],
+            [
+                [
+                    "Pasta",
+                    "Mortadella",
+                    "Olive oil",
+                    "Tomato sauce",
+                    "Pumpkin",
+                    "Orange"
+                ],
+                [
+                    "Couscous",
+                    "Turkey ham",
+                    "Butter",
+                    "Salsa",
+                    "Turnip",
+                    "Clementine"
+                ]
+            ],
+            [
+                [
+                    "Pasta",
+                    "Roast beef",
+                    "Olive oil",
+                    "Tomato sauce",
+                    "Pumpkin",
+                    "Kiwifruit"
+                ],
+                [
+                    "Couscous",
+                    "Goat",
+                    "Butter",
+                    "Salsa",
+                    "Turnip",
+                    "Orange"
+                ]
+            ],
+            [
+                [
+                    "Rice",
+                    "Steak",
+                    "Olive oil",
+                    "Marinara sauce",
+                    "Turnip",
+                    "Kiwifruit"
+                ],
+                [
+                    "Buckwheat",
+                    "Roast beef",
+                    "Butter",
+                    "Tomato sauce",
+                    "Pumpkin",
+                    "Orange"
+                ]
+            ],
+            [
+                [
+                    "Rice",
+                    "Salami",
+                    "Olive oil",
+                    "Salsa",
+                    "Pumpkin",
+                    "Orange"
+                ],
+                [
+                    "Buckwheat",
+                    "Turkey ham",
+                    "Butter",
+                    "Tomato sauce",
+                    "Turnip",
+                    "Clementine"
+                ]
+            ],
+            [
+                [
+                    "Wheat Bread",
+                    "Edam",
+                    "Olive oil",
+                    "Marinara sauce",
+                    "Artichoke",
+                    "Kiwifruit"
+                ],
+                [
+                    "Couscous",
+                    "Feta",
+                    "Butter",
+                    "Tomato sauce",
+                    "Pumpkin",
+                    "Orange"
+                ]
+            ],
+            [
+                [
+                    "Wheat Bread",
+                    "Beef",
+                    "Olive oil",
+                    "Salsa",
+                    "Turnip",
+                    "Orange"
+                ],
+                [
+                    "Couscous",
+                    "Roast beef",
+                    "Butter",
+                    "Tomato sauce",
+                    "Pumpkin",
+                    "Clementine"
+                ]
+            ]
+        ]
+    },
+    "used_jolly": false
+}
