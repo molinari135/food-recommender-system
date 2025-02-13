@@ -198,4 +198,3 @@ class RecommenderSystem:
         self.user_profiler.save_profile(filename)
 
         print("\n✅ Seasonal preferences saved successfully!")
-        
