@@ -34,11 +34,13 @@ def generate_meal(preferences_df: pd.DataFrame, filtered_df: pd.DataFrame):
     for food in meal:
         item_category = preferences_df[preferences_df["Food Name"] == food]["Category Name"].values[0]
 
-        if item_category not in ["Oils"]:
+        if item_category != ["Oils"]:
             similar_foods = RecommenderSystem.get_similar_food(
                 filtered_df, food_name=food, same_category=True, low_density_food=True
             )
-            similar_meal.append(similar_foods[0][0] if similar_foods else food)
+            similar_meal.append(similar_foods[0][0])
+        else:
+            similar_meal.append(food)
 
     return meal, similar_meal
 

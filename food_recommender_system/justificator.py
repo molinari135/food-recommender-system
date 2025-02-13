@@ -14,12 +14,38 @@ class Justificator:
         self.seasonal_info = seasonality
         self.macronutrients = ["Calories", "Carbs", "Fats", "Fiber", "Protein"]
 
+    @staticmethod
     def print_meal(meal: list, df: pd.DataFrame, servings: dict):    
         for food in meal:
             category = DataLoader.get_food_category(df, food)[0]
             serving_size = servings.get(category).get("serving_size")
             tips = servings.get(category).get("tips")
             print(f"- {serving_size}g of {food} ({tips})")
+
+    @staticmethod
+    def print_full_week_meals(user: UserProfiler, df: pd.DataFrame, servings: dict):
+        """Prints the full week's meal plan for the user."""
+        meal_types = ["Breakfast", "Snack", "Lunch", "Snack", "Dinner"]
+        week_days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+
+        meals = user.get_meals()  # This is a dictionary with meal types as keys
+
+        for day_idx, day in enumerate(week_days):
+            print(f"\n📅 {day}:")
+
+            for meal in meal_types:
+                if meal in meals:  # Ensure the meal type exists in the dictionary
+                    if day_idx < len(meals[meal]):  # Ensure the day index is within bounds
+                        main_meal, alternative_meal = meals[meal][day_idx]  # Extract main & alternative meals
+
+                        print(f"\n🍽️ {meal}:")
+                        print("👉 Main option:")
+                        Justificator.print_meal(main_meal, df, servings)
+
+                        print("\n🔄 Alternative option:")
+                        Justificator.print_meal(alternative_meal, df, servings)
+
+                        print("-" * 30)  # Separator for readability
 
     def compare_meals(self, meal1: list, meal2: list, verbose: bool = False):
 

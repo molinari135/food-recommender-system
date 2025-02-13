@@ -3,7 +3,6 @@ from recommender import RecommenderSystem
 from dataloader import DataLoader
 from mealgen import generate_weekly_meal_plan
 from justificator import Justificator
-from datetime import datetime
 from moodmod import change_meal
 from pathlib import Path
 
@@ -53,6 +52,8 @@ def main():
 
         meal_name, current_meal, current_alternative = Justificator.get_current_meal(user, df)
 
+        # Justificator.print_full_week_meals(user, df, servings)
+
         print(f"\nToday's {meal_name.lower()} is:")
         Justificator.print_meal(current_meal, df, servings)
         print("\nAlternatively, you can have:")
@@ -64,7 +65,7 @@ def main():
 
         preferences_df = df[df["Food Name"].isin(user_profiler.get_food_preferences())]
         change_meal(user, preferences_df, fast_food_equiv, meal_name, filename)
-        
+
     except Exception as e:
         print(f"An error occurred: {str(e)}")
 
