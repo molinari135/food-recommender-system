@@ -39,9 +39,10 @@ def main():
             if intolerances == "yes":
                 user.set_intolerances("Lactose")
 
-            intolerances = input("Are you gluten intolerant? (Yes/no): ").strip().lower()
-            if intolerances == "yes":
-                user.set_intolerances("Gluten")
+            # FIXME actually not working!
+            # intolerances = input("Are you gluten intolerant? (Yes/no): ").strip().lower()
+            # if intolerances == "yes":
+            #     user.set_intolerances("Gluten")
 
             # Save the profile
             user.save_profile(filename)
