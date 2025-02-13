@@ -15,7 +15,7 @@ class Justificator:
         self.macronutrients = ["Calories", "Carbs", "Fats", "Fiber", "Protein"]
 
     @staticmethod
-    def print_meal(meal: list, df: pd.DataFrame, servings: dict):    
+    def print_meal(meal: list, df: pd.DataFrame, servings: dict):
         for food in meal:
             category = DataLoader.get_food_category(df, food)[0]
             serving_size = servings.get(category).get("serving_size")
@@ -75,7 +75,8 @@ class Justificator:
             better_choice = {"food": None, "score": 0}  # Track which food is better based on nutrition
 
             for i, nutrient in enumerate(self.macronutrients):
-                f1_value, f2_value = int(food1_info[i]), int(food2_info[i])
+                f1_value = int(food1_info[i]) if pd.notna(food1_info[i]) else 0
+                f2_value = int(food2_info[i]) if pd.notna(food2_info[i]) else 0
 
                 if f1_value < f2_value:
                     if verbose:
@@ -106,7 +107,7 @@ class Justificator:
             if food1_info[3] > food2_info[3]:  # More fiber is better for digestion
                 persuasion += f"🌿 {food1} has more fiber, making it better for digestion and gut health.\n"
             if food1_info[4] > food2_info[4]:  # More protein helps with muscle growth
-                persuasion += f"💪 If you're looking to build muscle, {food1} is the better option.\n"
+                persuasion += f"💪 If you're looking to build muscle, {food1} is the better option because it has more proteins.\n"
 
             # Balanced advice
             persuasion += "😋 Remember that there is no good of bad food... Just follow your taste!\n"
@@ -115,16 +116,7 @@ class Justificator:
 
         return comparison_results
 
-    def recommend_seasonal(self, food_name):
-        """
-        Provides persuasive information about a fruit or vegetable, emphasizing its benefits and seasonality.
-
-        Args:
-            food_name (str): The name of the fruit or vegetable.
-
-        Returns:
-            str: Persuasive recommendation for choosing the food.
-        """
+    def recommend_seasonal(self, food_name: str) -> str:
 
         if food_name not in self.seasonal_info:
             return f"⚠️ Sorry, we don't have information on {food_name}."
@@ -162,13 +154,3 @@ class Justificator:
         current_alternative = user.get_meals()[meal_name][today_day_of_week][1]
 
         return meal_name, current_meal, current_alternative
-
-        # print(f"Today's {meal} is:")
-        # for food in current_meal:
-        #     category = DataLoader.get_food_category(df, food)[0]
-        #     print(f"- {food} ({category})")
-
-        # print("\nAlternatively, you can have:")
-        # for food in current_alternative:
-        #     category = DataLoader.get_food_category(df, food)
-        #     print(f"- {food} ({category[0] if category.size > 0 else 'Unknown'})")

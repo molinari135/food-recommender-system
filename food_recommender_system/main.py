@@ -7,7 +7,6 @@ from moodmod import change_meal
 from pathlib import Path
 
 
-# Main process
 def main():
     try:
         user_profiler = UserProfiler()
@@ -17,11 +16,13 @@ def main():
         food_seasonality_file = Path("food-seasonality.json")
         servings_file = Path("food-servings.json")
         fast_food_eqiv_file = Path("fast-food-equiv.json")
+        food_infos_file = Path("food-infos.json")
 
         df = dataloader.load_csv(nutritional_facts_file)
         seasonality = dataloader.load_json(food_seasonality_file)
         servings = dataloader.load_json(servings_file)
         fast_food_equiv = dataloader.load_json(fast_food_eqiv_file)
+        food_infos = dataloader.load_json(food_infos_file)
 
         name_surname = input("Enter name_surname to create or load your profile: ").strip().lower()
         filename = Path(f"{name_surname}.json")
@@ -47,13 +48,12 @@ def main():
             # Save the profile
             user.save_profile(filename)
             recommender.ask_user_preferences(filename)
-            recommender.ask_seasonal_preferences(filename)
+            recommender.ask_seasonal_preferences(filename, food_infos)
 
             generate_weekly_meal_plan(df, servings, user, filename)
 
         meal_name, current_meal, current_alternative = Justificator.get_current_meal(user, df)
-
-        # Justificator.print_full_week_meals(user, df, servings)
+        Justificator.print_full_week_meals(user, df, servings)
 
         print(f"\nToday's {meal_name.lower()} is:")
         Justificator.print_meal(current_meal, df, servings)
@@ -64,8 +64,8 @@ def main():
         for comp in comparison:
             print(comp)
 
-        preferences_df = df[df["Food Name"].isin(user_profiler.get_food_preferences())]
-        change_meal(user, preferences_df, fast_food_equiv, meal_name, filename)
+        # preferences_df = df[df["Food Name"].isin(user_profiler.get_food_preferences())]
+        change_meal(user, df, fast_food_equiv, meal_name, servings, filename)
 
     except Exception as e:
         print(f"An error occurred: {str(e)}")
