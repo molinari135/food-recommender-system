@@ -22,7 +22,7 @@ def change_meal(user: UserProfiler, df: pd.DataFrame, fast_food_equiv: dict, mea
 
             if is_stressed:
                 print(f"🤔 Let's see, today's {meal_name.lower()} is...")
-                Justificator.get_current_meal(user, df)
+                Justificator.get_current_meal(user, "Lunch", debug=True)
                 print("😉 Just for today, let's eat something that could improve your mood!")
 
                 fast_foods = df[df["Category Name"] == "Fast Foods"]
@@ -43,7 +43,7 @@ def change_meal(user: UserProfiler, df: pd.DataFrame, fast_food_equiv: dict, mea
 
                 user.set_meals(weekly_meals)
                 user.save_profile(filename)
-                print("\n🫡 Take care of yourself!")
+                print("\n🫡  Take care of yourself!")
         else:
             print(f"Have a nice {meal_name.lower()}!")
 

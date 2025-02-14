@@ -3,6 +3,7 @@ from dataloader import DataLoader
 from datetime import datetime
 from profiler import UserProfiler
 import pandas as pd
+from pathlib import Path
 
 
 class Justificator:
@@ -36,7 +37,8 @@ class Justificator:
             for meal in meal_types:
                 if meal in meals:  # Ensure the meal type exists in the dictionary
                     if day_idx < len(meals[meal]):  # Ensure the day index is within bounds
-                        main_meal, alternative_meal = meals[meal][day_idx]  # Extract main & alternative meals
+                        meal_data = meals[meal][day_idx]
+                        main_meal, alternative_meal = meal_data[:2]  # Extract main & alternative meals
 
                         print(f"\n🍽️ {meal}:")
                         print("👉 Main option:")
@@ -44,6 +46,11 @@ class Justificator:
 
                         print("\n🔄 Alternative option:")
                         Justificator.print_meal(alternative_meal, df, servings)
+
+                        if len(meal_data) == 3:
+                            chosen_meal = meal_data[2]
+                            print("\n✅ Chosen option:")
+                            Justificator.print_meal(chosen_meal, df, servings)
 
                         print("-" * 30)  # Separator for readability
 
@@ -140,17 +147,60 @@ class Justificator:
 
         return recommendation
 
-    def get_current_meal(user: UserProfiler, df: pd.DataFrame):
+    def get_current_meal(user: UserProfiler, meal_name: str = None, debug: bool = False):
         """Determines the current meal based on the time of day and provides recommendations."""
         today_day_of_week = datetime.now().weekday()
         current_hour = datetime.now().hour
 
-        meal_name = "Breakfast" if current_hour < 9 else \
-            "Snack" if current_hour < 11 else \
-            "Lunch" if current_hour < 14 else \
-            "Snack" if current_hour < 17 else "Dinner"
+        if debug:
+            meal_name = meal_name
+        else:
+            meal_name = "Breakfast" if current_hour < 9 else \
+                "Snack" if current_hour < 11 else \
+                "Lunch" if current_hour < 14 else \
+                "Snack" if current_hour < 17 else "Dinner"
 
         current_meal = user.get_meals()[meal_name][today_day_of_week][0]
         current_alternative = user.get_meals()[meal_name][today_day_of_week][1]
 
-        return meal_name, current_meal, current_alternative
+        if len(user.get_meals()[meal_name][today_day_of_week]) == 3:
+            # TODO This is the real expression of the user preferences!
+            choosen_meal = user.get_meals()[meal_name][today_day_of_week][2]
+        else:
+            choosen_meal = None
+
+        return meal_name, current_meal, current_alternative, choosen_meal
+
+    def choose_foods_in_current_meal(user: UserProfiler, filename: Path):
+        """Asks the user to choose between individual foods in the main meal and the alternative meal for the current meal."""
+        meal_name, current_meal, current_alternative, choosen_meal = Justificator.get_current_meal(user, meal_name="Lunch", debug=True)
+
+        # Check if the meal already has a chosen meal
+        if choosen_meal:
+            return
+
+        print(f"\n🍽️ {meal_name}:")
+        chosen_meal = []
+        for i, (main_food, alt_food) in enumerate(zip(current_meal, current_alternative)):
+            if main_food == alt_food:
+                chosen_meal.append(main_food)
+                continue
+
+            print(f"\n👉 Option 1: {main_food}")
+            print(f"🔄 Option 2: {alt_food}")
+
+            choice = input(f"Which option do you prefer for item {i + 1}? (1/2): ").strip()
+            if choice == "1":
+                chosen_meal.append(main_food)
+            elif choice == "2":
+                chosen_meal.append(alt_food)
+            else:
+                print("Invalid choice. Keeping the main option.")
+                chosen_meal.append(main_food)
+
+        meals = user.get_meals()
+        today_day_of_week = datetime.now().weekday()
+        meals[meal_name][today_day_of_week] = [current_meal, current_alternative, chosen_meal]  # Replace with the chosen meal
+        user.set_meals(meals)
+        user.save_profile(filename)
+        print("-" * 30)  # Separator for readability

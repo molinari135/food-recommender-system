@@ -7,6 +7,7 @@ from moodmod import change_meal
 from pathlib import Path
 
 import sys
+import time
 
 
 user_profiler = UserProfiler()
@@ -64,21 +65,27 @@ def create_or_load_user():
 
     return user, filename, recsys
 
+
 def display_current_meal_and_alternatives(user, filename):
     jst = Justificator(df, seasonality)
-    meal_name, current_meal, current_alternative = Justificator.get_current_meal(user, df)
-    
-    print(f"\nToday's {meal_name.lower()} is:")
-    Justificator.print_meal(current_meal, df, servings)
-    print("\nAlternatively, you can have:")
-    Justificator.print_meal(current_alternative, df, servings)
+    meal_name, current_meal, current_alternative, choosen_meal = Justificator.get_current_meal(user, meal_name="Lunch", debug=True)
 
-    comparison = jst.compare_meals(current_meal, current_alternative)
-    for comp in comparison:
-        print(comp)
+    if choosen_meal:
+        print(f"\nToday's {meal_name.lower()} is:")
+        Justificator.print_meal(choosen_meal, df, servings)
+    else:
+        print(f"\nToday's {meal_name.lower()} is:")
+        Justificator.print_meal(current_meal, df, servings)
+        print("\nAlternatively, you can have:")
+        Justificator.print_meal(current_alternative, df, servings)
 
-    # preferences_df = df[df["Food Name"].isin(user_profiler.get_food_preferences())]
-    change_meal(user, df, fast_food_equiv, meal_name, servings, filename)
+        comparison = jst.compare_meals(current_meal, current_alternative)
+        for comp in comparison:
+            print(comp)
+
+        # preferences_df = df[df["Food Name"].isin(user_profiler.get_food_preferences())]
+        change_meal(user, df, fast_food_equiv, meal_name, servings, filename)
+        Justificator.choose_foods_in_current_meal(user, filename)
 
 
 def display_weekly_meal_plan(user):
@@ -87,23 +94,61 @@ def display_weekly_meal_plan(user):
 
 def learn_about_seasonal_food(recsys: RecommenderSystem, food_info: dict):
     fruits, vegetables = recsys.get_seasonal_food()
+    seasonal_foods = fruits + vegetables
 
-    print("\nHere are some tips for your selected foods:")
-    for food in fruits + vegetables:
-        how_to_choose = food_info.get(food, {}).get("how_to_choose", "No information available")
-        how_to_store = food_info.get(food, {}).get("how_to_store", "No information available")
-        tips = food_info.get(food, {}).get("tips", "No tips available")
+    print("\n🌍 Why choose seasonal produce?")
+    print("✔️  Better taste & freshness – Seasonal foods are naturally ripened and have the best flavor.")
+    print("✔️  Higher nutritional value – Fresh seasonal produce retains more vitamins and minerals.")
+    print("✔️  Lower environmental impact – Locally grown seasonal food reduces transportation emissions.")
 
-        print(f"\n📌 {food.upper()}")
-        print(f"🛒 How to Choose: {how_to_choose}")
-        print(f"❄️ How to Store: {how_to_store}")
-        print(f"💡 Tips: {tips}")
+    time.sleep(2)
+
+    print("\nSelect a seasonal food to learn more or type 'back' to return to the main menu:")
+    time.sleep(1)
+
+    for idx, food in enumerate(seasonal_foods, start=1):
+        print(f"{idx}. {food}")
+        time.sleep(0.5)
+
+    while True:
+
+        print("\nSelect a seasonal food to learn more or type 'back' to return to the main menu:")
+        choice = input("Enter your choice: ").strip().lower()
+
+        if choice == 'back':
+            break
+
+        if choice.isdigit() and 1 <= int(choice) <= len(seasonal_foods):
+            food = seasonal_foods[int(choice) - 1]
+            benefits = food_info.get(food, {}).get("benefits", "No information available")
+            how_to_choose = food_info.get(food, {}).get("how_to_choose", "No information available")
+            how_to_store = food_info.get(food, {}).get("how_to_store", "No information available")
+            description = food_info.get(food, {}).get("description", "No information available")
+            nutritional_intake = food_info.get(food, {}).get("nutritional_intake", "No information available")
+            tips = food_info.get(food, {}).get("tips", "No tips available")
+
+            print(f"\n📌 {food.upper()}")
+            print(f"💪 Health Benefits: {", ".join(benefits)}\n")
+            time.sleep(1)
+            print(f"🛒 How to Choose: {how_to_choose}")
+            time.sleep(1)
+            print(f"❄️  How to Store: {how_to_store}\n")
+            time.sleep(1)
+            print(f"📌 Description: {description}")
+            time.sleep(1)
+            print(f"🥗 Nutritional Insights:\n{nutritional_intake}\n")
+            time.sleep(1)
+            print(f"💡 Tips: {tips}")
+            time.sleep(3)
+
+        else:
+            print("Invalid choice! Please enter a valid number or 'back'.")
 
 
 def main():
     try:
         user, filename, recsys = create_or_load_user()
-        
+
         while True:
             show_menu()
             choice = input("Enter your choice (1-5): ")
