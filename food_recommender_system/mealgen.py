@@ -10,7 +10,14 @@ from config import EXCLUDED_CATEGORIES, MEAL_GENERATION_CATEGORIES
 
 def generate_meal(preferences_df: pd.DataFrame, filtered_df: pd.DataFrame, category: str):
     """
-    Generate a meal based on user preferences and food categories.
+    Parameters:
+    preferences_df (pd.DataFrame): DataFrame containing user preferences with columns "Category Name" and "Food Name".
+    filtered_df (pd.DataFrame): DataFrame containing filtered food items for recommendation.
+    category (str): The specific food category to include in the meal.
+    Returns:
+    tuple: A tuple containing two lists:
+        - meal (list): A list of selected food items based on user preferences.
+        - similar_meal (list): A list of similar food items for each item in the meal.
     """
 
     meal = []
@@ -69,6 +76,22 @@ def generate_breakfast(preferences_df: pd.DataFrame, filtered_df: pd.DataFrame):
 
 
 def generate_snack(preferences_df: pd.DataFrame, filtered_df: pd.DataFrame):
+    """
+    Generate a snack based on user preferences and filtered data.
+    This function selects a snack consisting of three items from the user's preferences:
+    - One item from the "Baked Products Breakfast" category.
+    - One item from either the "Sweets Breakfast" or "Nuts Breakfast" category.
+    - One item from the "Fruits" category.
+    It then finds similar foods for each selected item from the filtered data, ensuring they are from the same category and are low-density foods.
+    Args:
+        preferences_df (pd.DataFrame): DataFrame containing user preferences with columns "Category Name" and "Food Name".
+        filtered_df (pd.DataFrame): DataFrame containing filtered food data for finding similar foods.
+    Returns:
+        tuple: A tuple containing two lists:
+            - snack (list): List of selected snack items.
+            - similar_snack (list): List of similar snack items found in the filtered data.
+    """
+
     snack = []
     snack.extend([
         random.choice(preferences_df[preferences_df["Category Name"] == "Baked Products Breakfast"]["Food Name"].to_list()),
@@ -90,6 +113,16 @@ def generate_snack(preferences_df: pd.DataFrame, filtered_df: pd.DataFrame):
 
 
 def compute_meal_calories(meal: list, df: pd.DataFrame, servings: pd.DataFrame, verbose: bool = False) -> float:
+    """
+    Computes the total calories for a given meal.
+    Args:
+        meal (list): A list of food names included in the meal.
+        df (pd.DataFrame): A DataFrame containing nutritional information for various foods.
+        servings (pd.DataFrame): A DataFrame containing serving size information for different food categories.
+        verbose (bool, optional): If True, prints detailed information about each food's calorie content. Defaults to False.
+    Returns:
+        float: The total calorie content of the meal.
+    """
 
     calories = 0
 
@@ -107,6 +140,17 @@ def compute_meal_calories(meal: list, df: pd.DataFrame, servings: pd.DataFrame, 
 
 
 def generate_weekly_meal_plan(df: pd.DataFrame, servings: dict, user_profiler: UserProfiler, filename: Path):
+    """
+    Generates a weekly meal plan based on user preferences, seasonal preferences, and intolerances.
+    Args:
+        df (pd.DataFrame): DataFrame containing the food dataset.
+        servings (dict): Dictionary containing the frequency of servings per week for each category.
+        user_profiler (UserProfiler): UserProfiler object to get user preferences and intolerances.
+        filename (Path): Path to save the generated meal plan.
+    Returns:
+        dict: A dictionary containing the generated meals for Breakfast, Snack, Lunch, and Dinner.
+    """
+
     # Load user profile
     user_preferences = user_profiler.get_food_preferences()
     seasonal_preferences = user_profiler.get_seasonal_preferences()
@@ -146,7 +190,6 @@ def generate_weekly_meal_plan(df: pd.DataFrame, servings: dict, user_profiler: U
     for category, info in servings_count.items():
         if category in categories:
             if not preferences_df[preferences_df["Category Name"] == category].empty:
-                print(f"Generating {info['frequency_per_week']} meals with {category}...")
                 for _ in range(info['frequency_per_week']):
                     meal, similar_meal = generate_meal(preferences_df, filtered_df, category)
                     meals.append((meal, similar_meal))

@@ -68,7 +68,18 @@ def create_or_load_user():
     return user, filename, recsys
 
 
-def display_current_meal_and_alternatives(user, filename):
+def display_current_meal_and_alternatives(user: UserProfiler, filename: Path):
+    """
+    Display the current meal and its alternatives for a given user.
+    This function retrieves the current meal and an alternative meal for the user,
+    displays the chosen meal if available, or the current meal and its alternative.
+    It also compares the current meal with the alternative and prints the comparison.
+    Args:
+        user (UserProfiler): The user object containing user-specific information.
+        filename (Path): The Path where the meal data is stored.
+    Returns:
+        None
+    """
     jst = Justificator(df, seasonality)
     meal_name, current_meal, current_alternative, choosen_meal = Justificator.get_current_meal(user, meal_name="Lunch", debug=True)
 
@@ -97,6 +108,15 @@ def display_weekly_meal_plan(user):
 
 
 def learn_about_seasonal_food(recsys: RecommenderSystem, food_info: dict):
+    """
+    Provides information about seasonal foods and allows the user to learn more about each food item.
+    Args:
+        recsys (RecommenderSystem): An instance of the RecommenderSystem class to get seasonal food data.
+        food_info (dict): A dictionary containing detailed information about various foods.
+    The function displays the benefits of choosing seasonal produce and lists available seasonal fruits and vegetables.
+    The user can select a food item to learn more about its health benefits, how to choose and store it, a description,
+    nutritional insights, and additional tips. The user can type 'back' to return to the main menu.
+    """
     fruits, vegetables = recsys.get_seasonal_food()
     seasonal_foods = fruits + vegetables
 

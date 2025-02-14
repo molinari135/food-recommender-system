@@ -22,6 +22,7 @@ class UserProfiler:
 
     def set_intolerances(self, intolerance: str):
         """Add an intolerance to the profile"""
+
         if intolerance == "Lactose":
             self.intolerances.append(["Dairy", "Dairy Breakfast"])
         if intolerance == "Gluten":
@@ -58,6 +59,7 @@ class UserProfiler:
         return self.used_jolly
 
     def save_profile(self, filename: Path):
+
         profile_data = {
             # TODO "diet": self.diet,
             "intolerances": self.intolerances,
@@ -71,13 +73,24 @@ class UserProfiler:
 
     @classmethod
     def check_profile(self, filename: Path):
+        """
+        Checks if a profile exists for the given filename. If the profile does not exist,
+        it creates a new one.
+
+        Args:
+            filename (Path): The name of the file to check for the profile.
+
+        Returns:
+            None
+        """
+
         if not os.path.exists(PROCESSED_DATA_PATH / filename):
             print("🆕 Profile not found. Creating a new one...")
             self.create_new_profile(filename)
 
     @classmethod
     def load_profile(cls, filename: Path):
-        """Load user's profile from JSON file"""
+
         try:
             with open(PROCESSED_DATA_PATH / filename, "r") as file:
                 data = json.load(file)
@@ -94,6 +107,7 @@ class UserProfiler:
 
     @staticmethod
     def create_new_profile(filename: Path):
+
         empty_profile = {
             # TODO "diet": "omnivore",
             "intolerances": [],
@@ -109,6 +123,7 @@ class UserProfiler:
         print(f"🆕 Empty profile created at {PROCESSED_DATA_PATH / filename}")
 
     def __str__(self) -> str:
+
         return f"""
             \nDiet: {self.diet},
             \nIntolerances: {self.intolerances},

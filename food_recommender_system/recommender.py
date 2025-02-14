@@ -16,6 +16,16 @@ class RecommenderSystem:
         self.user_profiler = user_profiler
 
     def get_seasonal_food(self, nationality: str = "Italy"):
+        """
+        Get the seasonal fruits and vegetables for a given nationality.
+        Args:
+            nationality (str): The nationality to get the seasonal food for. Defaults to "Italy".
+        Returns:
+            tuple: A tuple containing two lists:
+                - fruits (list): A list of seasonal fruits.
+                - vegetables (list): A list of seasonal vegetables.
+        """
+
         fruits = []
         vegetables = []
 
@@ -37,6 +47,18 @@ class RecommenderSystem:
 
     @staticmethod
     def get_similar_food(df: pd.DataFrame, food_name: str, same_category: bool = True, low_density_food: bool = True):
+        """
+        Get a list of foods similar to the given food based on nutritional information.
+        Parameters:
+        df (pd.DataFrame): DataFrame containing nutritional information of various foods.
+        food_name (str): The name of the food to find similar foods for.
+        same_category (bool, optional): If True, only consider foods in the same category as the given food. Default is True.
+        low_density_food (bool, optional): If True, sort similar foods by energy density. Default is True.
+        Returns:
+        list: A list of tuples containing similar foods and their similarity scores. If low_density_food is True,
+              each tuple also includes the energy density of the food.
+        """
+
         similar_foods = []
 
         if same_category:
@@ -71,6 +93,21 @@ class RecommenderSystem:
             return similar_foods
 
     def ask_user_preferences(self, filename: Path):
+        """
+        Asks the user for their food preferences based on categories and intolerances,
+        and saves the preferences to a profile.
+        Parameters:
+        filename (Path): The path where the user profile will be saved.
+        The function performs the following steps:
+        1. Sets default preferences based on user intolerances.
+        2. Filters the dataframe to exclude certain categories and intolerances.
+        3. Prompts the user to select their preferred foods from each category.
+        4. Combines the selected preferences into a single dataframe.
+        5. Saves the user's food preferences to a profile.
+        If no preferences are selected for a category, default preferences are used.
+        If the combined preferences dataframe is empty, the original filtered data is used.
+        """
+
         preferences = {}
         # Set the default preferences
         default_preferences = PREFERENCES["no_intolerances"]
@@ -141,6 +178,16 @@ class RecommenderSystem:
         print("\n✅ Preferences saved successfully!")
 
     def ask_seasonal_preferences(self, filename: Path, info_file: dict):
+        """
+        Prompts the user to select their preferred seasonal fruits and vegetables for the current month,
+        and saves these preferences to a user profile.
+        Args:
+            filename (Path): The path to the file where the user profile will be saved.
+            info_file (dict): A dictionary containing information about various foods, including their benefits,
+                              how to choose them, how to store them, and additional tips.
+        Returns:
+            None
+        """
 
         food_info = info_file
         # Get seasonal fruits and vegetables
@@ -172,18 +219,6 @@ class RecommenderSystem:
             selected_vegetables = [vegetables_list[int(i) - 1] for i in selected_vegetables.split()]
         else:
             selected_vegetables = vegetables
-
-        # Show additional information after selection
-        # print("\nHere are some tips for your selected foods:")
-        # for food in selected_fruits + selected_vegetables:
-        #     how_to_choose = food_info.get(food, {}).get("how_to_choose", "No information available")
-        #     how_to_store = food_info.get(food, {}).get("how_to_store", "No information available")
-        #     tips = food_info.get(food, {}).get("tips", "No tips available")
-
-        #     print(f"\n📌 {food.upper()}")
-        #     print(f"🛒 How to Choose: {how_to_choose}")
-        #     print(f"❄️ How to Store: {how_to_store}")
-        #     print(f"💡 Tips: {tips}")
 
         # Filter the user preferences dataframe to include only selected seasonal fruits and vegetables
         selected_fruits_df = self.df[self.df['Food Name'].isin(selected_fruits)]

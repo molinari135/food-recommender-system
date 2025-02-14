@@ -7,7 +7,16 @@ import random
 
 
 def change_meal(user: UserProfiler, df: pd.DataFrame, meal_name: str, filename: Path):
-    """Suggest a new meal based on user mood and preferences."""
+    """
+    Suggest a new meal based on user mood and preferences.
+    Parameters:
+    user (UserProfiler): The user profile containing meal preferences and mood information.
+    df (pd.DataFrame): DataFrame containing food items and their categories.
+    meal_name (str): The name of the meal to be changed (e.g., "Lunch", "Dinner").
+    filename (Path): The path to the file where the user profile is saved.
+    Returns:
+    None
+    """
 
     today_day_of_week = datetime.now().weekday()
     weekly_meals = user.get_meals()
@@ -44,7 +53,16 @@ def change_meal(user: UserProfiler, df: pd.DataFrame, meal_name: str, filename: 
 
 
 def reset_jolly_if_new_week(user: UserProfiler):
-    """Reset the jolly flag if today is the first day of the week (Monday)."""
+    """
+    Reset the jolly flag if today is the first day of the week (Monday).
+    This function checks if the current day is Monday and if the current time is exactly midnight.
+    If both conditions are met, it resets the 'jolly' flag for the user to indicate that a new week has started.
+    Args:
+        user (UserProfiler): An instance of UserProfiler representing the user whose jolly flag needs to be reset.
+    Returns:
+        None
+    """
+
     today = datetime.now()
 
     # Check if today is Monday and if it's past midnight

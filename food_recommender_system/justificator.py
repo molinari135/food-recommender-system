@@ -13,12 +13,25 @@ class Justificator:
 
     def __init__(self, df, seasonality):
         """Loads the nutritional database."""
+
         self.df = df
         self.seasonal_info = seasonality
         self.macronutrients = ["Calories", "Carbs", "Fats", "Fiber", "Protein"]
 
     @staticmethod
     def print_meal(meal: list, df: pd.DataFrame, servings: dict):
+        """
+        Prints the meal details including serving size and tips for each food item.
+
+        Args:
+            meal (list): A list of food items to be printed.
+            df (pd.DataFrame): A DataFrame containing food data.
+            servings (dict): A dictionary containing serving size and tips for each food category.
+
+        Returns:
+            None
+        """
+
         for food in meal:
             category = DataLoader.get_food_category(df, food)[0]
             serving_size = servings.get(category).get("serving_size")
@@ -27,20 +40,29 @@ class Justificator:
 
     @staticmethod
     def print_full_week_meals(user: UserProfiler, df: pd.DataFrame, servings: dict):
-        """Prints the full week's meal plan for the user."""
+        """
+        Prints the full week's meal plan for the user.
+        Args:
+            user (UserProfiler): An instance of UserProfiler containing user-specific meal data.
+            df (pd.DataFrame): A DataFrame containing meal information.
+            servings (dict): A dictionary containing serving sizes for each meal.
+        Returns:
+            None
+        """
+
         meal_types = ["Breakfast", "Snack", "Lunch", "Snack", "Dinner"]
         week_days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
-        meals = user.get_meals()  # This is a dictionary with meal types as keys
+        meals = user.get_meals()
 
         for day_idx, day in enumerate(week_days):
             print(f"\n📅 {day}:")
 
             for meal in meal_types:
-                if meal in meals:  # Ensure the meal type exists in the dictionary
-                    if day_idx < len(meals[meal]):  # Ensure the day index is within bounds
+                if meal in meals:
+                    if day_idx < len(meals[meal]):
                         meal_data = meals[meal][day_idx]
-                        main_meal, alternative_meal = meal_data[:2]  # Extract main & alternative meals
+                        main_meal, alternative_meal = meal_data[:2]
 
                         print(f"\n🍽️  {meal}:")
                         print("👉 Main option:")
@@ -54,10 +76,20 @@ class Justificator:
                             print("\n✅ Chosen option:")
                             Justificator.print_meal(chosen_meal, df, servings)
 
-                        print("🔹" * 30)  # Separator for readability
+                        print("-" * 30)
             time.sleep(0.5)
 
     def compare_meals(self, meal1: list, meal2: list, verbose: bool = False):
+        """
+        Compare two meals based on their nutritional information.
+        Args:
+            meal1 (list): A list of food items representing the first meal.
+            meal2 (list): A list of food items representing the second meal.
+            verbose (bool, optional): If True, provides detailed comparison information. Defaults to False.
+        Returns:
+            list: A list of strings containing the comparison results and recommendations.
+                  If there is an error (e.g., missing nutritional information), returns an error message.
+        """
 
         if len(meal1) != len(meal2):
             return "🔴 Error: The two meals should have the same number of items for a fair comparison."
@@ -126,6 +158,15 @@ class Justificator:
         return comparison_results
 
     def recommend_seasonal(self, food_name: str) -> str:
+        """
+        Recommend seasonal information for a given food item.
+        Args:
+            food_name (str): The name of the food item to get recommendations for.
+        Returns:
+            str: A string containing the recommendation, including health benefits,
+                 nutritional insights, and reasons for choosing seasonal produce.
+                 If the food item is not found, a warning message is returned.
+        """
 
         if food_name not in self.seasonal_info:
             return f"⚠️ Sorry, we don't have information on {food_name}."
@@ -133,10 +174,7 @@ class Justificator:
         details = self.seasonal_info[food_name]
 
         recommendation = f"🌿 Why choose {food_name}?\n"
-        # recommendation += f"📌 Description: {details['description']}\n"
         recommendation += f"💪 Health Benefits: {", ".join(details['benefits'])}\n"
-        # recommendation += f"🛒 How to Choose: {details['how_to_choose']}\n"
-        # recommendation += f"❄️ How to Store: {details['hot_to_store']}\n"
         recommendation += f"🥗 Nutritional Insights:\n{details['nutritional_intake']}\n"
 
         # Persuasive reasoning for seasonality
@@ -145,12 +183,23 @@ class Justificator:
         recommendation += "✔️  Higher nutritional value – Fresh seasonal produce retains more vitamins and minerals.\n"
         recommendation += "✔️  Lower environmental impact – Locally grown seasonal food reduces transportation emissions.\n"
 
-        # recommendation += "\n🍽️ Pro Tip: " + details["tips"] + "\n"
-
         return recommendation
 
     def get_current_meal(user: UserProfiler, meal_name: str = None, debug: bool = False):
-        """Determines the current meal based on the time of day and provides recommendations."""
+        """
+        Determines the current meal based on the time of day and provides recommendations.
+        Args:
+            user (UserProfiler): An instance of UserProfiler containing user meal preferences.
+            meal_name (str, optional): The name of the meal to retrieve. If None, the meal is determined based on the current time. Defaults to None.
+            debug (bool, optional): If True, uses the provided meal_name regardless of the current time. Defaults to False.
+        Returns:
+            tuple: A tuple containing:
+                - meal_name (str): The name of the determined meal.
+                - current_meal (str): The primary meal recommendation.
+                - current_alternative (str): An alternative meal recommendation.
+                - choosen_meal (str or None): The user's preferred meal if specified, otherwise None.
+        """
+
         today_day_of_week = datetime.now().weekday()
         current_hour = datetime.now().hour
 
@@ -174,7 +223,15 @@ class Justificator:
         return meal_name, current_meal, current_alternative, choosen_meal
 
     def choose_foods_in_current_meal(user: UserProfiler, filename: Path):
-        """Asks the user to choose between individual foods in the main meal and the alternative meal for the current meal."""
+        """
+        Asks the user to choose between individual foods in the main meal and the alternative meal for the current meal.
+        Parameters:
+        user (UserProfiler): The user profile object containing meal information.
+        filename (Path): The path to the file where the user profile is saved.
+        Returns:
+        None
+        """
+
         meal_name, current_meal, current_alternative, choosen_meal = Justificator.get_current_meal(user, meal_name="Lunch", debug=True)
 
         # Check if the meal already has a chosen meal
@@ -202,7 +259,7 @@ class Justificator:
 
         meals = user.get_meals()
         today_day_of_week = datetime.now().weekday()
-        meals[meal_name][today_day_of_week] = [current_meal, current_alternative, chosen_meal]  # Replace with the chosen meal
+        meals[meal_name][today_day_of_week] = [current_meal, current_alternative, chosen_meal]
         user.set_meals(meals)
         user.save_profile(filename)
-        print("🔹" * 30)  # Separator for readability
+        print("-" * 30)
