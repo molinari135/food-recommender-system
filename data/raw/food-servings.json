@@ -76,7 +76,7 @@
     },
     "Sauces": {
         "serving_size": 10,
-        "tips": "a tablespoon",
+        "tips": "optional, a tablespoon",
         "frequency_per_week": 14
     },
     "Nuts": {
@@ -86,7 +86,7 @@
     },
     "Nuts Breakfast": {
         "serving_size": 30,
-        "tips": "e.g. 7-8 walnuts, 15-20 almonds or hazelnuts",
+        "tips": "e.g. 2 full teaspoons",
         "frequency_per_week": 7
     },
     "Greens": {
@@ -111,7 +111,12 @@
     },
     "Baked Products Breakfast": {
         "serving_size": 50,
-        "tips": "e.g. 2-3 biscuits, a small bun",
+        "tips": "e.g. 2-3 biscuits, a slice of bread",
         "frequency_per_week": 14
+    },
+    "Fast Foods": {
+        "serving_size": 150,
+        "tips": "e.g. 1 portion",
+        "frequency_per_week": 1
     }
 }

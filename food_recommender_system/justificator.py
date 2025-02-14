@@ -3,6 +3,7 @@ from dataloader import DataLoader
 from datetime import datetime
 from profiler import UserProfiler
 import pandas as pd
+from pathlib import Path
 
 
 class Justificator:
@@ -15,7 +16,7 @@ class Justificator:
         self.macronutrients = ["Calories", "Carbs", "Fats", "Fiber", "Protein"]
 
     @staticmethod
-    def print_meal(meal: list, df: pd.DataFrame, servings: dict):    
+    def print_meal(meal: list, df: pd.DataFrame, servings: dict):
         for food in meal:
             category = DataLoader.get_food_category(df, food)[0]
             serving_size = servings.get(category).get("serving_size")
@@ -36,7 +37,8 @@ class Justificator:
             for meal in meal_types:
                 if meal in meals:  # Ensure the meal type exists in the dictionary
                     if day_idx < len(meals[meal]):  # Ensure the day index is within bounds
-                        main_meal, alternative_meal = meals[meal][day_idx]  # Extract main & alternative meals
+                        meal_data = meals[meal][day_idx]
+                        main_meal, alternative_meal = meal_data[:2]  # Extract main & alternative meals
 
                         print(f"\n🍽️ {meal}:")
                         print("👉 Main option:")
@@ -44,6 +46,11 @@ class Justificator:
 
                         print("\n🔄 Alternative option:")
                         Justificator.print_meal(alternative_meal, df, servings)
+
+                        if len(meal_data) == 3:
+                            chosen_meal = meal_data[2]
+                            print("\n✅ Chosen option:")
+                            Justificator.print_meal(chosen_meal, df, servings)
 
                         print("-" * 30)  # Separator for readability
 
@@ -75,7 +82,8 @@ class Justificator:
             better_choice = {"food": None, "score": 0}  # Track which food is better based on nutrition
 
             for i, nutrient in enumerate(self.macronutrients):
-                f1_value, f2_value = int(food1_info[i]), int(food2_info[i])
+                f1_value = int(food1_info[i]) if pd.notna(food1_info[i]) else 0
+                f2_value = int(food2_info[i]) if pd.notna(food2_info[i]) else 0
 
                 if f1_value < f2_value:
                     if verbose:
@@ -106,7 +114,7 @@ class Justificator:
             if food1_info[3] > food2_info[3]:  # More fiber is better for digestion
                 persuasion += f"🌿 {food1} has more fiber, making it better for digestion and gut health.\n"
             if food1_info[4] > food2_info[4]:  # More protein helps with muscle growth
-                persuasion += f"💪 If you're looking to build muscle, {food1} is the better option.\n"
+                persuasion += f"💪 If you're looking to build muscle, {food1} is the better option because it has more proteins.\n"
 
             # Balanced advice
             persuasion += "😋 Remember that there is no good of bad food... Just follow your taste!\n"
@@ -115,16 +123,7 @@ class Justificator:
 
         return comparison_results
 
-    def recommend_seasonal(self, food_name):
-        """
-        Provides persuasive information about a fruit or vegetable, emphasizing its benefits and seasonality.
-
-        Args:
-            food_name (str): The name of the fruit or vegetable.
-
-        Returns:
-            str: Persuasive recommendation for choosing the food.
-        """
+    def recommend_seasonal(self, food_name: str) -> str:
 
         if food_name not in self.seasonal_info:
             return f"⚠️ Sorry, we don't have information on {food_name}."
@@ -148,27 +147,60 @@ class Justificator:
 
         return recommendation
 
-    def get_current_meal(user: UserProfiler, df: pd.DataFrame):
+    def get_current_meal(user: UserProfiler, meal_name: str = None, debug: bool = False):
         """Determines the current meal based on the time of day and provides recommendations."""
         today_day_of_week = datetime.now().weekday()
         current_hour = datetime.now().hour
 
-        meal_name = "Breakfast" if current_hour < 9 else \
-            "Snack" if current_hour < 11 else \
-            "Lunch" if current_hour < 14 else \
-            "Snack" if current_hour < 17 else "Dinner"
+        if debug:
+            meal_name = meal_name
+        else:
+            meal_name = "Breakfast" if current_hour < 9 else \
+                "Snack" if current_hour < 11 else \
+                "Lunch" if current_hour < 14 else \
+                "Snack" if current_hour < 17 else "Dinner"
 
         current_meal = user.get_meals()[meal_name][today_day_of_week][0]
         current_alternative = user.get_meals()[meal_name][today_day_of_week][1]
 
-        return meal_name, current_meal, current_alternative
+        if len(user.get_meals()[meal_name][today_day_of_week]) == 3:
+            # TODO This is the real expression of the user preferences!
+            choosen_meal = user.get_meals()[meal_name][today_day_of_week][2]
+        else:
+            choosen_meal = None
 
-        # print(f"Today's {meal} is:")
-        # for food in current_meal:
-        #     category = DataLoader.get_food_category(df, food)[0]
-        #     print(f"- {food} ({category})")
+        return meal_name, current_meal, current_alternative, choosen_meal
 
-        # print("\nAlternatively, you can have:")
-        # for food in current_alternative:
-        #     category = DataLoader.get_food_category(df, food)
-        #     print(f"- {food} ({category[0] if category.size > 0 else 'Unknown'})")
+    def choose_foods_in_current_meal(user: UserProfiler, filename: Path):
+        """Asks the user to choose between individual foods in the main meal and the alternative meal for the current meal."""
+        meal_name, current_meal, current_alternative, choosen_meal = Justificator.get_current_meal(user, meal_name="Lunch", debug=True)
+
+        # Check if the meal already has a chosen meal
+        if choosen_meal:
+            return
+
+        print(f"\n🍽️ {meal_name}:")
+        chosen_meal = []
+        for i, (main_food, alt_food) in enumerate(zip(current_meal, current_alternative)):
+            if main_food == alt_food:
+                chosen_meal.append(main_food)
+                continue
+
+            print(f"\n👉 Option 1: {main_food}")
+            print(f"🔄 Option 2: {alt_food}")
+
+            choice = input(f"Which option do you prefer for item {i + 1}? (1/2): ").strip()
+            if choice == "1":
+                chosen_meal.append(main_food)
+            elif choice == "2":
+                chosen_meal.append(alt_food)
+            else:
+                print("Invalid choice. Keeping the main option.")
+                chosen_meal.append(main_food)
+
+        meals = user.get_meals()
+        today_day_of_week = datetime.now().weekday()
+        meals[meal_name][today_day_of_week] = [current_meal, current_alternative, chosen_meal]  # Replace with the chosen meal
+        user.set_meals(meals)
+        user.save_profile(filename)
+        print("-" * 30)  # Separator for readability

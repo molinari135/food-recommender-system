@@ -1,12 +1,14 @@
 from datetime import datetime
 from profiler import UserProfiler
+from justificator import Justificator
 from pathlib import Path
 import pandas as pd
 import random
 
-    
-def change_meal(user: UserProfiler, df: pd.DataFrame, fast_food_equiv: dict, meal_name: str, filename: Path):
+
+def change_meal(user: UserProfiler, df: pd.DataFrame, fast_food_equiv: dict, meal_name: str, servings: dict, filename: Path):
     """Suggest a new meal based on user mood and preferences."""
+
     today_day_of_week = datetime.now().weekday()
     weekly_meals = user.get_meals()
 
@@ -19,27 +21,29 @@ def change_meal(user: UserProfiler, df: pd.DataFrame, fast_food_equiv: dict, mea
             is_stressed = input("Are you feeling stressed today? (yes/no): ").strip().lower() == 'yes'
 
             if is_stressed:
-                print(f"Let's see... Today's {meal_name} is {weekly_meals[meal_name][today_day_of_week][0]}")
-                print("Just for today, let's eat something that could make you happier!")
+                print(f"🤔 Let's see, today's {meal_name.lower()} is...")
+                Justificator.get_current_meal(user, "Lunch", debug=True)
+                print("😉 Just for today, let's eat something that could improve your mood!")
 
                 fast_foods = df[df["Category Name"] == "Fast Foods"]
 
-                if not fast_foods.empty:
-                    fast_food = random.choice(fast_foods["Food Name"].to_list())
-                    new_lunch = [[fast_food]]
-                    food_equivalents = fast_food_equiv.get(fast_food, [])
+                fast_food = random.choice(fast_foods["Food Name"].to_list())
+                new_lunch = [[fast_food]]
+                food_equivalents = fast_food_equiv.get(fast_food)
 
-                    if food_equivalents:
-                        new_lunch.append(food_equivalents)
+                if food_equivalents:
+                    new_lunch.append(food_equivalents)
 
-                    weekly_meals[meal_name][today_day_of_week] = new_lunch
+                weekly_meals[meal_name][today_day_of_week] = new_lunch
 
-                    user.set_used_jolly(True)
-                    print(f"\nToday you can have a {", ".join(weekly_meals[meal_name][today_day_of_week][0])}")
-                    print(f"\nAlternatively, you can make a {", ".join(weekly_meals[meal_name][today_day_of_week][1])}")
+                user.set_used_jolly(True)
+                print(f"\nToday you can have: a {", ".join(weekly_meals[meal_name][today_day_of_week][0])}")
+                # Justificator.print_meal(weekly_meals[meal_name][today_day_of_week][0], df, servings)
+                print(f"Alternatively, you can make a {", ".join(weekly_meals[meal_name][today_day_of_week][1])}")
 
-                    user.set_meals(weekly_meals)
-                    user.save_profile(filename)
+                user.set_meals(weekly_meals)
+                user.save_profile(filename)
+                print("\n🫡  Take care of yourself!")
         else:
             print(f"Have a nice {meal_name.lower()}!")
 

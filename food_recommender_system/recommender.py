@@ -138,43 +138,63 @@ class RecommenderSystem:
         self.user_profiler.set_food_preferences(food_list.tolist())
         self.user_profiler.save_profile(filename)
 
-    def ask_seasonal_preferences(self, filename: Path):
+        print("\n✅ Preferences saved successfully!")
+
+    def ask_seasonal_preferences(self, filename: Path, info_file: dict):
+
+        food_info = info_file
         # Get seasonal fruits and vegetables
         fruits, vegetables = self.get_seasonal_food()
 
-        # Ask the user for their preferred seasonal fruits and vegetables
         print("Please select your preferred seasonal fruits and vegetables for this month.")
         print("Enter numbers separated by spaces, or press Enter to select all.")
 
-        # Get user preferences for seasonal fruits
-        print("\nSeasonal Fruits:")
-        for i, fruit in enumerate(fruits, 1):
-            print(f"{i}. {fruit}")
+        # Function to display food with benefits
+        def display_food_options(food_list, food_type):
+            print(f"\nSeasonal {food_type}:")
+            for i, food in enumerate(food_list, 1):
+                benefits = ", ".join(food_info.get(food, {}).get("benefits", ["No data available"]))
+                print(f"{i}. {food} (Benefits: {benefits})")
+            return food_list
 
+        # Get user preferences for seasonal fruits
+        fruits_list = display_food_options(fruits, "Fruits")
         selected_fruits = input(f"Select fruits (1-{len(fruits)}): ").strip()
         if selected_fruits:
-            selected_fruits = [fruits[int(i) - 1] for i in selected_fruits.split()]
+            selected_fruits = [fruits_list[int(i) - 1] for i in selected_fruits.split()]
         else:
             selected_fruits = fruits
 
         # Get user preferences for seasonal vegetables
-        print("\nSeasonal Vegetables:")
-        for i, vegetable in enumerate(vegetables, 1):
-            print(f"{i}. {vegetable}")
-
+        vegetables_list = display_food_options(vegetables, "Vegetables")
         selected_vegetables = input(f"Select vegetables (1-{len(vegetables)}): ").strip()
         if selected_vegetables:
-            selected_vegetables = [vegetables[int(i) - 1] for i in selected_vegetables.split()]
+            selected_vegetables = [vegetables_list[int(i) - 1] for i in selected_vegetables.split()]
         else:
             selected_vegetables = vegetables
+
+        # Show additional information after selection
+        print("\nHere are some tips for your selected foods:")
+        for food in selected_fruits + selected_vegetables:
+            how_to_choose = food_info.get(food, {}).get("how_to_choose", "No information available")
+            how_to_store = food_info.get(food, {}).get("how_to_store", "No information available")
+            tips = food_info.get(food, {}).get("tips", "No tips available")
+
+            print(f"\n📌 {food.upper()}")
+            print(f"🛒 How to Choose: {how_to_choose}")
+            print(f"❄️ How to Store: {how_to_store}")
+            print(f"💡 Tips: {tips}")
 
         # Filter the user preferences dataframe to include only selected seasonal fruits and vegetables
         selected_fruits_df = self.df[self.df['Food Name'].isin(selected_fruits)]
         selected_vegetables_df = self.df[self.df['Food Name'].isin(selected_vegetables)]
 
-        # Add breakfast preferences to combined_preferences
+        # Add selected preferences to combined_preferences
         combined_preferences = pd.concat([selected_fruits_df, selected_vegetables_df])
 
+        # Save selected seasonal preferences
         food_list = combined_preferences["Food Name"].unique()
         self.user_profiler.set_seasonal_preferences(food_list.tolist())
         self.user_profiler.save_profile(filename)
+
+        print("\n✅ Seasonal preferences saved successfully!")
