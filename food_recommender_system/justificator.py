@@ -5,6 +5,8 @@ from profiler import UserProfiler
 import pandas as pd
 from pathlib import Path
 
+import time
+
 
 class Justificator:
     """Provides explanations about fruits, vegetables, and meal choices based on nutritional data."""
@@ -40,7 +42,7 @@ class Justificator:
                         meal_data = meals[meal][day_idx]
                         main_meal, alternative_meal = meal_data[:2]  # Extract main & alternative meals
 
-                        print(f"\n🍽️ {meal}:")
+                        print(f"\n🍽️  {meal}:")
                         print("👉 Main option:")
                         Justificator.print_meal(main_meal, df, servings)
 
@@ -52,12 +54,13 @@ class Justificator:
                             print("\n✅ Chosen option:")
                             Justificator.print_meal(chosen_meal, df, servings)
 
-                        print("-" * 30)  # Separator for readability
+                        print("🔹" * 30)  # Separator for readability
+            time.sleep(0.5)
 
     def compare_meals(self, meal1: list, meal2: list, verbose: bool = False):
 
         if len(meal1) != len(meal2):
-            return "Error: The two meals should have the same number of items for a fair comparison."
+            return "🔴 Error: The two meals should have the same number of items for a fair comparison."
 
         comparison = ""
         comparison_results = []
@@ -67,7 +70,7 @@ class Justificator:
             food2_info = DataLoader.get_nutritional_info(self.df, food2, only_numbers=False)
 
             if food1_info.size == 0 or food2_info.size == 0:
-                return f"Error: Nutritional information for '{food1}' or '{food2}' is missing."
+                return f"🔴 Error: Nutritional information for '{food1}' or '{food2}' is missing."
 
             if verbose:
                 comparison = f"**Comparing {food1} vs {food2}:**\n"
@@ -77,7 +80,8 @@ class Justificator:
 
             if verbose:
                 comparison = f"\nComparing {food1} vs {food2}:\n"
-            persuasion = "💡 Which one should you choose?\n"
+            # persuasion = "💡 Which one should you choose?\n"
+            persuasion = ""
 
             better_choice = {"food": None, "score": 0}  # Track which food is better based on nutrition
 
@@ -110,16 +114,14 @@ class Justificator:
 
             # Additional tailored reasoning
             if food1_info[0] < food2_info[0]:  # Lower calories is generally healthier
-                persuasion += f"🔥 If you're trying to lose weight, {food1} is a lighter choice.\n"
+                persuasion += f"🔥 If you're trying to lose weight, {food1} is a lighter choice."
             if food1_info[3] > food2_info[3]:  # More fiber is better for digestion
-                persuasion += f"🌿 {food1} has more fiber, making it better for digestion and gut health.\n"
+                persuasion += f"🌿 {food1} has more fiber, making it better for digestion and gut health."
             if food1_info[4] > food2_info[4]:  # More protein helps with muscle growth
-                persuasion += f"💪 If you're looking to build muscle, {food1} is the better option because it has more proteins.\n"
+                persuasion += f"💪 If you're looking to build muscle, {food1} is the better option because it has more proteins."
 
-            # Balanced advice
-            persuasion += "😋 Remember that there is no good of bad food... Just follow your taste!\n"
-
-            comparison_results.append(comparison + "\n" + persuasion)
+            comparison_results.append(comparison + persuasion)
+        comparison_results.append("😋 Remember that there is no good of bad food... Just follow your taste!\n")
 
         return comparison_results
 
@@ -195,7 +197,7 @@ class Justificator:
             elif choice == "2":
                 chosen_meal.append(alt_food)
             else:
-                print("Invalid choice. Keeping the main option.")
+                print("⚠️ Invalid choice. Keeping the main option.")
                 chosen_meal.append(main_food)
 
         meals = user.get_meals()
@@ -203,4 +205,4 @@ class Justificator:
         meals[meal_name][today_day_of_week] = [current_meal, current_alternative, chosen_meal]  # Replace with the chosen meal
         user.set_meals(meals)
         user.save_profile(filename)
-        print("-" * 30)  # Separator for readability
+        print("🔹" * 30)  # Separator for readability

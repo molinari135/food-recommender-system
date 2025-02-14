@@ -7,6 +7,7 @@ from moodmod import change_meal
 from pathlib import Path
 
 import sys
+import os
 import time
 
 
@@ -27,16 +28,17 @@ food_infos = dataloader.load_json(food_infos_file)
 
 
 def show_menu():
-    print("\nWelcome to the Food Recommender System CLI!")
-    print("1. Create or Load User")
-    print("2. Display Current Meal and Alternatives")
-    print("3. Display Weekly Meal Plan")
-    print("4. Learn About Seasonal Food")
-    print("0. Exit")
+    print("\n🍽️  Welcome to the Food Recommender System CLI! 🍽️")
+    time.sleep(1)
+    print("1️. Create or Load User")
+    print("2️. Display Current Meal and Alternatives")
+    print("3️. Display Weekly Meal Plan")
+    print("4️. Learn About Seasonal Food")
+    print("0️. Exit")
 
 
 def create_or_load_user():
-    name_surname = input("Enter username to create or load your profile: ").strip().lower()
+    name_surname = input("🆔 Enter username to create or load your profile: ").strip().lower()
     filename = Path(f"{name_surname}.json")
 
     # Check if the profile to load exists, otherwise make a new one and load it
@@ -47,7 +49,7 @@ def create_or_load_user():
 
     if user.get_meals() == {} and user.get_intolerances() == []:
 
-        intolerances = input("Are you lactose intolerant? (Yes/no): ").strip().lower()
+        intolerances = input("\n❓ Are you lactose intolerant? (Yes/no): ").strip().lower()
         if intolerances == "yes":
             user.set_intolerances("Lactose")
 
@@ -62,7 +64,7 @@ def create_or_load_user():
         recsys.ask_seasonal_preferences(filename, food_infos)
 
         generate_weekly_meal_plan(df, servings, user, filename)
-
+    os.system('cls||clear')
     return user, filename, recsys
 
 
@@ -71,20 +73,22 @@ def display_current_meal_and_alternatives(user, filename):
     meal_name, current_meal, current_alternative, choosen_meal = Justificator.get_current_meal(user, meal_name="Lunch", debug=True)
 
     if choosen_meal:
-        print(f"\nToday's {meal_name.lower()} is:")
+        print(f"\n🍽️ Today's {meal_name.lower()} is:")
+        time.sleep(0.5)
         Justificator.print_meal(choosen_meal, df, servings)
+        change_meal(user, df, meal_name, filename)
     else:
-        print(f"\nToday's {meal_name.lower()} is:")
+        print(f"\n🍽️ Today's {meal_name.lower()} is:")
+        time.sleep(0.5)
         Justificator.print_meal(current_meal, df, servings)
-        print("\nAlternatively, you can have:")
+        print("\n🔄 Alternatively, you can have:")
         Justificator.print_meal(current_alternative, df, servings)
 
         comparison = jst.compare_meals(current_meal, current_alternative)
         for comp in comparison:
             print(comp)
 
-        # preferences_df = df[df["Food Name"].isin(user_profiler.get_food_preferences())]
-        change_meal(user, df, fast_food_equiv, meal_name, servings, filename)
+        # preferences_df = df[df["Food Name"].isin(user_profiler.get_food_preferences())
         Justificator.choose_foods_in_current_meal(user, filename)
 
 
@@ -97,13 +101,14 @@ def learn_about_seasonal_food(recsys: RecommenderSystem, food_info: dict):
     seasonal_foods = fruits + vegetables
 
     print("\n🌍 Why choose seasonal produce?")
+    time.sleep(0.5)
     print("✔️  Better taste & freshness – Seasonal foods are naturally ripened and have the best flavor.")
     print("✔️  Higher nutritional value – Fresh seasonal produce retains more vitamins and minerals.")
     print("✔️  Lower environmental impact – Locally grown seasonal food reduces transportation emissions.")
 
     time.sleep(2)
 
-    print("\nSelect a seasonal food to learn more or type 'back' to return to the main menu:")
+    print("\n🌞 Select a seasonal food to learn more or type 'back' to return to the main menu:")
     time.sleep(1)
 
     for idx, food in enumerate(seasonal_foods, start=1):
@@ -112,7 +117,7 @@ def learn_about_seasonal_food(recsys: RecommenderSystem, food_info: dict):
 
     while True:
 
-        print("\nSelect a seasonal food to learn more or type 'back' to return to the main menu:")
+        print("\n🌞 Select a seasonal food to learn more or type 'back' to return to the main menu:")
         choice = input("Enter your choice: ").strip().lower()
 
         if choice == 'back':
@@ -136,13 +141,13 @@ def learn_about_seasonal_food(recsys: RecommenderSystem, food_info: dict):
             time.sleep(1)
             print(f"📌 Description: {description}")
             time.sleep(1)
-            print(f"🥗 Nutritional Insights:\n{nutritional_intake}\n")
+            print(f"🥗 Nutritional Insights: {nutritional_intake}\n")
             time.sleep(1)
             print(f"💡 Tips: {tips}")
             time.sleep(3)
 
         else:
-            print("Invalid choice! Please enter a valid number or 'back'.")
+            print("⚠️ Invalid choice! Please enter a valid number or 'back'.")
 
 
 def main():
@@ -152,6 +157,7 @@ def main():
         while True:
             show_menu()
             choice = input("Enter your choice (1-5): ")
+            os.system('cls||clear')
 
             if choice == '1':
                 user, filename, recsys = create_or_load_user()
@@ -165,10 +171,10 @@ def main():
                 print("Exiting the program...")
                 sys.exit(0)
             else:
-                print("Invalid choice! Please enter a number between 1 and 5.")
+                print("⚠️ Invalid choice! Please enter a number between 1 and 5.")
 
     except Exception as e:
-        print(f"An error occurred: {str(e)}")
+        print(f"🔴 An error occurred: {str(e)}")
 
 
 # Run the main function

@@ -174,16 +174,16 @@ class RecommenderSystem:
             selected_vegetables = vegetables
 
         # Show additional information after selection
-        print("\nHere are some tips for your selected foods:")
-        for food in selected_fruits + selected_vegetables:
-            how_to_choose = food_info.get(food, {}).get("how_to_choose", "No information available")
-            how_to_store = food_info.get(food, {}).get("how_to_store", "No information available")
-            tips = food_info.get(food, {}).get("tips", "No tips available")
+        # print("\nHere are some tips for your selected foods:")
+        # for food in selected_fruits + selected_vegetables:
+        #     how_to_choose = food_info.get(food, {}).get("how_to_choose", "No information available")
+        #     how_to_store = food_info.get(food, {}).get("how_to_store", "No information available")
+        #     tips = food_info.get(food, {}).get("tips", "No tips available")
 
-            print(f"\n📌 {food.upper()}")
-            print(f"🛒 How to Choose: {how_to_choose}")
-            print(f"❄️ How to Store: {how_to_store}")
-            print(f"💡 Tips: {tips}")
+        #     print(f"\n📌 {food.upper()}")
+        #     print(f"🛒 How to Choose: {how_to_choose}")
+        #     print(f"❄️ How to Store: {how_to_store}")
+        #     print(f"💡 Tips: {tips}")
 
         # Filter the user preferences dataframe to include only selected seasonal fruits and vegetables
         selected_fruits_df = self.df[self.df['Food Name'].isin(selected_fruits)]

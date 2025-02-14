@@ -8,7 +8,7 @@ import time
 from config import EXCLUDED_CATEGORIES, MEAL_GENERATION_CATEGORIES
 
 
-def generate_meal(preferences_df: pd.DataFrame, filtered_df: pd.DataFrame):
+def generate_meal(preferences_df: pd.DataFrame, filtered_df: pd.DataFrame, category: str):
     """
     Generate a meal based on user preferences and food categories.
     """
@@ -18,11 +18,7 @@ def generate_meal(preferences_df: pd.DataFrame, filtered_df: pd.DataFrame):
         random.choice(
             preferences_df[preferences_df["Category Name"].isin(["Grains", "Gluten-Free Grains"])]["Food Name"].to_list()
         ),
-        random.choice(
-            preferences_df[preferences_df["Category Name"].isin([
-                "Legumes", "Dairy", "Lactose-Free Dairy", "Cured Meat", "Red Meat", "White Meat", "Seafood", "Eggs"
-            ])]["Food Name"].to_list()
-        ),
+        random.choice(preferences_df[preferences_df["Category Name"] == category]["Food Name"].to_list()),
         random.choice(preferences_df[preferences_df["Category Name"] == "Oils"]["Food Name"].to_list()),
         random.choice(preferences_df[preferences_df["Category Name"] == "Sauces"]["Food Name"].to_list()),
         random.choice(preferences_df[preferences_df["Category Name"] == "Vegetables"]["Food Name"].to_list()),
@@ -132,7 +128,7 @@ def generate_weekly_meal_plan(df: pd.DataFrame, servings: dict, user_profiler: U
     generated_meals = {"Breakfast": [], "Snack": [], "Lunch": [], "Dinner": []}
 
     for i in range(3):
-        print("Generating 7-day meal plan" + "." * (i + 1), end="\r")
+        print("❇️ Generating 7-day meal plan" + "." * (i + 1), end="\r")
         time.sleep(0.5)
 
     # Generate 7 breakfasts and snacks
@@ -147,16 +143,17 @@ def generate_weekly_meal_plan(df: pd.DataFrame, servings: dict, user_profiler: U
     meals = []
 
     # Generate meals based on frequency_per_week
-    for category in categories:
-        if category in servings_count:
-            info = servings_count[category]
+    for category, info in servings_count.items():
+        if category in categories:
             if not preferences_df[preferences_df["Category Name"] == category].empty:
-                for _ in range(info["frequency_per_week"]):
-                    meal, similar_meal = generate_meal(preferences_df, filtered_df)
+                print(f"Generating {info['frequency_per_week']} meals with {category}...")
+                for _ in range(info['frequency_per_week']):
+                    meal, similar_meal = generate_meal(preferences_df, filtered_df, category)
                     meals.append((meal, similar_meal))
 
     # Select 7 random lunches and 7 random dinners
     selected_lunches = random.sample(meals, 7)
+    meals = [meal for meal in meals if meal not in selected_lunches]
     selected_dinners = random.sample(meals, 7)
     generated_meals["Lunch"] = selected_lunches
     generated_meals["Dinner"] = selected_dinners

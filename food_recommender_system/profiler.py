@@ -72,7 +72,7 @@ class UserProfiler:
     @classmethod
     def check_profile(self, filename: Path):
         if not os.path.exists(PROCESSED_DATA_PATH / filename):
-            print("Profile not found. Creating a new one...")
+            print("🆕 Profile not found. Creating a new one...")
             self.create_new_profile(filename)
 
     @classmethod
@@ -106,7 +106,7 @@ class UserProfiler:
         with open(PROCESSED_DATA_PATH / filename, "w") as f:
             json.dump(empty_profile, f, indent=4)
 
-        print(f"Empty profile created at {PROCESSED_DATA_PATH / filename}")
+        print(f"🆕 Empty profile created at {PROCESSED_DATA_PATH / filename}")
 
     def __str__(self) -> str:
         return f"""
