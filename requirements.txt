@@ -2,7 +2,9 @@ black
 flake8
 isort
 ipykernel
+numpy
 pandas
 pip
 python-dotenv
+scikit-learn
 -e .

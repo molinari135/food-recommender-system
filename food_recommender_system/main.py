@@ -28,7 +28,7 @@ food_infos = dataloader.load_json(food_infos_file)
 
 
 def show_menu():
-    print("\n🍽️  Welcome to the Food Recommender System CLI! 🍽️")
+    print("\n🍽️ Welcome to the Food Recommender System CLI! 🍽️")
     time.sleep(1)
     print("1️. Create or Load User")
     print("2️. Display Current Meal and Alternatives")
@@ -176,7 +176,7 @@ def main():
 
         while True:
             show_menu()
-            choice = input("Enter your choice (1-5): ")
+            choice = input("Enter your choice (0-4): ")
             os.system('cls||clear')
 
             if choice == '1':
