@@ -1,6 +1,6 @@
 from datetime import datetime
 from profiler import UserProfiler
-from justificator import Justificator
+from justificator import get_current_meal
 from pathlib import Path
 import pandas as pd
 import random
@@ -24,13 +24,13 @@ def change_meal(user: UserProfiler, df: pd.DataFrame, meal_name: str, filename: 
     has_used_jolly = user.get_used_jolly()
 
     if has_used_jolly:
-        print(f"Have a nice {meal_name.lower()}!")
+        print(f"😊 Enjoy your {meal_name.lower()}!")
     else:
         if meal_name == "Lunch" or meal_name == "Dinner":
-            is_stressed = input("Are you feeling stressed today? (yes/no): ").strip().lower() == 'yes'
+            is_stressed = input("\nAre you feeling stressed today? (yes/no): ").strip().lower() == 'yes'
 
             if is_stressed:
-                Justificator.get_current_meal(user)
+                get_current_meal(user)
                 print("\n😉 Just for today, let's eat something that could improve your mood!")
 
                 fast_foods = df[df["Category Name"] == "Fast Foods"]
@@ -43,13 +43,13 @@ def change_meal(user: UserProfiler, df: pd.DataFrame, meal_name: str, filename: 
                 user.set_used_jolly(True)
                 user.set_meals(weekly_meals)
                 user.save_profile(filename)
-                print(f"🍽️ Today you can have {fast_food}")
+                print(f"🍽️ Today you can have {fast_food}. Enjoy your meal!")
 
                 user.set_meals(weekly_meals)
                 user.save_profile(filename)
-                print("🫡  Take care of yourself!")
+                print("🫡 Take care of yourself!")
         else:
-            print(f"Have a nice {meal_name.lower()}!")
+            print(f"😊 Enjoy your {meal_name.lower()}!")
 
 
 def reset_jolly_if_new_week(user: UserProfiler):
@@ -68,4 +68,4 @@ def reset_jolly_if_new_week(user: UserProfiler):
     # Check if today is Monday and if it's past midnight
     if today.weekday() == 0 and today.hour == 0 and today.minute == 0:
         user.set_used_jolly(False)
-        print("🤡 Jolly has been reset for the new week.")
+        print("🤡 Jolly has been reset for the new week. Have a great start to your week!")

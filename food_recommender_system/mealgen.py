@@ -1,7 +1,8 @@
 import random
 import pandas as pd
 from profiler import UserProfiler
-from recommender import RecommenderSystem, DataLoader
+from recommender import get_similar_food
+from dataloader import DataLoader
 from pathlib import Path
 import time
 
@@ -38,7 +39,7 @@ def generate_meal(preferences_df: pd.DataFrame, filtered_df: pd.DataFrame, categ
         item_category = preferences_df[preferences_df["Food Name"] == food]["Category Name"].values[0]
 
         if item_category != ["Oils"]:
-            similar_foods = RecommenderSystem.get_similar_food(
+            similar_foods = get_similar_food(
                 filtered_df, food_name=food, same_category=True, low_density_food=True
             )
             similar_meal.append(similar_foods[0][0])
@@ -67,7 +68,7 @@ def generate_breakfast(preferences_df: pd.DataFrame, filtered_df: pd.DataFrame):
 
     similar_breakfast = []
     for item in breakfast:
-        similar_foods = RecommenderSystem.get_similar_food(
+        similar_foods = get_similar_food(
             filtered_df, food_name=item, same_category=True, low_density_food=True
         )
         similar_breakfast.append(similar_foods[0][0] if similar_foods else item)
@@ -104,7 +105,7 @@ def generate_snack(preferences_df: pd.DataFrame, filtered_df: pd.DataFrame):
 
     similar_snack = []
     for item in snack:
-        similar_foods = RecommenderSystem.get_similar_food(
+        similar_foods = get_similar_food(
             filtered_df, food_name=item, same_category=True, low_density_food=True
         )
         similar_snack.append(similar_foods[0][0] if similar_foods else item)
@@ -172,8 +173,10 @@ def generate_weekly_meal_plan(df: pd.DataFrame, servings: dict, user_profiler: U
     generated_meals = {"Breakfast": [], "Snack": [], "Lunch": [], "Dinner": []}
 
     for i in range(3):
-        print("❇️ Generating 7-day meal plan" + "." * (i + 1), end="\r")
+        print(f"Generating 7-day meal plan{'.' * (i + 1)}", end="\r")
         time.sleep(0.5)
+
+    print("\nMeal plan generation complete!")
 
     # Generate 7 breakfasts and snacks
     for _ in range(7):
@@ -204,5 +207,7 @@ def generate_weekly_meal_plan(df: pd.DataFrame, servings: dict, user_profiler: U
     # Save meal plan to profile
     user_profiler.set_meals(generated_meals)
     user_profiler.save_profile(filename)
+
+    print(f"Weekly meal plan saved to {filename}")
 
     return generated_meals
