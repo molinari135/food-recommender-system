@@ -107,45 +107,46 @@ python food_recommender_system/main.py
 ```
 
 The system provides two standard profiles: `default` and `lactose`. You can also define a new username and it will be added automatically.
-To start using the Food Recommender System, follow these steps:
+The following is an example of usage of the system using the CLI interface.
 
-```bash
-🆔 Enter username to create or load your profile:
-```
+> If you do not write any number during the preferences selection, the system will load default choices.
 
-If you load `default`, the main menu will appear:
-
-```bash
-🍽️ Welcome to the Food Recommender System CLI! 🍽️
-1️. Create or Load User
-2️. Display Current Meal and Alternatives
-3️. Display Weekly Meal Plan
-4️. Learn About Seasonal Food
-0️. Exit
-Enter your choice (0-4): 
-```
+> If you do not write any number during the seasonal preference selection, the system will load every seasonal food.
 
 Follow the on-screen instructions to get personalized recipe recommendations.
 
-> If you do not write any number during the preferences selection, the system will load default choices!
+1. **Create or Load User**: This option allows to load a different user or create a new one, as in the beginning of the application.
+2. **Display Current Meal and Alternatives**: Using system's calendar and clock, this option will show the current meal of the day and, if needed, will ask the user to choose the actual meal by selecting a food for each section proposed. Then, it will be saved in the user's profile.
+3. **Display Weekly Meal Plan**: This option will show the entire generated weekly plan with breakfasts, snacks, lunches and dinners. The first meal shown is the one generated starting from user's preferences, then it will show an alternative version with a lower energy density (which is the standardized ratio between calories and weight). It will also display the actual user choice made between each food of the same meal.
+4. **Learn About Seasonal Food**: Using system's calendar, this option will show the user every seasonal fruit and vegetables alongside useful informations such as how to choose them, how to store them, how to cook them, some nutritional informations and benefits and also some tips.
 
-> If you do not write any number during the seasonal preference selection, the system will load every seasonal food!
+Example of loading standard profile `lactose`:
 
-### Create or Load User
+![Screenshot 2025-02-17 094612](https://github.com/user-attachments/assets/e2178773-a4fa-48d4-8212-0b3719e1ad0d)
 
-This option allows to load a different user or create a new one, as in the beginning of the application.
+Example of menu showing after creating or loading a profile:
 
-### Display Current Meal and Alternatives
+![Screenshot 2025-02-17 104327](https://github.com/user-attachments/assets/a270380a-1be8-4b98-bcdc-dbecb929d04f)
 
-Using system's calendar and clock, this option will show the current meal of the day and, if needed, will ask the user to choose the actual meal by selecting a food for each section proposed. Then, it will be saved in the user's profile.
+Printing the generated weekly meal plan:
 
-### Display Weekly Meal Plan
+![Screenshot 2025-02-17 094511](https://github.com/user-attachments/assets/9c12d766-a17b-4d49-92c9-1afa35fe2e0d)
 
-This option will show the entire generated weekly plan with breakfasts, snacks, lunches and dinners. The first meal shown is the one generated starting from user's preferences, then it will show an alternative version with a lower energy density (which is the standardized ratio between calories and weight). It will also display the actual user choice made between each food of the same meal.
+Or creating the CSV version of the plan:
 
-### Learn About Seasonal Food
+![Screenshot 2025-02-17 100059](https://github.com/user-attachments/assets/de8806b0-eba8-46fc-9258-1c723903606f)
 
-Using system's calendar, this option will show the user every seasonal fruit and vegetables alongside useful informations such as how to choose them, how to store them, how to cook them, some nutritional informations and benefits and also some tips.
+Example of current meal and justificator triggering:
+
+![Screenshot 2025-02-17 093745](https://github.com/user-attachments/assets/309caacc-526e-4346-8be3-2d7fdede7139)
+
+Seasonality function that shows all seasonal produces for the current month:
+
+![Screenshot 2025-02-17 093709](https://github.com/user-attachments/assets/4ef69d3f-d867-4f44-ab45-e09a0c304734)
+
+Example of information provided for a seasonal food:
+
+![Screenshot 2025-02-17 093728](https://github.com/user-attachments/assets/96017f21-3392-410c-b31e-e2b3013669c2)
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
