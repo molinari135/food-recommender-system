@@ -1,7 +1,7 @@
 # Food Recommender System with Justification
 > Food Recommender System with recipe and justification generation for Semantics in Intelligent Information Access and Recommender Systems @ Università degli Studi di Bari Aldo Moro, AY 2024/25
 
-![recsysfloww](https://github.com/user-attachments/assets/085fdc65-0f3e-4554-ab78-5351b5be240c)
+![foodrecsys](https://github.com/user-attachments/assets/0040e027-d13c-4145-a19d-3ca0138ce57d)
 
 ## Table of Contents
 - [Overview](#overview)
