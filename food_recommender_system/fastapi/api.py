@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
-from typing import Optional
+from pydantic import BaseModel, Field
+from typing import Optional, List
 from numpy.linalg import norm
 from pathlib import Path
 import pandas as pd
@@ -50,24 +50,140 @@ except Exception as e:
 
 
 class RecommenderRequest(BaseModel):
-    food_name: str
-    category: Optional[str] = None
-    low_density: bool = True
+    food_name: str = Field(
+        ...,
+        title="Food Name",
+        description="The name of the single food item to get recommendations for.",
+        example="Apple"
+    )
+    category: Optional[str] = Field(
+        None,
+        title="Food Category",
+        description="Optional food category for filtering the recommendations.",
+        example="Fruits"
+    )
+    low_density: bool = Field(
+        True,
+        title="Low Density",
+        description="Flag to filter foods with low caloric density.",
+        example=True
+    )
 
 
 class MoodRequest(BaseModel):
-    fast_food_preferences: list
+    fast_food_preferences: List[str] = Field(
+        ...,
+        title="Fast Food Preferences",
+        description="A list of fast food items that the user prefers.",
+        example=["Pizza", "Cheeseburger", "Hamburger"]
+    )
 
 
 class JustificatorRequest(BaseModel):
-    meal_1: list
-    meal_2: list
+    meal_1: List[str] = Field(
+        ...,
+        title="Name of the food item in the meal",
+        description="The name of a single food item in the meal to be compared.",
+        example=["Pizza"]
+    )
+    meal_2: List[str] = Field(
+        ...,
+        title="Name of the other food item in the meal",
+        description="The name of a single food item in the meal to be compared.",
+        example=["Pasta"]
+    )
 
 
 class MealGeneratorRequest(BaseModel):
-    food_preferences: list
-    seasonal_preferences: list
-    intolerances: list = None
+    food_preferences: List[str] = Field(
+        ...,
+        title="Food Preferences",
+        description="A list of food items that the user prefers.",
+        example=[
+            "Cod",
+            "Fish sticks",
+            "Mussels",
+            "Tuna",
+            "Salmon",
+            "Provolone",
+            "Swiss cheese",
+            "Parmigiano-Reggiano",
+            "Cheese",
+            "Ricotta",
+            "Mozzarella",
+            "Milk",
+            "Yogurt",
+            "Egg",
+            "Olive oil",
+            "Kefir",
+            "Greek yogurt",
+            "Chickpeas",
+            "Lentil",
+            "Bean",
+            "Wheat Bread",
+            "Pasta",
+            "Rice",
+            "Chicken meat",
+            "Mortadella",
+            "Salami",
+            "Italian sausage",
+            "Ham",
+            "Pork",
+            "Beef",
+            "Marinara sauce",
+            "Tomato sauce",
+            "Almond",
+            "Hazelnut",
+            "Pistachio",
+            "Walnut",
+            "Almond paste",
+            "Ice cream",
+            "Chocolate",
+            "Fruit preserves",
+            "Marmalade",
+            "Apple juice",
+            "Orange juice",
+            "Coffee",
+            "Espresso",
+            "Tea",
+            "Biscuit",
+            "White Bread",
+            "Italian bread",
+            "Chicken sandwich",
+            "Hamburger",
+            "Pizza"
+        ]
+    )
+    seasonal_preferences: List[str] = Field(
+        ...,
+        title="Seasonal Preferences",
+        description="A list of seasonal foods that the user prefers to include in their meals.",
+        example=[
+            "Apple",
+            "Grapefruit",
+            "Kiwifruit",
+            "Orange",
+            "Mandarin orange",
+            "Pear",
+            "Clementine",
+            "Artichoke",
+            "Broccoli",
+            "Cabbage",
+            "Carrot",
+            "Cauliflower",
+            "Chicory",
+            "Pumpkin",
+            "Turnip",
+            "Potato",
+            "Radicchio"
+        ]
+    )
+    intolerances: Optional[List[str]] = Field(
+        None,
+        title="Food Intolerances",
+        description="A list of foods the user is intolerant to. This field is optional.",
+        example=["Dairy"]  # Example intolerances
+    )
 
 
 def generate_breakfast_or_snack(user_dataset: pd.DataFrame, food_dataset: pd.DataFrame):
@@ -123,7 +239,7 @@ def generate_lunch_or_dinner(user_dataset: pd.DataFrame, food_dataset: pd.DataFr
     for food_name in meal:
         food_category = utils.get_food_category(food_name, food_dataset)
 
-        if food_category != ["Oils"]:
+        if food_category != "Oils":
             if food_category == "Fruits":
                 similar_foods = get_recommendation(food_name, user_dataset)
             else:
@@ -260,10 +376,11 @@ def generate_weekly_meals(user_dataset: pd.DataFrame, food_dataset: pd.DataFrame
         generated_meals["Snack"].append((snack_2, similar_snack_2))
 
     for category, info in servings.items():
-        count = info['frequency_per_week']
-        for _ in range(count):
-            meal, similar_meal = generate_lunch_or_dinner(user_dataset, df, category)
-            lunches_and_dinners.append((meal, similar_meal))
+        if category in utils.MEAL_GENERATION_CATEGORIES:
+            count = info['frequency_per_week']
+            for _ in range(count):
+                meal, similar_meal = generate_lunch_or_dinner(user_dataset, df, category)
+                lunches_and_dinners.append((meal, similar_meal))
 
     generated_meals["Lunch"] = random.sample(lunches_and_dinners, 7)
     lunches_and_dinners = [meal for meal in lunches_and_dinners if meal not in generated_meals["Lunch"]]

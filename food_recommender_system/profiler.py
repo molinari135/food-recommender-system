@@ -1,7 +1,7 @@
 import json
 import os
 from pathlib import Path
-from config import PROCESSED_DATA_PATH
+from food_recommender_system.config import PROCESSED_DATA_PATH
 
 
 class UserProfiler:
@@ -125,7 +125,6 @@ class UserProfiler:
     def __str__(self) -> str:
 
         return f"""
-            \nDiet: {self.diet},
             \nIntolerances: {self.intolerances},
             \nPreferences: {self.food_preferences},
             \nSeasonal preferences: {self.seasonal_preferences},
