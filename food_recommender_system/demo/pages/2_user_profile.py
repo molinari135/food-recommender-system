@@ -17,6 +17,7 @@ RAW_DATA_PATH = Path(os.path.join(BASE_PATH, 'raw'))
 
 
 with st.sidebar:
+    st.page_link('main.py', label='Home')
     st.page_link('pages/1_home.py', label='Create or Load User Profile')
     st.page_link('pages/2_user_profile.py', label='User Profile Information')
     st.page_link('pages/3_meal_selection.py', label='Meal Selection')
@@ -29,32 +30,32 @@ food_infos = json.load(open(RAW_DATA_PATH / "food-infos.json", "r"))
 # Main function for displaying user profile
 def display_user_profile():
     if st.session_state.selected_profile == "-- Create a new profile --" or st.session_state.selected_profile is None:
-        st.warning("No user profile selected. Please create or load a user profile.")
+        st.warning("⚠️ No user profile selected. Please create or load a user profile.")
         return
 
     selected_profile = st.session_state.selected_profile
     profile = UserProfiler.load_profile(Path(selected_profile))
 
     profile_name = selected_profile[:-5].replace('_', ' ').capitalize()
-    st.title(f"Welcome, {profile_name}!")
+    st.title(f"👋 Welcome, {profile_name}!")
 
     # Display Intolerances
     st.subheader("🚫 Intolerances")
     intolerances = profile.get_intolerances()
     if intolerances and intolerances[0]:
-        st.write(", ".join(intolerances[0]))
+        st.write("📋 " + ", ".join(intolerances[0]))
     else:
-        st.write("No intolerances listed.")
+        st.write("📋 No intolerances listed.")
 
     # # Display Food Preferences
     # st.subheader("🍽️ Food Preferences")
     # food_preferences = profile.get_food_preferences()
-    # st.write(", ".join(food_preferences) if food_preferences else "No food preferences listed.")
+    # st.write("📋 " + ", ".join(food_preferences) if food_preferences else "📋 No food preferences listed.")
 
     # # Display Seasonal Preferences
     # st.subheader("🌱 Seasonal Preferences")
     # seasonal_preferences = profile.get_seasonal_preferences()
-    # st.write(", ".join(seasonal_preferences) if seasonal_preferences else "No seasonal preferences listed.")
+    # st.write("📋 " + ", ".join(seasonal_preferences) if seasonal_preferences else "📋 No seasonal preferences listed.")
 
     st.subheader("🥗 Meals")
     meals = profile.get_meals()
@@ -65,7 +66,7 @@ def display_user_profile():
                 # Loop over each day
                 for day_index, meal_variants in enumerate(meal_options):
                     st.markdown(f"#### 📅 Day {day_index + 1}")  # Day Header
-                    
+
                     all_meal_data = []
 
                     # Loop over meal variants (different options for that meal)
@@ -74,13 +75,11 @@ def display_user_profile():
 
                         # Process each food item
                         for food_name in variant:
-                            category = food_dataset.loc[
-                                food_dataset["Food Name"] == food_name, "Category Name"
-                            ]
+                            category = food_dataset[food_dataset["Food Name"] == food_name]["Category Name"]
                             category_name = category.values[0] if not category.empty else "Unknown"
 
                             # Store food under its category
-                            row[category_name] = food_name  
+                            row[category_name] = food_name
 
                         all_meal_data.append(row)
 
@@ -90,7 +89,7 @@ def display_user_profile():
                     # Display the table
                     st.table(df)
     else:
-        st.write("No meals available.")
+        st.write("📋 No meals available.")
 
     st.subheader("🌦️ Seasonal Information")
     seasonal_preferences = profile.get_seasonal_preferences()
@@ -101,8 +100,8 @@ def display_user_profile():
                 food_info = food_infos[seasonal_food]
 
                 # Display general information
-                st.write(f"#### Description\n{food_info.get('description', 'No description available.')}")
-                
+                st.write(f"#### 📋 Description\n{food_info.get('description', 'No description available.')}")
+
                 # Prepare table data
                 table_data = {
                     "Benefits": ", ".join(food_info.get("benefits", ["No benefits available."])),
@@ -115,11 +114,11 @@ def display_user_profile():
 
                 # Display table
                 st.table(df)
-                st.write(f"#### Nutritional Intake\n{food_info.get('nutritional_intake', 'No information available.')}")
-                st.write(f"#### Tips\n {food_info.get('tips', 'No tips available.')}")
+                st.write(f"#### 📋 Nutritional Intake\n{food_info.get('nutritional_intake', 'No information available.')}")
+                st.write(f"#### 📋 Tips\n {food_info.get('tips', 'No tips available.')}")
 
             else:
-                st.write("No information available.")
+                st.write("📋 No information available.")
 
 
 # Call the function to display user profile

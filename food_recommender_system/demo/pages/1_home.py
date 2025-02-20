@@ -28,6 +28,7 @@ st.session_state.food_dataset = food_dataset
 st.session_state.food_seasonality = food_seasonality
 
 with st.sidebar:
+    st.page_link('main.py', label='Home')
     st.page_link('pages/1_home.py', label='Create or Load User Profile')
     st.page_link('pages/2_user_profile.py', label='User Profile Information')
     st.page_link('pages/3_meal_selection.py', label='Meal Selection')
@@ -75,20 +76,20 @@ def load_user_profile():
     if st.session_state.selected_profile is None:
         st.session_state.selected_profile = "-- Create a new profile --"
 
-    selected_profile = st.selectbox("Select an existing profile", ["-- Create a new profile --"] + profiles)
+    selected_profile = st.selectbox("📂 Select an existing profile", ["-- Create a new profile --"] + profiles)
 
     if selected_profile != "-- Create a new profile --":
         st.session_state.selected_profile = selected_profile
-        st.success(f"Selected profile: {selected_profile}")
+        st.success(f"✅ Selected profile: {selected_profile}")
         st.switch_page("pages/2_user_profile.py")
     else:
         # Create a new profile
-        st.subheader("Create a new profile")
+        st.subheader("🆕 Create a new profile")
         new_profile = UserProfiler()
         df = food_dataset.copy()
 
-        name = st.text_input("Enter your name:")
-        lactose_intolerance = st.selectbox("Do you have lactose intolerance?", options=["No", "Yes"])
+        name = st.text_input("👤 Enter your name:")
+        lactose_intolerance = st.selectbox("🥛 Do you have lactose intolerance?", options=["No", "Yes"])
 
         if lactose_intolerance == "Yes":
             df = df[~df['Category Name'].isin(['Dairy', 'Dairy Breakfast'])]
@@ -106,14 +107,14 @@ def load_user_profile():
         for category, foods in category_foods.items():
             # Pre-fill multiselect with all foods by default
             selected_foods = st.multiselect(
-                f"Select your preferred {category} (remove the ones you don't like)",
+                f"🍽️ Select your preferred {category} (remove the ones you don't like)",
                 options=foods,
                 default=foods  # Pre-selected by default
             )
 
             # Ensure at least one food remains selected
             if not selected_foods:
-                st.warning(f"You must select at least one food in {category}. Defaulting to the first item.")
+                st.warning(f"⚠️ You must select at least one food in {category}. Defaulting to the first item.")
                 selected_foods = [foods[0]]  # Restore at least one default food
 
             user_preferences[category] = selected_foods
@@ -126,11 +127,11 @@ def load_user_profile():
             for food in selected_foods:
                 if food in seasonal_foods:
                     seasonal_preferences.append(food)
-                elif category not in ["Fruits", "Vegetables"]:  # Exclude Fruits and Vegetables
+                elif category not in ["Fruits", "Vegetables"]:
                     non_seasonal_preferences.append(food)
 
         # Create and save the new profile
-        if st.button("Create Profile"):
+        if st.button("💾 Create Profile"):
             new_profile.set_intolerances("Lactose" if lactose_intolerance == "Yes" else [])
             new_profile.set_food_preferences(non_seasonal_preferences)
             new_profile.set_seasonal_preferences(seasonal_preferences)
@@ -149,22 +150,17 @@ def load_user_profile():
                 response.raise_for_status()  # Raise an error for bad responses
                 meals = response.json()["meals"]
             except requests.exceptions.RequestException as e:
-                st.error(f"Error generating meals: {e}")
+                st.error(f"❌ Error generating meals: {e}")
 
             new_profile.set_meals(meals)
 
             filename = f"{name.replace(' ', '_').lower()}.json"
             new_profile.save_profile(PROCESSED_DATA_PATH / filename)
 
-            # ✅ Set the new profile in session state
             st.session_state.selected_profile = filename
-
-            st.success(f"Profile '{filename}' created successfully!")
-            time.sleep(1)  # Short delay for better UX
-
-            # ✅ Force rerun with the new profile selected
+            st.success(f"🎉 Profile '{filename}' created successfully!")
+            time.sleep(1)
             st.switch_page("pages/2_user_profile.py")
 
 
-# Call the function to create/load profile
 load_user_profile()
