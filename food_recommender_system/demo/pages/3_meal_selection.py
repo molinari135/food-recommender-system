@@ -43,7 +43,7 @@ def get_current_meal_time():
 
 # Main function for displaying meal selection
 def display_meal_selection():
-    if st.session_state.selected_profile == "-- Create a new profile --" or "selected_profile" not in st.session_state:
+    if st.session_state.selected_profile == "-- Create a new profile --" or st.session_state.selected_profile is None:
         st.warning("No user profile selected. Please create or load a user profile.")
         return
     

@@ -28,7 +28,7 @@ food_infos = json.load(open(RAW_DATA_PATH / "food-infos.json", "r"))
 
 # Main function for displaying user profile
 def display_user_profile():
-    if st.session_state.selected_profile == "-- Create a new profile --" or "selected_profile" not in st.session_state:
+    if st.session_state.selected_profile == "-- Create a new profile --" or st.session_state.selected_profile is None:
         st.warning("No user profile selected. Please create or load a user profile.")
         return
 

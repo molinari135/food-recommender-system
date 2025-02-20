@@ -72,7 +72,7 @@ def load_user_profile():
     profiles = load_profiles()
 
     # Ensure session state for selected profile
-    if "selected_profile" not in st.session_state:
+    if st.session_state.selected_profile is None:
         st.session_state.selected_profile = "-- Create a new profile --"
 
     selected_profile = st.selectbox("Select an existing profile", ["-- Create a new profile --"] + profiles)
@@ -88,7 +88,7 @@ def load_user_profile():
         df = food_dataset.copy()
 
         name = st.text_input("Enter your name:")
-        lactose_intolerance = st.selectbox("Do you have lactose intolerance?", options=["Yes", "No"])
+        lactose_intolerance = st.selectbox("Do you have lactose intolerance?", options=["No", "Yes"])
 
         if lactose_intolerance == "Yes":
             df = df[~df['Category Name'].isin(['Dairy', 'Dairy Breakfast'])]

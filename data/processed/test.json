@@ -690,12 +690,10 @@
             ],
             [
                 [
-                    "Pasta",
-                    "Turkey meat",
-                    "Sesame oil",
-                    "Soy sauce",
-                    "Potato",
-                    "Clementine"
+                    [
+                        "Cheeseburger",
+                        0.9969594118808678
+                    ]
                 ],
                 [
                     "Couscous",
@@ -762,5 +760,5 @@
             ]
         ]
     },
-    "used_jolly": false
+    "used_jolly": true
 }

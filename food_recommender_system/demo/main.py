@@ -10,6 +10,7 @@ with st.sidebar:
     st.page_link('pages/2_user_profile.py', label='User Profile Information')
     st.page_link('pages/3_meal_selection.py', label='Meal Selection')
 
+st.session_state.selected_profile = None
 
 # import streamlit as st
 # from food_recommender_system.profiler import UserProfiler
