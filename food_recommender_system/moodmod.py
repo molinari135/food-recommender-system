@@ -1,6 +1,6 @@
 from datetime import datetime
-from profiler import UserProfiler
-from justificator import get_current_meal
+from food_recommender_system.profiler import UserProfiler
+from food_recommender_system.justificator import get_current_meal
 from pathlib import Path
 import pandas as pd
 import random

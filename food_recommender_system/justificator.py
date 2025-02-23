@@ -1,7 +1,7 @@
 import numpy as np
-from dataloader import DataLoader
+from food_recommender_system.dataloader import DataLoader
 from datetime import datetime
-from profiler import UserProfiler
+from food_recommender_system.profiler import UserProfiler
 import pandas as pd
 from pathlib import Path
 import time

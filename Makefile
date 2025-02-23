@@ -19,7 +19,6 @@ requirements:
 	
 
 
-
 ## Delete all compiled Python files
 .PHONY: clean
 clean:
@@ -39,8 +38,6 @@ format:
 	black --config pyproject.toml food_recommender_system
 
 
-
-
 ## Set up python interpreter environment
 .PHONY: create_environment
 create_environment:
@@ -48,6 +45,10 @@ create_environment:
 	@echo ">>> New virtualenv created. Activate with:\nworkon $(PROJECT_NAME)"
 	
 
+## Run the standalone project
+.PHONY: run
+run:
+	$(PYTHON_INTERPRETER) main.py
 
 
 #################################################################################
