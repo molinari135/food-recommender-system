@@ -202,7 +202,7 @@ This demo relies on an API hosted in another Hugging Face Spaces. The **Swagger 
 
 The demo has the same functionality as the standalone version and has the following initial screen:
 
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/fdc90e9b-469c-45d8-95f3-e368648ff157)
 
 Just follow the instructions in the welcome page to try every functionality.
 
