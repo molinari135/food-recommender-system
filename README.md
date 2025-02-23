@@ -6,7 +6,7 @@
 [![Static Badge](https://img.shields.io/badge/Docs-FastAPI_API-blue)](docs/)
 [![Static Badge](https://img.shields.io/badge/Docs-Streamlit_Demo-blue)](docs/)
 <a target="_blank" href="https://molinari135-food-recsys-api.hf.space/docs"><img src="https://img.shields.io/badge/🤗%20Hugging%20Face-Spaces-yellow.svg"></a>
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://huggingface.co/spaces/molinari135/food-recsys-demo)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://food-recsys-demo.streamlit.app/)
 
 
 ![foodrecsys](https://github.com/user-attachments/assets/0040e027-d13c-4145-a19d-3ca0138ce57d)
@@ -187,7 +187,7 @@ Example of information provided for a seasonal food:
 ### Option 2: Streamlit Demo
 
 <a target="_blank" href="https://molinari135-food-recsys-api.hf.space/docs"><img src="https://img.shields.io/badge/🤗%20Hugging%20Face-Spaces-yellow.svg"></a>
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://huggingface.co/spaces/molinari135/food-recsys-demo)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://food-recsys-demo.streamlit.app/)
 
 The system has a GUI demo made with **Streamlit** that can be tested by running the following command:
 
