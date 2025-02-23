@@ -203,7 +203,7 @@ This demo relies on an API hosted in another Hugging Face Spaces. The **Swagger 
 
 The demo has the same functionality as the standalone version and has the following initial screen:
 
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/46283852-d3c6-4208-8627-6244994534a1)
 
 In the main page of the Streamlit demo are shown the **Recommender Performances**. They are very useful to understand how well the recommender is performing overall:
 
