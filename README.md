@@ -2,16 +2,19 @@
 > Food Recommender System with recipe and justification generation for Semantics in Intelligent Information Access and Recommender Systems @ Università degli Studi di Bari Aldo Moro, AY 2024/25
 
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Static Badge](https://img.shields.io/badge/Docs-Food_RecSys-blue)](docs/)
+[![Static Badge](https://img.shields.io/badge/Docs-FastAPI_API-blue)](docs/)
+[![Static Badge](https://img.shields.io/badge/Docs-Streamlit_Demo-blue)](docs/)
 <a target="_blank" href="https://molinari135-food-recsys-api.hf.space/docs"><img src="https://img.shields.io/badge/🤗%20Hugging%20Face-Spaces-yellow.svg"></a>
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]()
 
+
 ![foodrecsys](https://github.com/user-attachments/assets/0040e027-d13c-4145-a19d-3ca0138ce57d)
 
-| [![Static Badge](https://img.shields.io/badge/Food_RecSys_Docs-grey)](docs/Food%20Recommender%20System%20with%20Justification%20Generator.pdf) | FastAPI API Docs | Streamlit Demo Docs |
-|---|---|---|
 
 ## Table of Contents
 - [Overview](#overview)
+- [Documentation](#documentation)
 - [Project Structure](#project-structure)
 - [Features](#features)
 - [Installation](#installation)
@@ -30,6 +33,17 @@ The system's architecture includes multiple components, each responsible for dif
 - **Mood Module**: Suggests meals based on the user’s mood, e.g., recommending comfort foods if the user is stressed.
 - **Seasonal Recommendations**: Encourages consumption of seasonal ingredients based on environmental and health benefits.
 
+
+## Documentation
+
+In the `docs` folder you can find the following documentation:
+
+- `food-recsys-docs.md`: Food Recommender System Standalone Documentation
+- `food-recsys-api-docs.md`: FastAPI API Documentation
+- `food-recsys-demo-docs.md`: Streamlit Demo Documentation
+
+A PDF version of every file is also available in the very same folder. These files can also be reached by clicking on the badges at the top of the page.
+
 ## Project Structure
 The project is structured as follows:
 
@@ -47,7 +61,7 @@ food-recommender-system/
 ├── docs/                               <-- Docs about the system, the API and the demo
 |   ├── food-recsys-docs.md
 |   ├── food-recsys-api-docs.md
-|   └── food-recsys-streamlit-docs.md
+|   └── food-recsys-dmeo-docs.md
 |
 ├──food_recommender_system/
 |   ├── demo/                           <--- Streamlit Demo folder
