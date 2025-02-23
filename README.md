@@ -6,7 +6,7 @@
 [![Static Badge](https://img.shields.io/badge/Docs-FastAPI_API-blue)](docs/)
 [![Static Badge](https://img.shields.io/badge/Docs-Streamlit_Demo-blue)](docs/)
 <a target="_blank" href="https://molinari135-food-recsys-api.hf.space/docs"><img src="https://img.shields.io/badge/🤗%20Hugging%20Face-Spaces-yellow.svg"></a>
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]()
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://huggingface.co/spaces/molinari135/food-recsys-demo)
 
 
 ![foodrecsys](https://github.com/user-attachments/assets/0040e027-d13c-4145-a19d-3ca0138ce57d)
@@ -103,35 +103,11 @@ food-recommender-system/
 
 ## Features
 
-### 1. User Profiling and Preferences
-
-- Collects and stores user data such as food preferences, intolerances (e.g., lactose or gluten), and dietary restrictions.
-- Users can modify their preferences based on their dietary needs, nationality, and lifestyle.
-- Profiles are stored in a JSON format for easy retrieval and modification.
-
-### 2. Meal Generation
-
-- Recommends meals based on user preferences and nutritional guidelines.
-- The system suggests different meal types such as breakfast, lunch, dinner, and snacks.
-- For each meal, a justification is provided based on the nutritional content and benefits of the chosen ingredients.
-
-### 3. Nutritional Comparison
-
-- Allows users to compare two meals or ingredients based on macronutrient content.
-- Comparison includes calories, protein, carbohydrates, fats, fiber, and other macronutrients.
-- The system provides a detailed comparison and suggests which meal/ingredient is a better choice based on the user's goals (e.g., weight loss, muscle gain).
-
-### 4. Mood-based Meal Suggestions
-
-- Suggests meals based on the user’s mood (e.g., stressed, tired).
-- The system allows the user to “reset” their jolly meal for the week, offering comfort foods or special treats if the user is feeling stressed.
-- The system prompts the user for input, like whether they are stressed, and responds with mood-appropriate meal recommendations.
-
-### 5. Seasonal Recommendations
-
-- Recommends meals based on seasonal ingredients.
-- Suggests ingredients with lower environmental impact by promoting local and seasonal produce.
-- Seasonal foods are encouraged for their higher nutritional content and better flavor.
+- Create or load a user profile with preferences, intolerances and meals
+- Ask for seasonal and non-seasonal preferences to generate meals
+- Recommend similar food with lower energy density from the same category or not
+- Once per week, ask the user if wants to have a cheat meal
+- Show useful information about seasonal and local fruits and vegetables
 
 
 ## Installation
@@ -155,6 +131,11 @@ To install the Food Recommender System, follow these steps:
 ## Usage
 
 ### Option 1: Standalone System
+
+[![Static Badge](https://img.shields.io/badge/Docs-Food_RecSys-blue)](docs/)
+[![Static Badge](https://img.shields.io/badge/Docs-FastAPI_API-blue)](docs/)
+[![Static Badge](https://img.shields.io/badge/Docs-Streamlit_Demo-blue)](docs/)
+
 To use the Food Recommender System, run the following command:
 
 ```bash
@@ -173,7 +154,7 @@ Follow the on-screen instructions to get personalized recipe recommendations.
 1. **Create or Load User**: This option allows to load a different user or create a new one, as in the beginning of the application.
 2. **Display Current Meal and Alternatives**: Using system's calendar and clock, this option will show the current meal of the day and, if needed, will ask the user to choose the actual meal by selecting a food for each section proposed. Then, it will be saved in the user's profile.
 3. **Display Weekly Meal Plan**: This option will show the entire generated weekly plan with breakfasts, snacks, lunches and dinners. The first meal shown is the one generated starting from user's preferences, then it will show an alternative version with a lower energy density (which is the standardized ratio between calories and weight). It will also display the actual user choice made between each food of the same meal.
-4. **Learn About Seasonal Food**: Using system's calendar, this option will show the user every seasonal fruit and vegetables alongside useful informations such as how to choose them, how to store them, how to cook them, some nutritional informations and benefits and also some tips.
+4. **Learn About Seasonal Food**: Using your system's calendar, this option will show the user every seasonal fruit and vegetables alongside useful informations such as how to choose them, how to store them, how to cook them, some nutritional informations and benefits and also some tips.
 
 Example of loading the profile `lactose`:
 
@@ -205,6 +186,9 @@ Example of information provided for a seasonal food:
 
 ### Option 2: Streamlit Demo
 
+<a target="_blank" href="https://molinari135-food-recsys-api.hf.space/docs"><img src="https://img.shields.io/badge/🤗%20Hugging%20Face-Spaces-yellow.svg"></a>
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://huggingface.co/spaces/molinari135/food-recsys-demo)
+
 The system has a GUI demo made with **Streamlit** that can be tested by running the following command:
 
 ```bash
@@ -221,7 +205,19 @@ The demo has the same functionality as the standalone version and has the follow
 
 ![alt text](image.png)
 
-Just follow the instructions in the welcome page to try every functionality.
+In the main page of the Streamlit demo are shown the **Recommender Performances**. They are very useful to understand how well the recommender is performing overall:
+
+- **Win Rate**: Percentage of times the recommender system's suggestion was chosen.
+- **Rejection Rate**: Percentage of times the user rejected the recommender system's suggestion.
+- **Avg. Persuasion Rating**: Average rating given by the user for the persuasion message of the recommendation.
+
+All these informations are obtained during runtime and saved in `metrics.json` file that can be accessed every time and contains the following informations:
+
+- `recsys_wins`: number of times in which the recommended food has been chosen instead of the preferred food
+- `user_wins`: number of times in which the preferred food has been chosen instead of the recommended food
+- `justification_success`: for now, same as the `recsys_wins` (for future uses)
+- `total_choices`: total number of choices that users have been made from the launch of the system
+- `persuasion_satisfaction`: a list with ratings from 1 to 5 that express the review of the overall comparison between preferred and recommended foods
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

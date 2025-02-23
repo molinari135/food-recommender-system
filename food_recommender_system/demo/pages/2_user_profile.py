@@ -67,7 +67,7 @@ def display_meals(profile):
     st.subheader("🥗 Meals")
     st.markdown("This is your meal plan for the week. You can view the meals for each day by expanding the section below. Remember that snacks can be eaten **twice a day**!")
     st.markdown("> You can also **print** this page for easy reference by clicking on the three dots on the top right after expanding all sections.")
-    
+
     meals = profile.get_meals()
     if "Snack" in meals:
         meals["Snack"] = meals["Snack"][:7]
@@ -104,7 +104,7 @@ def display_seasonal_information(profile):
     """
     st.subheader("🌦️ Seasonal Information")
     st.write("Here are useful information about seasonal food, for which you expressed preferences, **available this month**. You can expand each section to view more information about each food item.")
-    
+
     seasonal_preferences = profile.get_seasonal_preferences()
     for seasonal_food in seasonal_preferences:
         with st.expander(f"🍽️ **{seasonal_food.capitalize()}**"):
