@@ -9,6 +9,7 @@ pandas
 pip
 python-dotenv
 pytest
+pytest-mock
 scikit-learn
 uvicorn
 -e .
