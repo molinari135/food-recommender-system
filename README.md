@@ -7,6 +7,9 @@
 
 ![foodrecsys](https://github.com/user-attachments/assets/0040e027-d13c-4145-a19d-3ca0138ce57d)
 
+| Food RecSys Docs | FastAPI API Docs | Streamlit Demo Docs |
+|---|---|---|
+
 ## Table of Contents
 - [Overview](#overview)
 - [Project Structure](#project-structure)
@@ -202,7 +205,7 @@ This demo relies on an API hosted in another Hugging Face Spaces. The **Swagger 
 
 The demo has the same functionality as the standalone version and has the following initial screen:
 
-![image](https://github.com/user-attachments/assets/fdc90e9b-469c-45d8-95f3-e368648ff157)
+![alt text](image.png)
 
 Just follow the instructions in the welcome page to try every functionality.
 
