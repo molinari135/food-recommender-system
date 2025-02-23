@@ -7,7 +7,7 @@
 
 ![foodrecsys](https://github.com/user-attachments/assets/0040e027-d13c-4145-a19d-3ca0138ce57d)
 
-| Food RecSys Docs | FastAPI API Docs | Streamlit Demo Docs |
+| [![Static Badge](https://img.shields.io/badge/Food_RecSys_Docs-grey)](docs/Food%20Recommender%20System%20with%20Justification%20Generator.pdf) | FastAPI API Docs | Streamlit Demo Docs |
 |---|---|---|
 
 ## Table of Contents
