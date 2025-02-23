@@ -1,5 +1,6 @@
 black
 flake8
+fastapi
 isort
 ipykernel
 numpy
@@ -8,4 +9,5 @@ pip
 python-dotenv
 pytest
 scikit-learn
+uvicorn
 -e .
