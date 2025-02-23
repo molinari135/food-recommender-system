@@ -136,9 +136,7 @@ To install the Food Recommender System, follow these steps:
 
 ### Option 1: Standalone System
 
-[![Static Badge](https://img.shields.io/badge/Docs-Food_RecSys-blue)](docs/)
-[![Static Badge](https://img.shields.io/badge/Docs-FastAPI_API-blue)](docs/)
-[![Static Badge](https://img.shields.io/badge/Docs-Streamlit_Demo-blue)](docs/)
+[![Static Badge](https://img.shields.io/badge/Docs-Food_RecSys-blue)](docs/food-recsys-docs.md)
 
 To use the Food Recommender System, run the following command:
 
@@ -190,6 +188,8 @@ Example of information provided for a seasonal food:
 
 ### Option 2: Streamlit Demo
 
+[![Static Badge](https://img.shields.io/badge/Docs-FastAPI_API-blue)](docs/food-recsys-api.md)
+[![Static Badge](https://img.shields.io/badge/Docs-Streamlit_Demo-blue)](docs/food-recsys-demo.md)
 <a target="_blank" href="https://molinari135-food-recsys-api.hf.space/docs"><img src="https://img.shields.io/badge/🤗%20Hugging%20Face-Spaces-yellow.svg"></a>
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://food-recsys-demo.streamlit.app/)
 
