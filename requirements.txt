@@ -3,6 +3,7 @@ flake8
 fastapi
 isort
 ipykernel
+httpx
 numpy
 pandas
 pip
