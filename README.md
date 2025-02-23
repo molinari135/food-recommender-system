@@ -23,7 +23,7 @@
 
 ## Overview
 
-The Food Recommender System is designed to provide personalized recipe recommendations and generate justifications for the recommendations. This project is part of the Semantics in Intelligent Information Access course and Recommender System course at Università degli Studi di Bari Aldo Moro for the academic year 2024/25.
+The Food Recommender System is designed to provide personalized recipe recommendations and generate justifications for the recommendations. This project is part of *Semantics in Intelligent Information Access course* and *Recommender Systems* course at Università degli Studi di Bari Aldo Moro for the academic year 2024/25.
 
 The system's architecture includes multiple components, each responsible for different aspects of meal recommendation and justification. Below is a breakdown of the system's key modules and functionalities:
 
@@ -46,7 +46,7 @@ In the `docs` folder you can find the following documentation:
 - `food-recsys-api-docs.md`: FastAPI API Documentation
 - `food-recsys-demo-docs.md`: Streamlit Demo Documentation
 
-A PDF version of every file is also available in the very same folder. These files can also be reached by clicking on the badges at the top of the page.
+You can consult these files also clicking on the badges in this section or at the top of the page.
 
 ## Project Structure
 The project is structured as follows:
