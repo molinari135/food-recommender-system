@@ -2,9 +2,9 @@
 > Food Recommender System with recipe and justification generation for Semantics in Intelligent Information Access and Recommender Systems @ Università degli Studi di Bari Aldo Moro, AY 2024/25
 
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Static Badge](https://img.shields.io/badge/Docs-Food_RecSys-blue)](docs/)
-[![Static Badge](https://img.shields.io/badge/Docs-FastAPI_API-blue)](docs/)
-[![Static Badge](https://img.shields.io/badge/Docs-Streamlit_Demo-blue)](docs/)
+[![Static Badge](https://img.shields.io/badge/Docs-Food_RecSys-blue)](docs/food-recsys-docs.md)
+[![Static Badge](https://img.shields.io/badge/Docs-FastAPI_API-blue)](docs/food-recsys-api.md)
+[![Static Badge](https://img.shields.io/badge/Docs-Streamlit_Demo-blue)](docs/food-recsys-demo.md)
 <a target="_blank" href="https://molinari135-food-recsys-api.hf.space/docs"><img src="https://img.shields.io/badge/🤗%20Hugging%20Face-Spaces-yellow.svg"></a>
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://food-recsys-demo.streamlit.app/)
 
@@ -35,6 +35,10 @@ The system's architecture includes multiple components, each responsible for dif
 
 
 ## Documentation
+
+[![Static Badge](https://img.shields.io/badge/Docs-Food_RecSys-blue)](docs/food-recsys-docs.md)
+[![Static Badge](https://img.shields.io/badge/Docs-FastAPI_API-blue)](docs/food-recsys-api.md)
+[![Static Badge](https://img.shields.io/badge/Docs-Streamlit_Demo-blue)](docs/food-recsys-demo.md)
 
 In the `docs` folder you can find the following documentation:
 
