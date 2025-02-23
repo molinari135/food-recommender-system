@@ -1,6 +1,10 @@
 # Food Recommender System with Justification
 > Food Recommender System with recipe and justification generation for Semantics in Intelligent Information Access and Recommender Systems @ Università degli Studi di Bari Aldo Moro, AY 2024/25
 
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+<a target="_blank" href="https://huggingface.co/spaces/molinari135/food-recsys-demo"><img src="https://img.shields.io/badge/🤗%20Hugging%20Face-Spaces-yellow.svg"></a>
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]()
+
 ![foodrecsys](https://github.com/user-attachments/assets/0040e027-d13c-4145-a19d-3ca0138ce57d)
 
 ## Table of Contents

@@ -206,99 +206,99 @@
         "Breakfast": [
             [
                 [
-                    "Tea",
-                    "Biscuit",
-                    "Almond butter",
-                    "Apple"
+                    "Milk",
+                    "White Bread",
+                    "Marmalade",
+                    "Clementine"
                 ],
                 [
-                    "Herbal tea",
-                    "White Bread",
-                    "Almond paste",
-                    "Clementine"
+                    "Yogurt",
+                    "Multigrain bread",
+                    "Apricot jam",
+                    "Orange"
                 ]
             ],
             [
                 [
-                    "Rice milk",
-                    "Biscuit",
+                    "Oolong tea",
+                    "White Bread",
                     "Peanut butter",
-                    "Clementine"
+                    "Pear"
                 ],
                 [
                     "Herbal tea",
-                    "White Bread",
+                    "Multigrain bread",
                     "Almond paste",
                     "Orange"
                 ]
             ],
             [
                 [
-                    "Aloe vera juice",
-                    "Multigrain bread",
-                    "Marmalade",
-                    "Mandarin orange"
-                ],
-                [
-                    "Herbal tea",
-                    "White Bread",
-                    "Apricot jam",
-                    "Clementine"
-                ]
-            ],
-            [
-                [
-                    "Lemonade",
+                    "Green tea",
                     "White Bread",
                     "Peanut butter",
-                    "Mandarin orange"
-                ],
-                [
-                    "Herbal tea",
-                    "Multigrain bread",
-                    "Almond paste",
-                    "Clementine"
-                ]
-            ],
-            [
-                [
-                    "Aloe vera juice",
-                    "White Bread",
-                    "Peanut butter",
-                    "Kiwifruit"
-                ],
-                [
-                    "Herbal tea",
-                    "Multigrain bread",
-                    "Almond paste",
-                    "Clementine"
-                ]
-            ],
-            [
-                [
-                    "Aloe vera juice",
-                    "Biscuit",
-                    "Almond butter",
-                    "Kiwifruit"
-                ],
-                [
-                    "Herbal tea",
-                    "White Bread",
-                    "Almond paste",
-                    "Clementine"
-                ]
-            ],
-            [
-                [
-                    "Cranberry juice",
-                    "White Bread",
-                    "Almond butter",
                     "Apple"
                 ],
                 [
                     "Herbal tea",
                     "Multigrain bread",
                     "Almond paste",
+                    "Clementine"
+                ]
+            ],
+            [
+                [
+                    "Greek yogurt",
+                    "White Bread",
+                    "Fruit preserves",
+                    "Clementine"
+                ],
+                [
+                    "Kefir",
+                    "Multigrain bread",
+                    "Apricot jam",
+                    "Orange"
+                ]
+            ],
+            [
+                [
+                    "Green tea",
+                    "White Bread",
+                    "Fruit preserves",
+                    "Kiwifruit"
+                ],
+                [
+                    "Herbal tea",
+                    "Multigrain bread",
+                    "Apricot jam",
+                    "Clementine"
+                ]
+            ],
+            [
+                [
+                    "Instant coffee",
+                    "Biscuit",
+                    "Peanut butter",
+                    "Orange"
+                ],
+                [
+                    "Herbal tea",
+                    "White Bread",
+                    "Almond paste",
+                    "Clementine"
+                ]
+            ],
+            [
+                [
+                    "Herbal tea",
+                    "Multigrain bread",
+                    "Almond paste",
+                    "Orange"
+                ],
+                [
+                    "Oolong tea",
+                    "White Bread",
+                    "Peanut butter",
                     "Clementine"
                 ]
             ]
@@ -306,38 +306,10 @@
         "Snack": [
             [
                 [
-                    "Milk",
-                    "Biscuit",
-                    "Marmalade",
-                    "Pear"
-                ],
-                [
-                    "Yogurt",
-                    "White Bread",
-                    "Apricot jam",
-                    "Orange"
-                ]
-            ],
-            [
-                [
-                    "Yogurt",
-                    "Biscuit",
-                    "Apricot jam",
-                    "Orange"
-                ],
-                [
-                    "Milk",
-                    "White Bread",
-                    "Marmalade",
-                    "Clementine"
-                ]
-            ],
-            [
-                [
-                    "Rice milk",
-                    "Biscuit",
+                    "Green tea",
+                    "Multigrain bread",
                     "Peanut butter",
-                    "Kiwifruit"
+                    "Orange"
                 ],
                 [
                     "Herbal tea",
@@ -349,23 +321,9 @@
             [
                 [
                     "Coffee",
-                    "Biscuit",
-                    "Marmalade",
-                    "Orange"
-                ],
-                [
-                    "Herbal tea",
-                    "White Bread",
-                    "Apricot jam",
-                    "Clementine"
-                ]
-            ],
-            [
-                [
-                    "Aloe vera juice",
-                    "Biscuit",
+                    "Multigrain bread",
                     "Peanut butter",
-                    "Orange"
+                    "Mandarin orange"
                 ],
                 [
                     "Herbal tea",
@@ -376,27 +334,13 @@
             ],
             [
                 [
-                    "Cranberry juice",
-                    "Biscuit",
-                    "Peanut butter",
+                    "Lemonade",
+                    "Multigrain bread",
+                    "Almond paste",
                     "Clementine"
                 ],
                 [
                     "Herbal tea",
-                    "White Bread",
-                    "Almond paste",
-                    "Orange"
-                ]
-            ],
-            [
-                [
-                    "Kefir",
-                    "Biscuit",
-                    "Almond paste",
-                    "Clementine"
-                ],
-                [
-                    "Soy yogurt",
                     "White Bread",
                     "Peanut butter",
                     "Orange"
@@ -404,10 +348,10 @@
             ],
             [
                 [
-                    "Aloe vera juice",
-                    "Biscuit",
-                    "Almond butter",
-                    "Clementine"
+                    "Pineapple juice",
+                    "Multigrain bread",
+                    "Peanut butter",
+                    "Pear"
                 ],
                 [
                     "Herbal tea",
@@ -418,7 +362,35 @@
             ],
             [
                 [
-                    "Lemon tea",
+                    "Lemonade",
+                    "White Bread",
+                    "Almond paste",
+                    "Mandarin orange"
+                ],
+                [
+                    "Herbal tea",
+                    "Multigrain bread",
+                    "Peanut butter",
+                    "Clementine"
+                ]
+            ],
+            [
+                [
+                    "Lemonade",
+                    "White Bread",
+                    "Peanut butter",
+                    "Apple"
+                ],
+                [
+                    "Herbal tea",
+                    "Multigrain bread",
+                    "Almond paste",
+                    "Clementine"
+                ]
+            ],
+            [
+                [
+                    "Green tea",
                     "Multigrain bread",
                     "Fruit preserves",
                     "Pear"
@@ -432,29 +404,15 @@
             ],
             [
                 [
-                    "Espresso",
+                    "Milk",
                     "White Bread",
-                    "Peanut butter",
+                    "Marmalade",
                     "Mandarin orange"
                 ],
                 [
-                    "Herbal tea",
+                    "Yogurt",
                     "Multigrain bread",
-                    "Almond paste",
-                    "Clementine"
-                ]
-            ],
-            [
-                [
-                    "Pineapple juice",
-                    "Biscuit",
-                    "Almond paste",
-                    "Orange"
-                ],
-                [
-                    "Herbal tea",
-                    "White Bread",
-                    "Peanut butter",
+                    "Apricot jam",
                     "Clementine"
                 ]
             ],
@@ -462,94 +420,100 @@
                 [
                     "Green tea",
                     "Biscuit",
+                    "Almond paste",
+                    "Mandarin orange"
+                ],
+                [
+                    "Herbal tea",
+                    "White Bread",
                     "Peanut butter",
+                    "Clementine"
+                ]
+            ],
+            [
+                [
+                    "Herbal tea",
+                    "Biscuit",
+                    "Apricot jam",
+                    "Orange"
+                ],
+                [
+                    "Oolong tea",
+                    "White Bread",
+                    "Marmalade",
+                    "Clementine"
+                ]
+            ],
+            [
+                [
+                    "Yogurt",
+                    "Biscuit",
+                    "Apricot jam",
+                    "Mandarin orange"
+                ],
+                [
+                    "Milk",
+                    "White Bread",
+                    "Marmalade",
+                    "Clementine"
+                ]
+            ],
+            [
+                [
+                    "Orange juice",
+                    "Multigrain bread",
+                    "Marmalade",
+                    "Mandarin orange"
+                ],
+                [
+                    "Herbal tea",
+                    "White Bread",
+                    "Apricot jam",
+                    "Clementine"
+                ]
+            ],
+            [
+                [
+                    "Espresso",
+                    "White Bread",
+                    "Almond butter",
+                    "Pear"
+                ],
+                [
+                    "Herbal tea",
+                    "Multigrain bread",
+                    "Almond paste",
+                    "Orange"
+                ]
+            ],
+            [
+                [
+                    "Tea",
+                    "White Bread",
+                    "Marmalade",
                     "Apple"
                 ],
                 [
                     "Herbal tea",
-                    "White Bread",
-                    "Almond paste",
-                    "Clementine"
-                ]
-            ],
-            [
-                [
-                    "Cranberry juice",
                     "Multigrain bread",
-                    "Fruit preserves",
-                    "Clementine"
-                ],
-                [
-                    "Herbal tea",
-                    "White Bread",
                     "Apricot jam",
-                    "Orange"
-                ]
-            ],
-            [
-                [
-                    "Oolong tea",
-                    "Multigrain bread",
-                    "Fruit preserves",
                     "Clementine"
-                ],
-                [
-                    "Herbal tea",
-                    "White Bread",
-                    "Apricot jam",
-                    "Orange"
                 ]
             ]
         ],
         "Lunch": [
             [
                 [
-                    "Couscous",
-                    "Ground chicken",
-                    "Soybean oil",
-                    "Soy sauce",
-                    "Cabbage",
-                    "Clementine"
-                ],
-                [
-                    "Pasta",
-                    "Rabbit Meat",
-                    "Margarine",
-                    "Tomato sauce",
-                    "Pickled cucumber",
-                    "Orange"
-                ]
-            ],
-            [
-                [
                     "Oat",
-                    "Swiss cheese",
+                    "Tempeh",
                     "Olive oil",
-                    "Mustard",
-                    "Carrot",
-                    "Apple"
-                ],
-                [
-                    "Buckwheat",
-                    "Feta",
-                    "Margarine",
-                    "Tomato sauce",
-                    "Pickled cucumber",
-                    "Clementine"
-                ]
-            ],
-            [
-                [
-                    "Pasta",
-                    "Egg white",
-                    "Sunflower oil",
                     "Salsa",
-                    "Radicchio",
+                    "Turnip",
                     "Pear"
                 ],
                 [
-                    "Couscous",
-                    "Egg",
+                    "Buckwheat",
+                    "Bean",
                     "Margarine",
                     "Tomato sauce",
                     "Pickled cucumber",
@@ -558,17 +522,71 @@
             ],
             [
                 [
-                    "Millet",
-                    "Cream cheese",
-                    "Olive oil",
-                    "Salsa",
-                    "Cabbage",
+                    "Pasta",
+                    "Roquefort",
+                    "Sunflower oil",
+                    "Tomato sauce",
+                    "Artichoke",
                     "Orange"
                 ],
                 [
-                    "Buckwheat",
+                    "Couscous",
                     "Cottage cheese",
                     "Margarine",
+                    "Salsa",
+                    "Pickled cucumber",
+                    "Clementine"
+                ]
+            ],
+            [
+                [
+                    "Couscous",
+                    "Egg",
+                    "Sunflower oil",
+                    "Soy sauce",
+                    "Radicchio",
+                    "Clementine"
+                ],
+                [
+                    "Pasta",
+                    "Egg white",
+                    "Margarine",
+                    "Tomato sauce",
+                    "Pickled cucumber",
+                    "Orange"
+                ]
+            ],
+            [
+                [
+                    "Pasta",
+                    "Smoked salmon",
+                    "Margarine",
+                    "Salsa",
+                    "Cauliflower",
+                    "Clementine"
+                ],
+                [
+                    "Couscous",
+                    "Surimi",
+                    "Olive oil",
+                    "Tomato sauce",
+                    "Pickled cucumber",
+                    "Orange"
+                ]
+            ],
+            [
+                [
+                    "Pasta",
+                    "Soybean",
+                    "Olive oil",
+                    "Mustard",
+                    "Carrot",
+                    "Mandarin orange"
+                ],
+                [
+                    "Couscous",
+                    "Bean",
+                    "Margarine",
                     "Tomato sauce",
                     "Pickled cucumber",
                     "Clementine"
@@ -576,25 +594,17 @@
             ],
             [
                 [
-                    "Millet",
-                    "Soybean",
+                    "Couscous",
+                    "Egg",
+                    "Sesame oil",
+                    "Soy sauce",
+                    "Cabbage",
+                    "Mandarin orange"
+                ],
+                [
+                    "Pasta",
+                    "Egg white",
                     "Margarine",
-                    "Marinara sauce",
-                    "Cauliflower",
-                    "Kiwifruit"
-                ],
-                [
-                    "Buckwheat",
-                    "Bean",
-                    "Olive oil",
-                    "Tomato sauce",
-                    "Pickled cucumber",
-                    "Clementine"
-                ],
-                [
-                    "Millet",
-                    "Bean",
-                    "Olive oil",
                     "Tomato sauce",
                     "Pickled cucumber",
                     "Clementine"
@@ -603,55 +613,37 @@
             [
                 [
                     "Rice",
-                    "Provolone",
-                    "Peanut oil",
-                    "Salsa",
-                    "Pumpkin",
-                    "Clementine"
+                    "Turkey bacon",
+                    "Sunflower oil",
+                    "Tomato sauce",
+                    "Chicory",
+                    "Mandarin orange"
                 ],
                 [
                     "Buckwheat",
-                    "Feta",
+                    "Turkey ham",
                     "Margarine",
-                    "Tomato sauce",
-                    "Pickled cucumber",
-                    "Orange"
-                ]
-            ],
-            [
-                [
-                    "Pasta",
-                    "Ricotta",
-                    "Sunflower oil",
                     "Salsa",
-                    "Broccoli",
-                    "Pear"
-                ],
-                [
-                    "Couscous",
-                    "Cottage cheese",
-                    "Margarine",
-                    "Tomato sauce",
                     "Pickled cucumber",
-                    "Orange"
+                    "Clementine"
                 ]
             ]
         ],
         "Dinner": [
             [
                 [
-                    "Millet",
-                    "Pork belly",
-                    "Peanut oil",
-                    "Mustard",
-                    "Artichoke",
-                    "Apple"
+                    "Buckwheat",
+                    "Mozzarella",
+                    "Sunflower oil",
+                    "Tomato sauce",
+                    "Cauliflower",
+                    "Orange"
                 ],
                 [
-                    "Buckwheat",
-                    "Roast beef",
+                    "Millet",
+                    "Cottage cheese",
                     "Margarine",
-                    "Tomato sauce",
+                    "Salsa",
                     "Pickled cucumber",
                     "Clementine"
                 ]
@@ -659,16 +651,16 @@
             [
                 [
                     "Wheat Bread",
-                    "Hummus",
-                    "Margarine",
-                    "Soy sauce",
-                    "Artichoke",
-                    "Orange"
+                    "Romano cheese",
+                    "Coconut oil",
+                    "Mustard",
+                    "Pumpkin",
+                    "Apple"
                 ],
                 [
                     "Couscous",
-                    "Bean",
-                    "Olive oil",
+                    "Feta",
+                    "Margarine",
                     "Tomato sauce",
                     "Pickled cucumber",
                     "Clementine"
@@ -677,44 +669,62 @@
             [
                 [
                     "Millet",
-                    "Pork bacon",
-                    "Peanut oil",
-                    "Soy sauce",
+                    "Turkey meat",
+                    "Sunflower oil",
+                    "Marinara sauce",
+                    "Broccoli",
+                    "Orange"
+                ],
+                [
+                    "Buckwheat",
+                    "Rabbit Meat",
+                    "Margarine",
+                    "Tomato sauce",
+                    "Pickled cucumber",
+                    "Clementine"
+                ]
+            ],
+            [
+                [
+                    "Rice",
+                    "Goat cheese",
+                    "Sesame oil",
+                    "Tomato sauce",
                     "Cauliflower",
                     "Apple"
                 ],
                 [
                     "Buckwheat",
-                    "Turkey ham",
+                    "Cottage cheese",
                     "Margarine",
-                    "Tomato sauce",
+                    "Salsa",
                     "Pickled cucumber",
                     "Clementine"
                 ]
             ],
             [
                 [
-                    "McDonald's french fries"
+                    "Fish sandwich"
                 ],
                 [
-                    "Hash browns"
+                    "McDonald's Quarter Pounder"
                 ],
                 [
-                    "McDonald's french fries"
+                    "McDonald's Quarter Pounder"
                 ]
             ],
             [
                 [
-                    "Millet",
-                    "Ground chicken",
-                    "Peanut oil",
-                    "Salsa",
-                    "Pumpkin",
-                    "Mandarin orange"
+                    "Wheat Bread",
+                    "Fontina",
+                    "Coconut oil",
+                    "Mustard",
+                    "Turnip",
+                    "Apple"
                 ],
                 [
-                    "Buckwheat",
-                    "Rabbit Meat",
+                    "Couscous",
+                    "Feta",
                     "Margarine",
                     "Tomato sauce",
                     "Pickled cucumber",
@@ -725,32 +735,14 @@
                 [
                     "Couscous",
                     "Fish sticks",
-                    "Sesame oil",
-                    "Salsa",
+                    "Soybean oil",
+                    "Marinara sauce",
                     "Chicory",
-                    "Pear"
+                    "Clementine"
                 ],
                 [
                     "Pasta",
                     "Surimi",
-                    "Margarine",
-                    "Tomato sauce",
-                    "Pickled cucumber",
-                    "Orange"
-                ]
-            ],
-            [
-                [
-                    "Millet",
-                    "Lentil",
-                    "Peanut oil",
-                    "Soy sauce",
-                    "Cauliflower",
-                    "Pear"
-                ],
-                [
-                    "Buckwheat",
-                    "Bean",
                     "Margarine",
                     "Tomato sauce",
                     "Pickled cucumber",
