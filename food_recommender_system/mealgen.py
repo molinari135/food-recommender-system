@@ -1,8 +1,8 @@
 import random
 import pandas as pd
-from profiler import UserProfiler
-from recommender import get_similar_food
-from dataloader import DataLoader
+from food_recommender_system.profiler import UserProfiler
+from food_recommender_system.recommender import get_similar_food
+from food_recommender_system.dataloader import DataLoader
 from pathlib import Path
 import time
 

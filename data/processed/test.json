@@ -1,0 +1,763 @@
+{
+    "intolerances": [],
+    "food_preferences": [
+        "Anchovy",
+        "Carp",
+        "Cod",
+        "Fish sticks",
+        "Mackerel",
+        "Smoked salmon",
+        "Sturgeon",
+        "Surimi",
+        "Shrimp",
+        "Mussels",
+        "Tuna",
+        "Squid",
+        "Octopus",
+        "Salmon",
+        "Trout",
+        "Blue cheese",
+        "Brie",
+        "Camembert",
+        "Edam",
+        "Feta",
+        "Fontina",
+        "Gouda cheese",
+        "Gruyere cheese",
+        "Provolone",
+        "Romano cheese",
+        "Swiss cheese",
+        "Cheese",
+        "Cottage cheese",
+        "Cream cheese",
+        "Ricotta",
+        "Roquefort",
+        "Goat cheese",
+        "Mozzarella",
+        "Milk",
+        "Yogurt",
+        "Egg white",
+        "Yolk",
+        "Egg",
+        "Kefir",
+        "Greek yogurt",
+        "Soy yogurt",
+        "Chickpeas",
+        "Lentil",
+        "Soybean",
+        "Tempeh",
+        "Hummus",
+        "Tofu",
+        "Bean",
+        "Wheat Bread",
+        "Couscous",
+        "Pasta",
+        "Buckwheat",
+        "Millet",
+        "Oat",
+        "Rice",
+        "Chicken meat",
+        "Turkey meat",
+        "Ground turkey",
+        "Ground chicken",
+        "Lamb",
+        "Rabbit Meat",
+        "Turkey ham",
+        "Luncheon meat",
+        "Mortadella",
+        "Salami",
+        "Italian sausage",
+        "Turkey bacon",
+        "Turkey sausage",
+        "Ham",
+        "Pork bacon",
+        "Roast beef",
+        "Meatball",
+        "Pork belly",
+        "Pork",
+        "Ground beef",
+        "Goat",
+        "Steak",
+        "Beef",
+        "Mustard",
+        "Salsa",
+        "Marinara sauce",
+        "Soy sauce",
+        "Tomato sauce",
+        "Almond",
+        "Cashew",
+        "Chestnut",
+        "Hazelnut",
+        "Macadamia",
+        "Mixed nuts",
+        "Pecan",
+        "Pine nuts",
+        "Pistachio",
+        "Walnut",
+        "Peanut",
+        "Almond paste",
+        "Almond butter",
+        "Peanut butter",
+        "White chocolate",
+        "Cr\u00e8me caramel",
+        "Ice cream",
+        "Sherbet",
+        "Fudge",
+        "Kit Kat",
+        "Chocolate pudding",
+        "M&Ms Peanut",
+        "After eight",
+        "Twix",
+        "Cocoa bean",
+        "Gelatin dessert",
+        "Mousse",
+        "Apple crisp",
+        "Flan",
+        "Pudding",
+        "Rice pudding",
+        "Praline",
+        "Mars",
+        "Snickers",
+        "Chocolate",
+        "Frozen yogurt",
+        "Fruit preserves",
+        "Marmalade",
+        "Apricot jam",
+        "Soybean oil",
+        "Peanut oil",
+        "Coconut oil",
+        "Olive oil",
+        "Sesame oil",
+        "Sunflower oil",
+        "Margarine",
+        "Soy milk",
+        "Apple juice",
+        "Orange juice",
+        "Pineapple juice",
+        "Oolong tea",
+        "Green tea",
+        "Lemon tea",
+        "Coffee",
+        "Espresso",
+        "Instant coffee",
+        "Aloe vera juice",
+        "Cranberry juice",
+        "Lemonade",
+        "Black tea",
+        "Tea",
+        "Rice milk",
+        "Herbal tea",
+        "Biscuit",
+        "Multigrain bread",
+        "White Bread",
+        "French bread",
+        "Italian bread",
+        "Pita bread",
+        "Rye bread",
+        "Bread crumbs",
+        "Bread sticks",
+        "Cracker",
+        "Crouton",
+        "Filo",
+        "Focaccia",
+        "Hot dog",
+        "Veggie burger",
+        "Hash browns",
+        "Cheeseburger",
+        "Chicken sandwich",
+        "Fish sandwich",
+        "Hamburger",
+        "Roast beef sandwich",
+        "French fries",
+        "McDonald's hamburger",
+        "McDonald's Filet-O-Fish",
+        "McDonald's Cheeseburger",
+        "McDonald's Quarter Pounder",
+        "McDonald's Big Mac",
+        "McDonald's french fries",
+        "Burger King Whopper",
+        "Pepperoni Pizza",
+        "Pizza",
+        "Chicken McNuggets",
+        "McChicken Sandwich",
+        "Egg McMUFFIN",
+        "KFC Fried Chicken",
+        "Club sandwich"
+    ],
+    "seasonal_preferences": [
+        "Apple",
+        "Kiwifruit",
+        "Orange",
+        "Mandarin orange",
+        "Pear",
+        "Clementine",
+        "Artichoke",
+        "Broccoli",
+        "Cabbage",
+        "Carrot",
+        "Cauliflower",
+        "Chicory",
+        "Pumpkin",
+        "Turnip",
+        "Potato",
+        "Radicchio"
+    ],
+    "meals": {
+        "Breakfast": [
+            [
+                [
+                    "Tea",
+                    "Biscuit",
+                    "Almond butter",
+                    "Apple"
+                ],
+                [
+                    "Herbal tea",
+                    "White Bread",
+                    "Almond paste",
+                    "Clementine"
+                ]
+            ],
+            [
+                [
+                    "Rice milk",
+                    "Biscuit",
+                    "Peanut butter",
+                    "Clementine"
+                ],
+                [
+                    "Herbal tea",
+                    "White Bread",
+                    "Almond paste",
+                    "Orange"
+                ]
+            ],
+            [
+                [
+                    "Aloe vera juice",
+                    "Multigrain bread",
+                    "Marmalade",
+                    "Mandarin orange"
+                ],
+                [
+                    "Herbal tea",
+                    "White Bread",
+                    "Apricot jam",
+                    "Clementine"
+                ]
+            ],
+            [
+                [
+                    "Lemonade",
+                    "White Bread",
+                    "Peanut butter",
+                    "Mandarin orange"
+                ],
+                [
+                    "Herbal tea",
+                    "Multigrain bread",
+                    "Almond paste",
+                    "Clementine"
+                ]
+            ],
+            [
+                [
+                    "Aloe vera juice",
+                    "White Bread",
+                    "Peanut butter",
+                    "Kiwifruit"
+                ],
+                [
+                    "Herbal tea",
+                    "Multigrain bread",
+                    "Almond paste",
+                    "Clementine"
+                ]
+            ],
+            [
+                [
+                    "Aloe vera juice",
+                    "Biscuit",
+                    "Almond butter",
+                    "Kiwifruit"
+                ],
+                [
+                    "Herbal tea",
+                    "White Bread",
+                    "Almond paste",
+                    "Clementine"
+                ]
+            ],
+            [
+                [
+                    "Cranberry juice",
+                    "White Bread",
+                    "Almond butter",
+                    "Apple"
+                ],
+                [
+                    "Herbal tea",
+                    "Multigrain bread",
+                    "Almond paste",
+                    "Clementine"
+                ]
+            ]
+        ],
+        "Snack": [
+            [
+                [
+                    "Milk",
+                    "Biscuit",
+                    "Marmalade",
+                    "Pear"
+                ],
+                [
+                    "Yogurt",
+                    "White Bread",
+                    "Apricot jam",
+                    "Orange"
+                ]
+            ],
+            [
+                [
+                    "Yogurt",
+                    "Biscuit",
+                    "Apricot jam",
+                    "Orange"
+                ],
+                [
+                    "Milk",
+                    "White Bread",
+                    "Marmalade",
+                    "Clementine"
+                ]
+            ],
+            [
+                [
+                    "Rice milk",
+                    "Biscuit",
+                    "Peanut butter",
+                    "Kiwifruit"
+                ],
+                [
+                    "Herbal tea",
+                    "White Bread",
+                    "Almond paste",
+                    "Clementine"
+                ]
+            ],
+            [
+                [
+                    "Coffee",
+                    "Biscuit",
+                    "Marmalade",
+                    "Orange"
+                ],
+                [
+                    "Herbal tea",
+                    "White Bread",
+                    "Apricot jam",
+                    "Clementine"
+                ]
+            ],
+            [
+                [
+                    "Aloe vera juice",
+                    "Biscuit",
+                    "Peanut butter",
+                    "Orange"
+                ],
+                [
+                    "Herbal tea",
+                    "White Bread",
+                    "Almond paste",
+                    "Clementine"
+                ]
+            ],
+            [
+                [
+                    "Cranberry juice",
+                    "Biscuit",
+                    "Peanut butter",
+                    "Clementine"
+                ],
+                [
+                    "Herbal tea",
+                    "White Bread",
+                    "Almond paste",
+                    "Orange"
+                ]
+            ],
+            [
+                [
+                    "Kefir",
+                    "Biscuit",
+                    "Almond paste",
+                    "Clementine"
+                ],
+                [
+                    "Soy yogurt",
+                    "White Bread",
+                    "Peanut butter",
+                    "Orange"
+                ]
+            ],
+            [
+                [
+                    "Aloe vera juice",
+                    "Biscuit",
+                    "Almond butter",
+                    "Clementine"
+                ],
+                [
+                    "Herbal tea",
+                    "White Bread",
+                    "Almond paste",
+                    "Orange"
+                ]
+            ],
+            [
+                [
+                    "Lemon tea",
+                    "Multigrain bread",
+                    "Fruit preserves",
+                    "Pear"
+                ],
+                [
+                    "Herbal tea",
+                    "White Bread",
+                    "Apricot jam",
+                    "Orange"
+                ]
+            ],
+            [
+                [
+                    "Espresso",
+                    "White Bread",
+                    "Peanut butter",
+                    "Mandarin orange"
+                ],
+                [
+                    "Herbal tea",
+                    "Multigrain bread",
+                    "Almond paste",
+                    "Clementine"
+                ]
+            ],
+            [
+                [
+                    "Pineapple juice",
+                    "Biscuit",
+                    "Almond paste",
+                    "Orange"
+                ],
+                [
+                    "Herbal tea",
+                    "White Bread",
+                    "Peanut butter",
+                    "Clementine"
+                ]
+            ],
+            [
+                [
+                    "Green tea",
+                    "Biscuit",
+                    "Peanut butter",
+                    "Apple"
+                ],
+                [
+                    "Herbal tea",
+                    "White Bread",
+                    "Almond paste",
+                    "Clementine"
+                ]
+            ],
+            [
+                [
+                    "Cranberry juice",
+                    "Multigrain bread",
+                    "Fruit preserves",
+                    "Clementine"
+                ],
+                [
+                    "Herbal tea",
+                    "White Bread",
+                    "Apricot jam",
+                    "Orange"
+                ]
+            ],
+            [
+                [
+                    "Oolong tea",
+                    "Multigrain bread",
+                    "Fruit preserves",
+                    "Clementine"
+                ],
+                [
+                    "Herbal tea",
+                    "White Bread",
+                    "Apricot jam",
+                    "Orange"
+                ]
+            ]
+        ],
+        "Lunch": [
+            [
+                [
+                    "Couscous",
+                    "Ground chicken",
+                    "Soybean oil",
+                    "Soy sauce",
+                    "Cabbage",
+                    "Clementine"
+                ],
+                [
+                    "Pasta",
+                    "Rabbit Meat",
+                    "Margarine",
+                    "Tomato sauce",
+                    "Pickled cucumber",
+                    "Orange"
+                ]
+            ],
+            [
+                [
+                    "Oat",
+                    "Swiss cheese",
+                    "Olive oil",
+                    "Mustard",
+                    "Carrot",
+                    "Apple"
+                ],
+                [
+                    "Buckwheat",
+                    "Feta",
+                    "Margarine",
+                    "Tomato sauce",
+                    "Pickled cucumber",
+                    "Clementine"
+                ]
+            ],
+            [
+                [
+                    "Pasta",
+                    "Egg white",
+                    "Sunflower oil",
+                    "Salsa",
+                    "Radicchio",
+                    "Pear"
+                ],
+                [
+                    "Couscous",
+                    "Egg",
+                    "Margarine",
+                    "Tomato sauce",
+                    "Pickled cucumber",
+                    "Orange"
+                ]
+            ],
+            [
+                [
+                    "Millet",
+                    "Cream cheese",
+                    "Olive oil",
+                    "Salsa",
+                    "Cabbage",
+                    "Orange"
+                ],
+                [
+                    "Buckwheat",
+                    "Cottage cheese",
+                    "Margarine",
+                    "Tomato sauce",
+                    "Pickled cucumber",
+                    "Clementine"
+                ]
+            ],
+            [
+                [
+                    "Millet",
+                    "Soybean",
+                    "Margarine",
+                    "Marinara sauce",
+                    "Cauliflower",
+                    "Kiwifruit"
+                ],
+                [
+                    "Buckwheat",
+                    "Bean",
+                    "Olive oil",
+                    "Tomato sauce",
+                    "Pickled cucumber",
+                    "Clementine"
+                ],
+                [
+                    "Millet",
+                    "Bean",
+                    "Olive oil",
+                    "Tomato sauce",
+                    "Pickled cucumber",
+                    "Clementine"
+                ]
+            ],
+            [
+                [
+                    "Rice",
+                    "Provolone",
+                    "Peanut oil",
+                    "Salsa",
+                    "Pumpkin",
+                    "Clementine"
+                ],
+                [
+                    "Buckwheat",
+                    "Feta",
+                    "Margarine",
+                    "Tomato sauce",
+                    "Pickled cucumber",
+                    "Orange"
+                ]
+            ],
+            [
+                [
+                    "Pasta",
+                    "Ricotta",
+                    "Sunflower oil",
+                    "Salsa",
+                    "Broccoli",
+                    "Pear"
+                ],
+                [
+                    "Couscous",
+                    "Cottage cheese",
+                    "Margarine",
+                    "Tomato sauce",
+                    "Pickled cucumber",
+                    "Orange"
+                ]
+            ]
+        ],
+        "Dinner": [
+            [
+                [
+                    "Millet",
+                    "Pork belly",
+                    "Peanut oil",
+                    "Mustard",
+                    "Artichoke",
+                    "Apple"
+                ],
+                [
+                    "Buckwheat",
+                    "Roast beef",
+                    "Margarine",
+                    "Tomato sauce",
+                    "Pickled cucumber",
+                    "Clementine"
+                ]
+            ],
+            [
+                [
+                    "Wheat Bread",
+                    "Hummus",
+                    "Margarine",
+                    "Soy sauce",
+                    "Artichoke",
+                    "Orange"
+                ],
+                [
+                    "Couscous",
+                    "Bean",
+                    "Olive oil",
+                    "Tomato sauce",
+                    "Pickled cucumber",
+                    "Clementine"
+                ]
+            ],
+            [
+                [
+                    "Millet",
+                    "Pork bacon",
+                    "Peanut oil",
+                    "Soy sauce",
+                    "Cauliflower",
+                    "Apple"
+                ],
+                [
+                    "Buckwheat",
+                    "Turkey ham",
+                    "Margarine",
+                    "Tomato sauce",
+                    "Pickled cucumber",
+                    "Clementine"
+                ]
+            ],
+            [
+                [
+                    "McDonald's french fries"
+                ],
+                [
+                    "Hash browns"
+                ],
+                [
+                    "McDonald's french fries"
+                ]
+            ],
+            [
+                [
+                    "Millet",
+                    "Ground chicken",
+                    "Peanut oil",
+                    "Salsa",
+                    "Pumpkin",
+                    "Mandarin orange"
+                ],
+                [
+                    "Buckwheat",
+                    "Rabbit Meat",
+                    "Margarine",
+                    "Tomato sauce",
+                    "Pickled cucumber",
+                    "Clementine"
+                ]
+            ],
+            [
+                [
+                    "Couscous",
+                    "Fish sticks",
+                    "Sesame oil",
+                    "Salsa",
+                    "Chicory",
+                    "Pear"
+                ],
+                [
+                    "Pasta",
+                    "Surimi",
+                    "Margarine",
+                    "Tomato sauce",
+                    "Pickled cucumber",
+                    "Orange"
+                ]
+            ],
+            [
+                [
+                    "Millet",
+                    "Lentil",
+                    "Peanut oil",
+                    "Soy sauce",
+                    "Cauliflower",
+                    "Pear"
+                ],
+                [
+                    "Buckwheat",
+                    "Bean",
+                    "Margarine",
+                    "Tomato sauce",
+                    "Pickled cucumber",
+                    "Orange"
+                ]
+            ]
+        ]
+    },
+    "used_jolly": true
+}

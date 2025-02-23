@@ -1,10 +1,15 @@
 black
 flake8
+fastapi
 isort
 ipykernel
+httpx
 numpy
 pandas
 pip
 python-dotenv
+pytest
+pytest-mock
 scikit-learn
+uvicorn
 -e .

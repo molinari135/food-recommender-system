@@ -1,9 +1,9 @@
-from profiler import UserProfiler
-from recommender import ask_seasonal_preferences, ask_user_preferences, get_seasonal_food
-from dataloader import DataLoader
-from mealgen import generate_weekly_meal_plan
-from justificator import print_meal, print_full_week_meals, choose_foods_in_current_meal, get_current_meal
-from moodmod import change_meal
+from food_recommender_system.profiler import UserProfiler
+from food_recommender_system.recommender import ask_seasonal_preferences, ask_user_preferences, get_seasonal_food
+from food_recommender_system.dataloader import DataLoader
+from food_recommender_system.mealgen import generate_weekly_meal_plan
+from food_recommender_system.justificator import print_meal, print_full_week_meals, choose_foods_in_current_meal, get_current_meal
+from food_recommender_system.moodmod import change_meal
 from pathlib import Path
 
 import sys

@@ -4,9 +4,9 @@ from numpy.linalg import norm
 from datetime import datetime
 from pathlib import Path
 
-from dataloader import DataLoader
-from profiler import UserProfiler
-from config import EXCLUDED_CATEGORIES, PREFERENCES, LACTOSE_INTOLERANCE, GLUTEN_INTOLERANCE, LACTOSE_AND_GLUTEN_INTOLERANCE
+from food_recommender_system.dataloader import DataLoader
+from food_recommender_system.profiler import UserProfiler
+from food_recommender_system.config import EXCLUDED_CATEGORIES, PREFERENCES, LACTOSE_INTOLERANCE, GLUTEN_INTOLERANCE, LACTOSE_AND_GLUTEN_INTOLERANCE
 
 
 def get_seasonal_food(df: pd.DataFrame, seasonality: dict, nationality: str = "Italy"):

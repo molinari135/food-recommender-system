@@ -2,7 +2,7 @@ import json
 import pandas as pd
 from pathlib import Path
 from typing import Tuple
-from config import RAW_DATA_PATH
+from food_recommender_system.config import RAW_DATA_PATH
 
 
 class DataLoader:

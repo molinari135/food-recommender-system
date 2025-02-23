@@ -89,11 +89,6 @@
         "tips": "e.g. 2 full teaspoons",
         "frequency_per_week": 7
     },
-    "Greens": {
-        "serving_size": 80,
-        "tips": "a bowl",
-        "frequency_per_week": 7
-    },
     "Beverages": {
         "serving_size": 200,
         "tips": "a medium glass",
