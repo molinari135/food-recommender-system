@@ -19,7 +19,10 @@
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
+    - [Option 1: Standalone System](#option-1-standalone-system)
+    - [Option 2: Streamlit Demo](#option-2-streamlit-demo)
 - [License](#license)
+- [Contributors](#contributors)
 
 ## Overview
 
@@ -42,11 +45,13 @@ The system's architecture includes multiple components, each responsible for dif
 
 In the `docs` folder you can find the following documentation:
 
-- `food-recsys-docs.md`: Food Recommender System Standalone Documentation
+- `food-recsys-docs.md`: Food Recommender System (Standalone ver.) Documentation
 - `food-recsys-api-docs.md`: FastAPI API Documentation
 - `food-recsys-demo-docs.md`: Streamlit Demo Documentation
 
 You can consult these files also clicking on the badges in this section or at the top of the page.
+
+Information about the **data** provided in this repository can be found in the Datasets section.
 
 ## Project Structure
 The project is structured as follows:
@@ -225,3 +230,6 @@ All these informations are obtained during runtime and saved in `metrics.json` f
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contributors
+This system was designed and implemented by **Ester Molinari** (@molinari135), MSc student in Computer Science @ University of Bari Aldo Moro during AY 2024/2025.

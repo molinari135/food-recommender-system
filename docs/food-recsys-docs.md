@@ -2,19 +2,59 @@
 
 ## Table of Contents
 1. [Introduction](#introduction)
-2. [Configuration](#configuration)
-3. [Data Loader](#data-loader)
-4. [Main](#main)
-5. [Justificator](#justificator)
-6. [Meal Generator](#meal-generator)
-7. [Mood Modifier](#mood-modifier)
-8. [User Profiler](#user-profiler)
-9. [Recommender](#recommender)
+2. [Datasets](#datasets)
+    1. [food-infos.json](#food-infosjson)
+    2. [food-servings.json](#food-servingsjson)
+    3. [food-seasonality.json](#food-seasonalityjson)
+    4. [nutritional-facts.csv](#nutritional-factscsv)
+3. [Configuration File](#configuration-file)
+4. [Data Loader](#data-loader)
+5. [Main](#main)
+6. [Justificator](#justificator)
+7. [Meal Generator](#meal-generator)
+8. [Mood Modifier](#mood-modifier)
+9. [User Profiler](#user-profiler)
+10. [Recommender](#recommender)
+11. [Contributors](#contributors)
 
 ## Introduction
 The Food Recommender System is designed to help users create personalized meal plans based on their preferences, intolerances, and seasonal food availability. This documentation provides an overview of the system's components and their functionalities.
 
 ![foodrecsys](https://github.com/user-attachments/assets/0040e027-d13c-4145-a19d-3ca0138ce57d)
+
+## Datasets
+
+The Food Recommender System utilizes several datasets to provide accurate and personalized meal recommendations. Below is an overview of the key files used:
+
+### food-infos.json
+**Filepath:** `food-recommender-system/data/raw/food-infos.json`
+
+This JSON file contains detailed information about various foods, including storage tips and other useful advice. Each entry provides practical tips on how to store and consume different types of fruits.
+
+These information have been manually scraped from [Altroconsumo's Fruit and Vegetable Calendar](https://www.altroconsumo.it/alimentazione/fare-la-spesa/consigli/calendario-frutta-verdura).
+
+### food-servings.json
+**Filepath:** `food-recommender-system/data/raw/food-servings.json`
+
+This JSON file outlines the recommended serving sizes and weekly consumption frequencies for different food categories. It includes tips on how to measure servings and provides guidelines for a balanced diet.
+
+These information have been manually scraped from [LARN Standard Serving Sizes](https://sinu.it/wp-content/uploads/2019/07/20141111_LARN_Porzioni.pdf).
+
+### food-seasonality.json
+**Filepath:** `food-recommender-system/data/raw/food-seasonality.json`
+
+This JSON file lists the seasonal availability of various fruits and vegetables in Italy. It helps the system recommend foods that are in season, ensuring freshness and better nutritional value.
+
+These information have been manually scraped from [Altroconsumo's Fruit and Vegetable Calendar](https://www.altroconsumo.it/alimentazione/fare-la-spesa/consigli/calendario-frutta-verdura).
+
+### nutritional-facts.csv
+**Filepath:** `food-recommender-system/data/raw/nutritional-facts.csv`
+
+This CSV file contains comprehensive nutritional information for a wide range of foods. The dataset has been heavily modified from its original version on Kaggle to better fit the needs of the Food Recommender System. It includes data on calories, macronutrients, vitamins, and minerals for each food item.
+
+For more details on the original dataset, you can visit the [Kaggle page](https://www.kaggle.com/datasets/beridzeg45/food-nutritional-facts).
+
+These files collectively provide the necessary data to generate personalized and nutritionally balanced meal plans for users.
 
 ## Configuration file
 **Filepath:** `food-recommender-system/food_recommender_system/config.py`
@@ -121,3 +161,6 @@ The `recommender.py` file contains functions to recommend foods based on user pr
 - `get_similar_food(df: pd.DataFrame, food_name: str, same_category: bool, low_density_food: bool)`: Gets a list of foods similar to the given food.
 - `ask_user_preferences(df: pd.DataFrame, user_profiler: UserProfiler, filename: Path)`: Asks the user for their food preferences and saves them to a profile.
 - `ask_seasonal_preferences(df: pd.DataFrame, seasonality: dict, user_profiler: UserProfiler, filename: Path, info_file: dict)`: Asks the user for their seasonal food preferences and saves them to a profile.
+
+## Contributors
+This system was designed and implemented by **Ester Molinari** (@molinari135), MSc student in Computer Science @ University of Bari Aldo Moro during AY 2024/2025.

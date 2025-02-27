@@ -5,7 +5,7 @@ build-backend = "flit_core.buildapi"
 [project]
 name = "food_recommender_system"
 version = "0.0.1"
-description = "Food recommender system with recipe and justification generation"
+description = "Food recommender system with Justifications"
 authors = [
   { name = "Ester" },
 ]

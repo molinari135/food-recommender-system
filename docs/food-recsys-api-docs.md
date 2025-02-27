@@ -2,6 +2,24 @@
 
 <a target="_blank" href="https://molinari135-food-recsys-api.hf.space/docs"><img src="https://img.shields.io/badge/🤗%20Hugging%20Face-Spaces-yellow.svg"></a>
 
+
+## Table of Contents
+1. [Overview](#overview)
+2. [Base URL](#base-url)
+3. [Endpoints](#endpoints)
+    - [Recommend Food](#1-recommend-food)
+    - [Recommend Cheat Meal](#2-recommend-cheat-meal)
+    - [Justify Ingredients](#3-justify-ingredients)
+    - [Generate Meals](#4-generate-meals)
+4. [Models](#models)
+    - [RecommenderRequest](#recommenderrequest)
+    - [MoodRequest](#moodrequest)
+    - [JustificatorRequest](#justificatorrequest)
+    - [MealGeneratorRequest](#mealgeneratorrequest)
+5. [Running the API](#running-the-api)
+6. [Conclusion](#conclusion)
+7. [Contributors](#contributors)
+
 ## Overview
 This document provides an overview of the Food Recommender System API, built using FastAPI. The API offers endpoints for recommending foods, generating meals, and justifying ingredient choices based on user preferences.
 
@@ -364,3 +382,6 @@ uvicorn food_recommender_system/fastapi/api:app --reload
 
 ## Conclusion
 This documentation provides a comprehensive overview of the Food Recommender System API. For further details, refer to the source code and comments within the implementation files.
+
+## Contributors
+This API was designed and implemented by **Ester Molinari** (@molinari135), MSc student in Computer Science @ University of Bari Aldo Moro during AY 2024/2025.

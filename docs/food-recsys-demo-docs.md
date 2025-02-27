@@ -3,6 +3,8 @@
 Welcome to the Food RecSys demo documentation! This guide will help you understand the structure and functionality of the Food RecSys demo application. The application is built using Streamlit and provides personalized food recommendations based on user profiles.
 
 ## Table of Contents
+## Table of Contents
+
 1. [Introduction](#introduction)
 2. [File Structure](#file-structure)
 3. [Main Components](#main-components)
@@ -11,6 +13,7 @@ Welcome to the Food RecSys demo documentation! This guide will help you understa
     - [Meal Selection Page](#meal-selection-page)
 4. [How to Run the Application](#how-to-run-the-application)
 5. [Conclusion](#conclusion)
+6. [Contributors](#contributors)
 
 ## Introduction
 Food RecSys is a personalized food recommendation system that helps users create and manage their food profiles, receive meal suggestions, and track their dietary preferences. The application is designed to be user-friendly and provides a seamless experience for managing food preferences and meal plans.
@@ -75,3 +78,6 @@ To run the Food RecSys demo application, follow these steps:
 
 ## Conclusion
 This documentation provides an overview of the Food RecSys demo application, including its file structure and main components. By following the instructions, you can easily run the application and explore its features. Enjoy your personalized food recommendations!
+
+## Contributors
+This demo was designed and implemented by **Ester Molinari** (@molinari135), MSc student in Computer Science @ University of Bari Aldo Moro during AY 2024/2025.
