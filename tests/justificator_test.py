@@ -41,20 +41,20 @@ def sample_user():
     user.get_meals.return_value = {
         "Breakfast": [
             (["Apple"], ["Banana"]),
-            (["Banana"], ["Apple"]),
             (["Apple"], ["Banana"]),
-            (["Banana"], ["Apple"]),
             (["Apple"], ["Banana"]),
-            (["Banana"], ["Apple"]),
+            (["Apple"], ["Banana"]),
+            (["Apple"], ["Banana"]),
+            (["Apple"], ["Banana"]),
             (["Apple"], ["Banana"])
         ],
         "Lunch": [
             (["Chicken"], ["Broccoli"]),
-            (["Broccoli"], ["Chicken"]),
             (["Chicken"], ["Broccoli"]),
-            (["Broccoli"], ["Chicken"]),
             (["Chicken"], ["Broccoli"]),
-            (["Broccoli"], ["Chicken"]),
+            (["Chicken"], ["Broccoli"]),
+            (["Chicken"], ["Broccoli"]),
+            (["Chicken"], ["Broccoli"]),
             (["Chicken"], ["Broccoli"])
         ]
     }
