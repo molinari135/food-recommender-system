@@ -51,7 +51,7 @@ In the `docs` folder you can find the following documentation:
 
 You can consult these files also clicking on the badges in this section or at the top of the page.
 
-Information about the **data** provided in this repository can be found in the Datasets section.
+Information about the **data** provided in this repository can be found in the [Datasets section](https://github.com/molinari135/food-recommender-system/blob/master/docs/food-recsys-docs.md#datasets) of the system documentation.
 
 ## Project Structure
 The project is structured as follows:
