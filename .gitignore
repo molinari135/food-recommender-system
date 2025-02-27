@@ -172,3 +172,7 @@ cython_debug/
 
 .notebooks
 .vscode
+README.pdf
+docs/food-recsys-api-docs.pdf
+docs/food-recsys-demo-docs.pdf
+docs/food-recsys-docs.pdf
