@@ -1,7 +1,13 @@
 # Food Recommender System with Justification
 > Food Recommender System with recipe and justification generation for Semantics in Intelligent Information Access and Recommender Systems @ Università degli Studi di Bari Aldo Moro, AY 2024/25
 
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
+
+[cc-by-nc]: https://creativecommons.org/licenses/by-nc/4.0/
+[cc-by-nc-image]: https://licensebuttons.net/l/by-nc/4.0/88x31.png
+[cc-by-nc-shield]: https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg
+
+[![CC BY-NC 4.0][cc-by-nc-shield]][cc-by-nc]
 [![Static Badge](https://img.shields.io/badge/Docs-Food_RecSys-blue)](docs/food-recsys-docs.md)
 [![Static Badge](https://img.shields.io/badge/Docs-FastAPI_API-blue)](docs/food-recsys-api-docs.md)
 [![Static Badge](https://img.shields.io/badge/Docs-Streamlit_Demo-blue)](docs/food-recsys-demo-docs.md)
@@ -229,7 +235,12 @@ All these informations are obtained during runtime and saved in `metrics.json` f
 - `persuasion_satisfaction`: a list with ratings from 1 to 5 that express the review of the overall comparison between preferred and recommended foods
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+This work is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International License][cc-by-nc].
+
+For a copy of the license, please visit https://creativecommons.org/licenses/by-nc/4.0/
+
+[![CC BY-NC 4.0][cc-by-nc-image]][cc-by-nc]
 
 ## Contributors
 This system was designed and implemented by **Ester Molinari** (@molinari135), MSc student in Computer Science @ University of Bari Aldo Moro during AY 2024/2025.
